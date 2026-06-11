@@ -1,0 +1,26 @@
+.Account_container {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+/* Make account layout stack on small screens */
+@media (max-width: 768px) {
+  .Account_container {
+    flex-direction: column;
+    gap: 16px;
+    padding: 12px;
+    align-items: stretch;
+  }
+}
+
+/* Slightly tighter spacing for medium screens */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .Account_container {
+    gap: 24px;
+    padding: 20px;
+  }
+}

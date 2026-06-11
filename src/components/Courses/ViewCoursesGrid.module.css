@@ -1,0 +1,177 @@
+.course_card {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  max-width: 300px; /* بديل ممتاز للـ width الثابت */
+  height: auto;
+
+  padding-bottom: 23px;
+  gap: 23px;
+
+  border: 0.77px solid #d9e4e5;
+  border-radius: 18px;
+  background-color: #fff;
+  overflow: hidden;
+  box-sizing: border-box;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  position: relative; /* مهم للبادج */
+}
+
+.course_card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  border-color: #6dcde5;
+}
+
+/* الصورة */
+.course_card img {
+  width: 100%;
+  height: 155px;
+  object-fit: cover;
+  border-radius: 18px 18px 0 0;
+  display: block;
+}
+
+/* البادج */
+.duration_badge {
+  position: absolute;
+  top: 10px;
+  right: 10px; /* بديل عن left الثابت */
+
+  width: auto;
+  padding: 5px 12px;
+
+  border-radius: 42px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  background: rgba(255, 255, 255, 0.95);
+  color: #04181c;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+/* معلومات الكورس */
+.course_info {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  width: 100%;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.course_info span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #4a5568;
+}
+
+/* النجوم وعدد الطلاب */
+.info_star_studentCount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.info_star_studentCount span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+/* --- Responsive --- */
+
+/* تابلت */
+@media (max-width: 1024px) {
+  .course_card {
+    max-width: 100%;
+  }
+}
+
+/* موبايل */
+@media (max-width: 768px) {
+  .course_info span {
+    font-size: 13px;
+  }
+
+  .course_card img {
+    height: 140px;
+  }
+}
+
+/* موبايل صغير جداً */
+@media (max-width: 480px) {
+  .course_info {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .duration_badge {
+    font-size: 10px;
+    padding: 4px 10px;
+  }
+}
+.view_button {
+  /* التموضع */
+   /* أو absolute إذا كان مطلوباً وضعه بدقة فوق عناصر أخرى */
+
+  /* الأبعاد الثابتة */
+  width: 268.71px;
+  height: 39.92px;
+
+  /* الحدود والزوايا */
+  border: 0.77px solid #d9e4e5;
+  border-radius: 115.19px; /* شكل كبسولي مثالي */
+
+  /* التنسيق الداخلي */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent; /* أو يمكنك وضع خلفية حسب التصميم */
+
+  /* الخط والمظهر */
+  font-size: 14px;
+  font-weight: 500;
+  color: #04181c;
+  cursor: pointer;
+
+  /* الخصائص الإضافية */
+  opacity: 1;
+  transform: rotate(0deg);
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+/* تأثير التفاعل عند التمرير */
+.view_button:hover {
+  background-color: #6dcde5; /* اللون السماوي الذي استخدمناه سابقاً */
+  color: white;
+  border-color: #6dcde5;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .view_button {
+    width: 100%; /* ليأخذ عرض الحاوية في الجوال */
+    max-width: 268.71px;
+    margin: 0 auto;
+  }
+}

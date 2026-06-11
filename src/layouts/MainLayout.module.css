@@ -1,0 +1,23 @@
+.app_wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* يجعل التطبيق يأخذ كامل ارتفاع الشاشة على الأقل */
+}
+
+.main_content {
+  flex: 1; /* هذا هو السر! يجعل الماين يتمدد ليملأ الفراغ بين الهيدر والفوتر */
+  width: 100%;
+  /* max-width: 1200px; تحديد عرض أقصى لراحة العين في الشاشات الكبيرة */
+  margin: 0 auto; /* توسيط المحتوى في المنتصف */
+
+  /* لضمان التجاوب الكامل */
+  box-sizing: border-box;
+}
+
+/* التجاوب مع الشاشات الصغيرة (Mobile) */
+@media (max-width: 768px) {
+  .main_content {
+    padding: 15px;
+    max-width: 100%; /* إلغاء العرض المحدد في الموبايل */
+  }
+}

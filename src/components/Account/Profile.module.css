@@ -1,0 +1,353 @@
+.Personal_profile {
+  display: flex;
+  flex-direction: column;
+  max-width: 948px;
+  gap: 40px;
+  padding: 40px;
+}
+.Account_info {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.Account_title {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.Account_form1 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-rows: auto;
+  row-gap: 32px;
+  column-gap: 22px;
+}
+.Account_form2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-rows: auto;
+  row-gap: 32px;
+  column-gap: 22px;
+}
+.item5 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.grid_item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.grid_item input {
+  /* الأبعاد المحددة مع دعم التجاوب الكامل */
+  width: 100%;
+  height: 48px;
+
+  /* المسافات الداخلية (يمين ويسار 20px) لحماية النص والأيقونات من الالتصاق بالحواف */
+  padding: 0 20px;
+
+  /* الحواف والحدود ولون الخلفية */
+  border: 1px solid #d9e4e5;
+  border-radius: 8px;
+  background-color: #ffffff;
+
+  /* ترتيب المحتوى داخلياً (النص والأيقونة أو السهم) على أطراف الحقل */
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  /* تنسيق الخط الافتراضي داخل الحقل */
+  font-family: "Tajawal", sans-serif;
+  font-size: 15px;
+  color: #072127; /* لون خطك الداكن الأساسي */
+
+  /* حركة ناعمة جداً عند تفاعل المستخدم */
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* Make the profile forms responsive: stack fields on small screens */
+@media (max-width: 768px) {
+  .Personal_profile {
+    padding: 20px;
+    gap: 24px;
+  }
+
+  .Account_form1,
+  .Account_form2 {
+    grid-template-columns: 1fr; /* single column */
+    column-gap: 12px;
+    row-gap: 18px;
+  }
+
+  .item5 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  .icon_circle_wrapper {
+    width: 56px;
+    height: 56px;
+  }
+
+  .delete_account_btn {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .Personal_profile {
+    padding: 14px;
+    gap: 16px;
+  }
+
+  .grid_item input,
+  .custom_select,
+  .custom_textarea {
+    font-size: 14px;
+  }
+}
+
+/* التنسيق الجمالي والتفاعلي عند الضغط داخل الحقل للـ Focus */
+.grid_item input:focus-within,
+.grid_item input:focus {
+  outline: none;
+  border-color: #6dcde5; /* يتغير للون السماوي المعتمد لديك */
+  box-shadow: 0 0 0 3px rgba(109, 205, 229, 0.15); /* إضاءة ناعمة حول الحقل */
+}
+
+/* تنسيق النص التوضيحي الباهت (Placeholder) */
+.grid_item input::placeholder {
+  color: #a3b8bc; /* رمادي باهت متناسق مع الإطار */
+  opacity: 1;
+}
+
+/* phone input custom wrapper to allow custom flag image overlay */
+.phoneWrapper {
+  position: relative;
+}
+
+.syriaFlag {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* adjust react-phone-input-2 input default visuals when needed */
+.phoneWrapper .react-tel-input {
+  width: 100%;
+}
+
+.phoneWrapper .form-control {
+  box-sizing: border-box;
+  border: 1px solid #d9e4e5;
+  border-radius: 8px;
+  height: 48px;
+}
+
+/* hide the dropdown arrow/flag button when disableDropdown is used */
+.phoneWrapper :global(.flag-dropdown) {
+  display: none !important;
+}
+
+/* ensure user can type full number including country code */
+.phoneWrapper .form-control {
+  padding-left: 52px; /* leave space for our syriaFlag image */
+}
+
+/* hide the selected-flag element rendered by react-phone-input-2 */
+.phoneWrapper :global(.selected-flag) {
+  display: none !important;
+}
+
+/* fallback: hide any global div.flag-dropdown if present */
+:global(div.flag-dropdown) {
+  display: none !important;
+}
+
+.select_container {
+  position: relative;
+  width: 100%;
+  height: 48px;
+}
+
+.custom_select {
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+
+  /* الحواف والحدود المطابقة لتصميمك */
+  border: 1px solid #d9e4e5;
+  border-radius: 8px;
+  background-color: #ffffff;
+
+  /* الخط والتوجيه العربي */
+  font-family: "Tajawal", sans-serif;
+  font-size: 15px;
+  color: #072127;
+  direction: rtl;
+
+  /* إخفاء سهم المتصفح الافتراضي البشع لكي نضع سهمنا الخاص */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* تأثير الـ Focus عند فتح القائمة */
+.custom_select:focus {
+  outline: none;
+  border-color: #6dcde5;
+  box-shadow: 0 0 0 3px rgba(109, 205, 229, 0.15);
+}
+
+/* رسم السهم المخصص في أقصى اليسار */
+.select_container::after {
+  content: "";
+  position: absolute;
+  left: 20px; /* بما أن الاتجاه RTL فالسهم يكون على اليسار */
+  top: 50%;
+  transform: translateY(-50%);
+  /* رسم سهم ناعم باستخدام حواف الـ CSS */
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid #708387;
+  pointer-events: none; /* لكي لا يحجب الضغط عن القائمة */
+}
+
+/* الحاوية الخارجية التي تجمع صندوق النص وزر الرفع */
+.textarea_container {
+  width: 100%;
+  max-width: 952px; /* أو حسب العرض الأقصى للسطر الكامل لديك */
+  min-height: 150px;
+
+  /* الإطار والحواف المطلوبة */
+  border: 1px solid #d9e4e5;
+  border-radius: 12px;
+  background-color: #ffffff;
+
+  /* الترتيب الداخلي الذكي */
+  box-sizing: border-box;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* يدفع صندوق النص للأعلى وزر الرفع للأسفل */
+  position: relative;
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* تأثير الـ Focus عند الضغط داخل أي مكان في الحاوية */
+.textarea_container:focus-within {
+  border-color: #6dcde5; /* لونك السماوي المعتمد */
+  box-shadow: 0 0 0 3px rgba(109, 205, 229, 0.15);
+}
+
+/* صندوق النص الفعلي (بدون إطارات أو خلفية لأنه يذوب داخل الأب) */
+.custom_textarea {
+  width: 100%;
+  height: 115px;
+  border: none;
+  outline: none;
+  resize: none; /* يمنع المستخدم من تخريب التصميم بسحب الزاوية */
+  background: transparent;
+
+  font-family: "Tajawal", sans-serif;
+  font-size: 15px;
+  color: #072127;
+  direction: rtl;
+}
+
+.custom_textarea::placeholder {
+  color: #a3b8bc;
+}
+
+/* سطر التحكم السفلي الذي يحتوي على زر الرفع */
+.action_row {
+  display: flex;
+  justify-content: center; /* يبدأ من اليمين لأن الاتجاه RTL */
+  margin-top: 10px;
+}
+
+/* زر رفع الملف الذكي والتفاعلي */
+.icon_circle_wrapper {
+  /* الأبعاد الثابتة والمثالية المحددة من قبلك */
+  width: 67px;
+  height: 67px;
+
+  /* جعل الحاوية دائرية بالكامل */
+  border-radius: 50%;
+
+  /* اللون السماوي الشفاف بنسبة 10% (تم تحويله لصيغة RGBA لضمان استقرار المتصفحات) */
+  background-color: rgba(109, 205, 229, 0.1);
+
+  /* السحر الهندي: توسيط أي أيقونة أو نص بداخل الدائرة تماماً عمودياً وأفقياً */
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  /* تأثير حركة ناعم إذا كانت الدائرة تفاعلية أو قابلة للضغط */
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+/* تأثير اختياري عند تمرير الماوس إذا كانت الدائرة تعمل كزر */
+.icon_circle_wrapper:hover {
+  background-color: rgba(109, 205, 229, 0.2); /* تغميق الخلفية قليلاً */
+  transform: scale(1.05); /* تكبير خفيف جداً للحركة */
+
+  cursor: pointer; /* إظهار مؤشر اليد للدلالة على أنه قابل للنقر */
+}
+.delete_account_btn {
+  /* الأبعاد المحددة من قبلك */
+  width: 100%;
+  max-width: 195px;
+  height: 52px;
+
+  /* الخلفية الحمراء التحذيرية الشفافة بنسبة 10% */
+  background-color: rgba(236, 38, 37, 0.1); /* #EC26251A محولة لصيغة RGBA لثبات المتصفحات */
+
+  /* لون النص باللون الأحمر الصريح والغامق للتوافق مع معايير الـ Accessibility */
+  color: var(--text-secondary); /* استخدم المتغير الخاص بك للون الأحمر الصريح */
+
+  /* الحواف وتصفير حدود المتصفح الافتراضية */
+  border: none;
+  border-radius: 8px;
+
+  /* الخط وتنسيق التموضع الداخلي */
+  font-family: "Tajawal", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+
+  /* لضمان التوسيط الكامل للكلمة والأيقونة إن وجدت */
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* تأثير هوفر (Hover) احترافي عند وقوف الماوس (يتحول الأحمر إلى صريح ليعطي شعوراً بالخطورة) */
+.delete_account_btn:hover {
+  background-color: #ec2625; /* ملء الخلفية بالأحمر الكامل */
+  color: #ffffff; /* تحويل النص للأبيض تماماً */
+  box-shadow: 0 4px 12px rgba(236, 38, 37, 0.2); /* ظل أحمر ناعم */
+}

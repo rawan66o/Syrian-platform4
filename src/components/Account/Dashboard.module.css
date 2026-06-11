@@ -1,0 +1,318 @@
+.Dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-top: 40px;
+  width: 100%;
+  max-width: 952px;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+}
+.Dashboard_banner {
+  width: 100%;
+  max-width: 952px;
+  height: 136px;
+
+  /* الحواف والتأثيرات */
+  border-radius: 16px;
+  opacity: 1; /* (افتراضية، ويمكن الاستغناء عنها إلا لو كنت تريد عمل Fade animation لاحقاً) */
+
+  /* التدرج اللوني الانسيابي من الأزرق السماوي المعتمد لديك */
+  background: linear-gradient(90deg, #6dcde5 0%, #c0eaf4 100%);
+
+  /* لضمان الحساب الصحيح للأبعاد والمسافات الداخلية */
+  box-sizing: border-box;
+  padding: 20px; /* مسافة داخلية اختيارية لحماية النصوص */
+
+  /* إذا كنت تريد توسيط العناصر بداخله عمودياً وأفقياً */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.Dashboard_banner_profile {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.Dashboard_banner_name {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.profile_avatar {
+  /* توحيد الأبعاد إلى أقرب رقم صحيح وزوجي لضمان دائرية مثالية */
+  width: 84px;
+  height: 84px;
+
+  /* جعل العنصر دائرياً بالكامل */
+  border-radius: 50%;
+
+  /* اختيارياً: إذا كان العنصر يحتوي على صورة بداخله لضمان عدم تشوهها */
+  object-fit: cover;
+
+  /* الأواصية المتبقية */
+  opacity: 1; /* قيمة افتراضية */
+
+  /* الـ angle: 0deg تعني لا يوجد دوران، فلا داعي لكتابة transform: rotate(0deg) وتثقيل الكود */
+}
+.white_pill_button {
+  /* الأبعاد المحددة للزر */
+  width: 170px;
+  height: 52px;
+
+  /* الحواف الدائرية بالكامل (تصميم كبسولة) */
+  border-radius: 100px;
+
+  /* الألوان الخلفية والنص */
+  background-color: #ffffff;
+  color: var(--text-primary); /* يفضل استخدام متغيرك الداكن ليتضح النص فوق الأبيض */
+
+  /* تصفير حدود المتصفح الافتراضية وتنسيق الخط */
+  border: none;
+  font-family: "Tajawal", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+
+  /* لضمان توسيط النص تماماً داخل الزر */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  /* تحويل المؤشر ليد تفاعلية وتأثير ناعم */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* تأثير هوفر (Hover) ناعم ليظهر للمستخدم أن الزر تفاعلي */
+.white_pill_button:hover {
+  background-color: #f8f9fa; /* رمادي خفيف جداً عند الوقوف عليه */
+  transform: translateY(-1px); /* رفعة خفيفة للأعلى */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* ظل ناعم جداً */
+}
+
+/* التجاوب مع الموبايل (اختياري إذا أردت أن ينكمش في الشاشات الصغيرة جداً) */
+@media (max-width: 480px) {
+  .white_pill_button {
+    width: 100%; /* ليأخذ كامل العرض المتاح في الموبايل لسهولة الضغط */
+    max-width: 170px;
+  }
+}
+.Dashboard_Statistics {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  justify-content: space-between;
+}
+.Statistic_item {
+  /* الأبعاد بعد جبرها لأقرب رقم صحيح ومناسب بالتصميم */
+  width: 100%;
+  max-width: 303px;
+  height: 120px;
+
+  /* الحواف والحدود المحسنة (6px بدلاً من 6.06px) */
+  border: 1px solid #d9e4e5;
+  border-radius: 6px;
+
+  /* تنسيق داخلي مقترح لترتيب أرقام ونصوص الإحصائيات */
+  box-sizing: border-box;
+  padding: 10px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+
+  /* خلفية بيضاء افتراضية لكي لا يظهر ما خلفها (يمكنك تعديلها) */
+  background-color: #ffffff;
+
+  /* تأثير حركة ناعم */
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* تأثير هوفر (Hover) ناعم ومحترف يناسب بطاقات الإحصائيات */
+.Statistic_item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(217, 228, 229, 0.4);
+  border-color: #6dcde5; /* يتحول للون السماوي المعتمد لديك عند الوقوف عليه */
+}
+.Current_courses {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+.Current_courses_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Current_courses_list {
+  display: flex;
+  gap: 24px;
+  width: 100%;
+  overflow-x: auto; /* لتمكين التمرير الأفقي إذا كانت القائمة طويلة */
+  padding-bottom: 10px; /* مسافة أسفل القائمة لتجنب تداخلها مع الحواف */
+}
+.Course_item {
+  /* الأبعاد المحددة مع دعم التجاوب الكامل */
+  width: 100%;
+  max-width: 463px;
+  height: 295px;
+
+  /* اختصار الـ Padding: (أعلى وأسفل: 24px) (يمين ويسار: 20px) */
+  padding: 24px 20px;
+
+  /* الحواف والحدود */
+  border: 1px solid #d9e4e5;
+  border-radius: 12px;
+  background-color: #ffffff; /* خلفية بيضاء افتراضية للبطاقة */
+
+  /* ترتيب المحتوى الداخلي للبطاقة (صورة الكورس، العنوان، السعر) عمودياً */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 25px; /* المسافة الثابتة بين العناصر الداخلية */
+
+  /* تأثير حركة ناعم جداً عند تفاعل المستخدم */
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* تأثير هوفر (Hover) مميز لبطاقات الكورسات لجذب الانتباه */
+.Course_item:hover {
+  border-color: #6dcde5; /* يتغير الإطار للون السماوي الذكي المعتمد لديك */
+  box-shadow: 0 10px 20px rgba(109, 205, 229, 0.15); /* ظل ناعم مائل للزرقان */
+  cursor: pointer;
+}
+
+/* ضبط التجاوب للشاشات الصغيرة جداً (الموبايل) */
+@media (max-width: 480px) {
+  .Course_item {
+    height: auto; /* يترك الارتفاع مرناً في الموبايل إذا كان عنوان الكورس طويلاً */
+    min-height: 200px;
+    padding: 16px 12px; /* تقليل المسافات الداخلية قليلاً لتوفير مساحة للنص */
+  }
+}
+
+/* Make course list stack on small screens instead of horizontal cards */
+@media (max-width: 768px) {
+  .Current_courses_list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    overflow-x: visible;
+  }
+
+  .Course_item {
+    max-width: 100%;
+    height: auto;
+    padding: 18px;
+    gap: 16px;
+  }
+
+  .Course_title {
+    align-items: flex-start;
+  }
+
+  .progress_track {
+    max-width: 100%;
+  }
+}
+
+.Course_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Course_progress {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: start;
+}
+.progress_track {
+  /* جعل العرض مرناً لتجنب أي مشاكل في الموبايل */
+  width: 100%;
+  max-width: 422px;
+  height: 19px;
+
+  /* اللون الرمادي الشفاف الخاص بك (#EBEBEB80) */
+  background-color: rgba(235, 235, 235, 0.5);
+
+  /* انحناء الحواف الكامل كبسولة (تم جبرها برمجياً لـ 100px لأن الارتفاع 19px فقط) */
+  border-radius: 100px;
+
+  /* لضمان أن أي عنصر ملون داخلي لا يخرج عن الحواف الدائرية */
+  position: relative;
+  overflow: hidden;
+}
+
+/* شريط التقدم الفعلي الملون (جاهز لملء النسبة داخل الشريط الرمادي) */
+.progress_bar {
+  height: 100%; /* يأخذ كامل ارتفاع الـ 19px الخاصة بالأب تلقائياً */
+
+  /* العرض هنا نجعله مرناً ويبدأ من 0%، وسنتحكم به من كود الـ React */
+  width: 56px;
+
+  /* في حال كان هناك نسبة صغيرة جداً وتريد عرضاً أدنى كبداية */
+  min-width: 20px;
+
+  /* اللون السماوي المميز المعتمد لديك */
+  background-color: #6dcde5;
+
+  /* حواف دائرية كاملة متناسقة مع الأب */
+  border-radius: 100px;
+
+  /* تأثير حركة أنيميشن ناعم جداً وانسيابي عند تغير النسبة */
+  transition: width 0.5s ease-in-out;
+}
+.progress_info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.tinted_bottom_border_button {
+  /* الأبعاد المحددة مع جبر الكسور */
+  width: 100%;
+  max-width: 204px;
+  height: 52px;
+
+  /* الخلفية الشفافة الملونة بنسبة 10% (تم تحويل #6DCEE51A إلى صيغة RGBA لثبات المتصفحات) */
+  background-color: rgba(109, 206, 229, 0.1);
+
+  /* الحواف والانحناءات */
+  border: none; /* تصفير الحدود الافتراضية للزر */
+  border-bottom: 1px solid #6dcde5; /* إضافة الخط السفلي فقط المعتمد لديك */
+  border-radius: 8px;
+
+  /* تنسيق الخط والترتيب الداخلي */
+  font-family: "Tajawal", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #072127; /* اللون الداكن المعتمد في هويتك لتوفير تباين ممتاز */
+
+  /* لضمان توسيط محتوى الزر تماماً */
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* المسافة بين أي أيقونة ونص داخل الزر */
+
+  /* تفاعل المؤشر وتأثير الحركة */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* تأثير هوفر (Hover) ناعم وتفاعلي يناسب هذا الاستايل */
+.tinted_bottom_border_button:hover {
+  background-color: rgba(109, 206, 229, 0.2); /* زيادة غمق الخلفية قليلاً عند الوقوف عليه */
+  border-bottom-width: 2px; /* زيادة سماكة الخط السفلي لتأثير تفاعلي ذكي */
+  box-shadow: 0 4px 12px rgba(109, 205, 229, 0.1); /* ظل ناعم جداً مائل للسماوي */
+}
