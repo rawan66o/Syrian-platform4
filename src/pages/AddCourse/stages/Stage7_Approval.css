@@ -1,0 +1,129 @@
+/* ========== Stage 7 - Approval Page (منزلة 97) ========== */
+
+.approval-page {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+}
+
+.approval-card {
+  width: 806px;
+  max-width: 100%;
+  height: 216px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  background: transparent;
+}
+
+/* Loading Spinner */
+.approval-loader-figma {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader-ring {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.loader-line-fade {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 3px;
+  height: 14px;
+  margin-left: -1.5px;
+  margin-top: -14px;
+  border-radius: 2px;
+  background: #6dcde5;
+  transform-origin: center 43px;
+  animation: lineFade 1.2s ease-in-out infinite;
+}
+
+@keyframes lineFade {
+  0% {
+    opacity: var(--final-opacity, 0.3);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: var(--final-opacity, 0.3);
+  }
+}
+
+/* Text Content */
+.approval-text-figma {
+  width: 806px;
+  max-width: 100%;
+  height: 92px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.approval-text-figma h2 {
+  font-family: "Tajawal", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 100%;
+  color: #072127;
+  text-align: center;
+  margin: 0;
+}
+
+.approval-text-figma p {
+  font-family: "Tajawal", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 100%;
+  color: #708387;
+  text-align: center;
+  margin: 0;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
+  .approval-text-figma h2 {
+    font-size: 24px;
+  }
+
+  .approval-text-figma p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .approval-text-figma h2 {
+    font-size: 20px;
+  }
+
+  .approval-text-figma p {
+    font-size: 14px;
+  }
+
+  .approval-loader-figma {
+    width: 80px;
+    height: 80px;
+  }
+
+  .loader-line-fade {
+    width: 2px;
+    height: 12px;
+    margin-left: -1px;
+    margin-top: -12px;
+  }
+}

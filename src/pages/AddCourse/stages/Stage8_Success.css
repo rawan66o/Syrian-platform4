@@ -1,0 +1,319 @@
+/* ========== Stage 8 - Success Page ========== */
+
+.success-page {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.success-card-figma {
+  width: 806px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  background: transparent;
+}
+
+/* أيقونة النجاح المتدرجة */
+.success-icon-figma {
+  width: 218px;
+  height: 218px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.success-circle-outer {
+  width: 218px;
+  height: 218px;
+  background: #34c7590d;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.success-circle-middle {
+  width: 150px;
+  height: 150px;
+  background: #34c75926;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.success-circle-inner {
+  width: 77.5px;
+  height: 77.5px;
+  background: #34c759;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.success-circle-inner svg {
+  width: 35px;
+  height: 28px;
+}
+
+/* النصوص */
+.success-text-figma {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.success-text-figma h2 {
+  font-family: "Tajawal", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  color: #072127;
+  margin: 0;
+}
+
+.success-text-figma p {
+  font-family: "Tajawal", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: #708387;
+  margin: 0;
+}
+
+/* الأزرار */
+.success-buttons-figma {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.success-btn-outline-figma {
+  width: 208px;
+  height: 56px;
+  background: #f2f2f280;
+  border: none;
+  border-radius: 8px;
+  font-family: "Tajawal", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: #072127;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.success-btn-outline-figma:hover {
+  background: #e0e0e0;
+}
+
+.success-btn-primary-figma {
+  width: 208px;
+  height: 56px;
+  background: #6dcde526;
+  border: none;
+  border-radius: 8px;
+  font-family: "Tajawal", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: #072127;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.success-btn-primary-figma:hover {
+  background: #6dcde540;
+}
+
+/* قسم التقييم السفلي */
+.success-feedback-figma {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #d9e4e5;
+}
+
+.feedback-question-figma {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.feedback-label-figma {
+  font-family: "Tajawal", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #072127;
+}
+
+.feedback-buttons-figma {
+  display: flex;
+  gap: 16px;
+}
+
+.feedback-btn-no-figma {
+  width: 57px;
+  height: 40px;
+  background: #f2f2f2;
+  border: none;
+  border-radius: 8px;
+  font-family: "Tajawal", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #708387;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.feedback-btn-no-figma:hover {
+  background: #e0e0e0;
+}
+
+.feedback-btn-yes-figma {
+  width: 57px;
+  height: 40px;
+  background: #6dcde5;
+  border: none;
+  border-radius: 8px;
+  font-family: "Tajawal", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.feedback-btn-yes-figma:hover {
+  background: #4bb8d1;
+}
+
+.feedback-thanks-figma {
+  font-family: "Tajawal", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #708387;
+}
+
+/* ========== Responsive - Stage 8 ========== */
+@media (max-width: 768px) {
+  .success-text-figma h2 {
+    font-size: 24px;
+  }
+
+  .success-text-figma p {
+    font-size: 16px;
+  }
+
+  .success-btn-outline-figma,
+  .success-btn-primary-figma {
+    width: 160px;
+    height: 48px;
+    font-size: 16px;
+  }
+
+  .success-icon-figma {
+    width: 150px;
+    height: 150px;
+  }
+
+  .success-circle-outer {
+    width: 150px;
+    height: 150px;
+  }
+
+  .success-circle-middle {
+    width: 110px;
+    height: 110px;
+  }
+
+  .success-circle-inner {
+    width: 60px;
+    height: 60px;
+  }
+
+  .success-circle-inner svg {
+    width: 28px;
+    height: 22px;
+  }
+
+  .feedback-label-figma {
+    font-size: 14px;
+  }
+
+  .feedback-btn-no-figma,
+  .feedback-btn-yes-figma {
+    width: 50px;
+    height: 36px;
+    font-size: 12px;
+  }
+
+  .feedback-thanks-figma {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .success-card-figma {
+    gap: 24px;
+  }
+
+  .success-text-figma h2 {
+    font-size: 20px;
+  }
+
+  .success-text-figma p {
+    font-size: 14px;
+  }
+
+  .success-btn-outline-figma,
+  .success-btn-primary-figma {
+    width: 140px;
+    height: 44px;
+    font-size: 14px;
+  }
+
+  .success-icon-figma {
+    width: 120px;
+    height: 120px;
+  }
+
+  .success-circle-outer {
+    width: 120px;
+    height: 120px;
+  }
+
+  .success-circle-middle {
+    width: 90px;
+    height: 90px;
+  }
+
+  .success-circle-inner {
+    width: 50px;
+    height: 50px;
+  }
+
+  .success-circle-inner svg {
+    width: 24px;
+    height: 18px;
+  }
+
+  .success-feedback-figma {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .feedback-question-figma {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
