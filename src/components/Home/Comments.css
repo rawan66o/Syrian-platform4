@@ -1,0 +1,358 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap');
+
+/* الحاوية الرئيسية */
+.comments {
+    margin-top: 20px;
+    padding-top: 60px 20px;
+    background-color: #ffffff;
+    font-family: 'Tajawal', sans-serif;
+    direction: rtl;
+}
+
+.comments-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* الهيدر: العناوين والأسهم */
+.comments-header {
+   display: flex;
+    justify-content: space-between;
+    align-items: center; /* ليكون العنوان والأسهم على خط واحد */
+    margin-bottom: 50px;
+    gap: 20px;
+}
+
+.comments-titles h4 {
+    color: #00a8cc; /* لون سماوي مشابه للصورة */
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.comments-titles h3 {
+   margin: 0; /* إزالة المارجن الافتراضي لضبط المحاذاة مع الأسهم */
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* تنسيق الأسهم */
+.comments-arrow-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.arrow-box {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px; /* قيمة صغيرة ليكون مربعاً بحواف ناعمة، أو 0 ليكون حاداً جداً */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: #fff;
+}
+
+.arrow-box:hover {
+   background-color: #67c7e7;
+   
+}
+
+.comments-arrow {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+/* حاوية الكروت */
+.comments-cards {
+    gap: 25px;
+    overflow: visible;
+}
+   
+
+
+/* الكرت الواحد */
+.comment-item {
+     background-color:#F9F9F9;
+    border-radius: 15px;
+    padding: 25px;
+    flex: 1;
+    min-width: 450px;
+    max-width: 600px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+    border: 1px solid #f0f0f0;
+}
+
+/* السطر العلوي: الصورة والاسم */
+.comment-top-row {
+    display: flex;
+    flex-direction: row-reverse; /* هذا السطر سيعيد الصورة لليمين والاسم لليسار */
+    justify-content: flex-end; 
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.comment-user {
+    text-align: right;
+}
+
+.comment-user p {
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+    font-size: 1rem;
+}
+
+.comment-user span {
+    color: #888;
+    font-size: 0.85rem;
+}
+
+.commentimg {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* السطر الأوسط: النجوم والتاريخ */
+.comment-mid-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.comments-rating {
+    display: flex;
+    gap: 3px;
+}
+
+.rating {
+    color: #ffb400; /* لون النجوم الذهبي */
+    font-size: 1rem;
+}
+
+.comments-date {
+    display: flex;
+    flex-direction: row-reverse; /* لضمان ظهور الأيقونة يسار الرقم */
+    align-items: center;
+    gap: 8px;
+}
+
+.comment-date-icon {
+    font-size: 1.1rem;
+}
+
+/* نص التعليق */
+.comment-text {
+    text-align: right;
+}
+
+.comment-text p {
+    color: #555;
+    line-height: 1.8;
+    font-size: 0.95rem;
+    margin: 0;
+}
+.swiper{
+    overflow: visible;
+}
+
+.swiper-slide{
+    width: auto !important;
+}
+/* =========================================
+   TABLET
+========================================= */
+@media (max-width: 992px) {
+
+    .comments {
+        padding: 50px 20px;
+    }
+
+    .comments-content {
+        min-width: 10%;
+    }
+
+    /* الهيدر */
+    .comments-header {
+        margin-bottom: 40px;
+        gap: 15px;
+    }
+
+    .comments-titles h4 {
+        font-size: 18px;
+    }
+
+    .comments-titles h3 {
+        font-size: 24px;
+        line-height: 1.4;
+    }
+
+    /* الأسهم */
+    .arrow-box {
+        width: 38px;
+        height: 38px;
+    }
+
+    .comments-arrow {
+        font-size: 1.3rem;
+    }
+
+    /* الكروت */
+    .comments-cards {
+        gap: 20px;
+    }
+
+    .comment-item {
+        min-width: 380px;
+        max-width: 500px;
+        padding: 22px;
+    }
+
+    /* الصورة */
+    .commentimg {
+        width: 55px;
+        height: 55px;
+    }
+
+    /* الاسم */
+    .comment-user p {
+        font-size: 0.95rem;
+    }
+
+    .comment-user span {
+        font-size: 0.8rem;
+    }
+
+    /* النجوم والتاريخ */
+    .rating {
+        font-size: 0.95rem;
+    }
+
+    .comments-date {
+        font-size: 0.9rem;
+    }
+
+    /* النص */
+    .comment-text p {
+        font-size: 0.9rem;
+        line-height: 1.7;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+@media (max-width: 768px) {
+
+    .comments {
+        padding: 40px 15px;
+    }
+
+    /* الهيدر */
+    .comments-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 18px;
+        margin-bottom: 30px;
+    }
+
+    .comments-titles h4 {
+        font-size: 16px;
+    }
+
+    .comments-titles h3 {
+        font-size: 22px;
+        line-height: 1.5;
+    }
+
+    /* الأسهم */
+    .comments-arrow-icons {
+        gap: 10px;
+    }
+
+    .arrow-box {
+        width: 35px;
+        height: 35px;
+        border-radius: 6px;
+    }
+
+    .comments-arrow {
+        font-size: 1.1rem;
+    }
+
+    /* الكروت */
+    .comments-cards {
+        gap: 10px;
+    }
+
+    .comment-item {
+        min-width: 85%;
+        max-width: 85%;
+        padding: 18px;
+        border-radius: 12px;
+    }
+
+    /* السطر العلوي */
+    .comment-top-row {
+        gap: 12px;
+        margin-bottom: 16px;
+    }
+
+    .commentimg {
+        width: 50px;
+        height: 50px;
+    }
+
+    .comment-user p {
+        font-size: 0.9rem;
+    }
+
+    .comment-user span {
+        font-size: 0.75rem;
+    }
+
+    /* السطر الأوسط */
+    .comment-mid-row {
+        margin-bottom: 16px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .rating {
+        font-size: 0.9rem;
+    }
+
+    .comments-date {
+        font-size: 0.8rem;
+        gap: 5px;
+    }
+
+    .comment-date-icon {
+        font-size: 1rem;
+    }
+
+    /* النص */
+    .comment-text p {
+        font-size: 0.85rem;
+        line-height: 1.8;
+    }
+}
+/*خلي عرض العنصر على قد المحتوى تبعو، مو ياخد عرض كبير أو ثابت.
+
+يعني بدل ما الـ slide ياخد مساحة كبيرة فاضية، بيصير حجمو فقط قد الكرت الموجود جواه.*/
+.swiper-slide{
+    width: fit-content !important;
+}
+.swiper{
+    padding-right: 45px;
+}
+
+

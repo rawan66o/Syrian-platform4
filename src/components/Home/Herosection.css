@@ -1,0 +1,542 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap');
+
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 7%;
+    margin-right: 30px;
+    direction: rtl;
+    background-color: #fff;
+    min-height: 80vh;
+    font-family: 'Tajawal', sans-serif;
+}
+
+/* القسم النصي - اليمين */
+.hero-section-content {
+    flex: 1;
+    max-width: 520px;
+    /* ضبط العرض الأقصى لتقريب المسافة بين الكتلتين */
+}
+
+.hero-section-start {
+    background-color: #f1fbfb;
+    /* لون فاتح جداً من التصميم */
+    color: #5ec6bd;
+    /* لون التركواز الأساسي */
+    padding: 8px 18px;
+    /* ضبط الـ padding */
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.hero-section-content h1 {
+    font-size: 46px;
+    /* تصغير طفيف */
+    /* لون أزرق كحلي داكن */
+    margin: 20px 0;
+    line-height: 1.3;
+}
+
+.hero-section-content p {
+    color: #636d7f;
+    /* لون سكني أفتح قليلاً */
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    white-space: pre-line;
+    /* لضمان التفاف الأسطر بشكل صحيح */
+}
+
+/* الأزرار */
+.hero-section-button {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.hero-section-button a:first-child {
+    background-color: #67c7e7;
+    color: white;
+    border: none;
+    padding: 13px 45px;
+    border-radius: 25px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(94, 198, 189, 0.3);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.hero-section-button a:last-child {
+    background-color: #f6f7fa;
+    /* لون رمادي فاتح للخلفية */
+    color: #3e4c61;
+    /* لون أغمق للنص */
+    border: none;
+    padding: 13px 45px;
+    border-radius: 25px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.hero-section-button a:hover {
+    opacity: 0.8;
+}
+
+
+.hero-section-button span {
+    color: #8c96ab;
+}
+
+/* الإحصائيات */
+.hero-section-stats {
+    display: flex;
+    gap: 0;
+    background-color: #f1fbfb;
+    padding: 0;
+    border-radius: 15px;
+    width: 380px;
+    /* تحديد عرض دقيق */
+    height: 90px;
+    margin-bottom: 30px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.hero-section-stats div {
+    text-align: center;
+    flex: 1;
+}
+
+.hero-section-stats h3 {
+    color: #5ec6bd;
+    font-size: 26px;
+    margin: 0;
+    font-weight: 700;
+}
+
+.hero-section-stats span {
+    color: #3e8d83;
+    /* لون أغمق للنص الصغير */
+    font-size: 14px;
+}
+
+/* صور الطلاب في الأسفل */
+.hero-section-students {
+    display: flex;
+    align-items: center;
+
+}
+
+.hero-section-students img {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 3px solid white;
+    /* زيادة سمك الإطار */
+    margin-left: -12px;
+}
+
+.hero-section-students span {
+    color: #acb3c2;
+    margin-left: 15px;
+    margin-right: 4px;
+    font-size: 18px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: white;
+    text-align: center;
+    line-height: 1.6;
+
+
+
+}
+
+.hero-section-students p {
+    margin: 0;
+    font-size: 13px;
+    color: #636d7f;
+}
+
+/* قسم الصور - اليسار - أهم التعديلات */
+.hero-section-images {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -50px;
+    /* تقريب الكتلة لليسار قليلاً */
+}
+
+.image-wrapper {
+    position: relative;
+    width: 360px;
+    /* تصغير مساحة الطالب قليلاً لضبط المسافات */
+    height: 360px;
+
+}
+
+.ring {
+    position: absolute;
+    width: 125%;
+    z-index: 1;
+    top: -10px;
+    right: -18px;
+    mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+
+
+}
+
+.student {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%;
+    /* تصغير الطالب نفسه */
+    z-index: 2;
+    mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+
+}
+
+/* العناصر الزخرفية - التموضع المطلق (Absolute) */
+
+/* 1. السهم - تم تكبيره وتعديل مكانه */
+.arrow {
+    position: absolute;
+    top: -100px;
+    right: 10%;
+    /* تحريكه لليسار قليلاً */
+    width: 160px;
+    /* تكبير الحجم */
+    z-index: 3;
+}
+
+/* 2. قبعة التخرج والخطوط */
+.graduation {
+    position: absolute;
+    bottom: 10%;
+    right: -3%;
+    /* تحريكها لأقصى اليسار */
+    width: 160px;
+    z-index: 3;
+    transform: rotate(2deg);
+}
+
+.lines {
+    position: absolute;
+    top: -125px;
+    left: 55%;
+    width: 35px;
+}
+
+/* 3. الـ Badges (مشاريع تطوعية / كورسات تعليمية) - تعديل الـ positioning لتتطابق */
+.badge {
+    position: absolute;
+    background: white;
+    padding: 10px 18px;
+    /* تعديل الـ padding */
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+    /* ظل أقوى */
+    font-size: 13px;
+    font-weight: 600;
+    z-index: 4;
+}
+
+/* مشاريع تطوعية */
+.badge1 {
+    bottom: 316px;
+    left: 156px;
+    /* تموضع دقيق */
+}
+
+/* كورسات تعليمية */
+.badge2 {
+    bottom: 7%;
+    left: 65%;
+    /* تموضع دقيق */
+}
+
+/* التجاوب (Media Queries) */
+@media (max-width: 1100px) {
+    .hero-section {
+        padding: 60px 4%;
+    }
+
+    .hero-section-images {
+        margin-left: -20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-section {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 40px;
+    }
+
+    .hero-section-content {
+        margin-top: 60px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-section-button,
+    .hero-section-stats {
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-section-images {
+        margin-left: 0;
+    }
+}
+
+/* =========================================
+   TABLET
+========================================= */
+@media (max-width: 992px) {
+
+    .hero-section {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 50px 5%;
+        margin-right: 0;
+        gap: 40px;
+    }
+    .hero-section-start{
+        display: flex;
+ 
+        max-width:100px ;
+        margin: 30px 320px 30px ;
+    }
+
+    /* النص */
+    .hero-section-content {
+        max-width: 100%;
+        margin: auto;
+    }
+
+    .hero-section-content h1 {
+        font-size: 38px;
+        line-height: 1.4;
+    }
+
+    .hero-section-content p {
+        font-size: 16px;
+      
+    }
+
+    /* الأزرار */
+    .hero-section-button {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-bottom: 35px;
+    }
+
+    .hero-section-button a:first-child,
+    .hero-section-button a:last-child {
+        padding: 12px 35px;
+        font-size: 15px;
+    }
+
+    /* الإحصائيات */
+    .hero-section-stats {
+        width: 100%;
+        max-width: 380px;
+        margin: auto;
+        margin-bottom: 25px;
+    }
+
+    /* الطلاب */
+    .hero-section-students {
+        justify-content: center;
+    }
+
+    /* الصور */
+    .hero-section-images {
+        margin-left: 0;
+    }
+
+    .image-wrapper {
+        width: 320px;
+        height: 320px;
+    }
+
+    .arrow {
+        width: 120px;
+        top: -70px;
+        right: -15%;
+    }
+
+    .graduation {
+        width: 120px;
+        right: 0;
+    }
+
+    .lines {
+        width: 28px;
+        top: -105px;
+    }
+
+    .badge {
+        font-size: 12px;
+        padding: 8px 14px;
+    }
+
+    .badge1 {
+        bottom: 260px;
+        left: 219px;
+    }
+
+    .badge2 {
+        left: 60%;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+@media (max-width: 768px) {
+
+    .hero-section {
+        padding: 40px 20px;
+        min-height: auto;
+        gap: 30px;
+    }
+
+    /* النص */
+    .hero-section-content h1 {
+        font-size: 30px;
+        margin: 15px 0;
+    }
+
+    .hero-section-content p {
+        font-size: 14px;
+        line-height: 1.7;
+
+    }
+
+    .hero-section-start {
+        font-size: medium;
+        padding: 7px 15px;
+        width: 30%;
+        text-align: center;
+        margin: auto;
+    }
+
+    /* الأزرار */
+    .hero-section-button {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-section-button a:first-child,
+    .hero-section-button a:last-child {
+        width: 100%;
+        text-align: center;
+        padding: 13px 20px;
+        font-size: 14px;
+    }
+
+    /* الإحصائيات */
+    .hero-section-stats {
+        width: 100%;
+        height: auto;
+        padding: 15px 10px;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .hero-section-stats h3 {
+        font-size: 22px;
+    }
+
+    .hero-section-stats span {
+        font-size: 12px;
+    }
+
+    /* الطلاب */
+    .hero-section-students {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .hero-section-students img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .hero-section-students p {
+        font-size: 12px;
+    }
+
+    /* الصور */
+    .image-wrapper {
+        width: 250px;
+        height: 250px;
+    }
+
+    .ring {
+        width: 120%;
+        right: -15px;
+    }
+
+    .student {
+        width: 82%;
+    }
+
+    /* الزخارف */
+    .arrow {
+        width: 90px;
+        top: -50px;
+        right: -35%;
+    }
+
+    .graduation {
+        width: 90px;
+        bottom: 5%;
+        right: -5%;
+    }
+
+    .lines {
+        width: 22px;
+        top: -65px;
+        left: 58%;
+    }
+
+    /* البادجات */
+    .badge {
+        font-size: 10px;
+        padding: 7px 10px;
+        border-radius: 10px;
+    }
+
+    .badge1 {
+        bottom: 200px;
+        left: 70%;
+    }
+
+    .badge2 {
+        bottom: 5%;
+        left: 70%;
+    }
+
+}
+
+

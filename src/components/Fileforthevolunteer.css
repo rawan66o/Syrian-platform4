@@ -1,0 +1,459 @@
+/* ==========================================================================
+   إعدادات عامة وتصفير الأبعاد للموقع العربي (RTL)
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap');
+
+.file-forthe-volunteer {
+    display: flex;
+    flex-direction: row-reverse; /* يضع القائمة الجانبية يميناً والمحتوى يساراً */
+    background-color: #f8fafc;
+    padding: 30px;
+    gap: 30px;
+    font-family: 'Tajawal', sans-serif;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* ==========================================================================
+   تصميم القائمة الجانبية (Sidebar)
+   ========================================================================== */
+.my-information {
+    width: 280px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    padding: 20px 0;
+    height: fit-content;
+    direction: rtl;
+    flex-shrink: 0; /* يمنع انكماش القائمة في الشاشات المتوسطة */
+}
+
+.my-information-content h4 {
+    font-size: 14px;
+    color: #94a3b8;
+    margin: 15px 20px 8px 20px;
+    font-weight: 600;
+}
+
+.my-information-divider {
+    display: block;
+    height: 1px;
+    background-color: #f1f5f9;
+    margin: 0 20px 10px 20px;
+}
+
+.my-information-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+/* تنسيق موحد لجميع أزرار القائمة الجانبية */
+.sidebar-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 12px 20px;
+    background: none;
+    border: none;
+    font-size: 15px;
+    color: #64748b;
+    cursor: pointer;
+    text-align: right;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+}
+
+/* الكلاس المسؤول عن اللون الأزرق الفاتح عند تفعيل أي زر */
+.sidebar-btn.active {
+    background-color: #61cbdc !important;
+    color: #ffffff !important;
+}
+
+/* حركات الهوفير فقط على الأزرار غير المفعّلة */
+.sidebar-btn:hover:not(.active) {
+    background-color: #f8fafc;
+    color: #0f172a;
+}
+
+/* حجم موحد للأيقونات داخل القائمة */
+.sidebar-icon {
+    font-size: 18px;
+}
+
+/* إصلاح وتنسيق زر تسجيل الخروج الخاص بالـ NavLink */
+.logout-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 15px;
+    color: #ef4444 !important; /* اللون الأحمر المخصص للخروج */
+    text-decoration: none; /* إزالة الخط السفلي التلقائي للروابط */
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+}
+
+.logout-link:hover {
+    background-color: #fef2f2;
+    color: #b91c1c !important;
+}
+
+.logout-link .sidebar-icon {
+    color: #ef4444 !important;
+}
+
+.logout-link:hover .sidebar-icon {
+    color: #b91c1c !important;
+}
+
+/* ==========================================================================
+   قسم المحتوى الرئيسي (Main Content Layout)
+   ========================================================================== */
+.content {
+    flex: 1;
+    direction: rtl;
+    min-width: 0; /* يمنع كسر عناصر Flexbox وتمددها خارج الحاوية */
+}
+
+.dashboard {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.dashboard h3 {
+    font-size: 18px;
+    color: #1e293b;
+    margin: 0 0 6px 0;
+    font-weight: 700;
+}
+
+.dashboard p {
+    font-size: 13px;
+    color: #64748b;
+    margin: 0 0 20px 0;
+}
+
+/* توزيع الحقول بالتساوي حقلين بجانب بعضهما */
+.account-information, 
+.additional-information {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+    row-gap: 20px;
+}
+
+/* تنسيق الجروب (العنوان فوق المدخل مباشرة) */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* جعل الحقول الطويلة المحددة تمتد على عرض السطر كاملاً */
+.full-width {
+    grid-column: span 2;
+}
+
+.dashboard label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #334155;
+    font-weight: 600;
+}
+
+/* تنسيق حقول الإدخال */
+.dashboard input[type='text'],
+.dashboard input[type='email'],
+.dashboard input[type='tel'],
+.dashboard textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #334155;
+    background-color: #ffffff;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+}
+
+/* ✨ حقل التاريخ */
+.dashboard input[type='date'] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #334155;
+    background-color: #ffffff;
+    outline: none;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 8px;
+    text-align: right;
+}
+
+.dashboard input[type='date']::-webkit-datetime-edit {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.dashboard input[type='date']::-webkit-datetime-edit-fields-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.dashboard input[type='date']::-webkit-calendar-picker-indicator {
+    margin: 0;
+    cursor: pointer;
+    order: -1;
+}
+
+/* ✨ تنسيق حقول الـ select */
+.dashboard select {
+    width: 100%;
+    padding: 12px 15px 12px 35px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #334155;
+    background-color: #ffffff;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+    appearance: none; 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'></polyline></svg>");
+    background-repeat: no-repeat;
+    background-position: left 15px center;
+    background-size: 16px;
+}
+
+.dashboard input:focus, 
+.dashboard select:focus, 
+.dashboard textarea:focus {
+    border-color: #61cbdc;
+}
+
+.dashboard textarea {
+    resize: vertical;
+    min-height: 110px;
+}
+
+/* ==========================================================================
+   ✨ تنسيق حقل الهاتف
+   ========================================================================== */
+.phone-input {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.phone-input input {
+    border: none !important;
+    text-align: right;
+    padding: 12px 15px;
+}
+
+.country-code-select {
+    border: none !important;
+    background-color: #f8fafc;
+    border-right: 1px solid #e2e8f0;
+    padding: 12px 10px;
+    font-size: 14px;
+    color: #475569;
+    cursor: pointer;
+    outline: none;
+    height: 100%;
+    width: auto;
+    min-width: 95px;
+    text-align: center;
+    direction: ltr;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    transition: background-color 0.2s;
+}
+
+.country-code-select:hover {
+    background-color: #f1f5f9;
+}
+
+/* ==========================================================================
+   قسم رفع السيرة الذاتية (CV Upload)
+   ========================================================================== */
+.cv-upload {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed #cbd5e1;
+    border-radius: 8px;
+    padding: 30px;
+    background-color: #f8fafc;
+}
+
+.upload-btn {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    width: 42px;
+    height: 42px;
+    background-color: #61cbdc;
+    color: white !important;
+    border-radius: 50%;
+    font-size: 24px !important;
+    cursor: pointer;
+}
+
+#cv-file {
+    display: none;
+}
+
+/* ==========================================================================
+   قسم زر حذف الحساب
+   ========================================================================== */
+.delete-account {
+    border-top: 1px solid #f1f5f9;
+    padding-top: 20px;
+}
+
+.delete-account h4 {
+    margin: 0 0 10px 0;
+}
+
+.delete-account a {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #fce7f3;
+    color: black;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.delete-account a:hover {
+    background-color: #fbcfe8;
+}
+
+
+/* ==========================================================================
+   🌐 الأكواد الخاصة بالريسبونسف (Media Queries) 
+   ========================================================================== */
+
+/* 1️⃣ إعدادات الشاشات المتوسطة والأجهزة اللوحية (Tablets - أقل من 1024px) */
+@media (max-width: 968px) {
+    .file-forthe-volunteer {
+        padding: 20px;
+        gap: 20px; /* تقليص المسافات الكبيرة */
+    }
+
+    .my-information {
+        width: 240px; /* تصغير عرض القائمة الجانبية قليلاً لتوفير مساحة للحقول */
+    }
+
+    .dashboard {
+        padding: 25px; /* تقليل المسافات الداخلية للوحة */
+        gap: 25px;
+    }
+
+    .account-information, 
+    .additional-information {
+        column-gap: 20px; /* تقريب الحقول من بعضها لتجنب انضغاط النصوص */
+    }
+}
+
+/* 2️⃣ إعدادات الشاشات الصغيرة والهواتف المحمولة (Mobiles - أقل من 768px) */
+@media (max-width: 768px) {
+    /* تحويل العناصر لتصبح تحت بعضها عمودياً بدلاً من أفقياً */
+    .file-forthe-volunteer {
+        flex-direction: column;
+        padding: 12px;
+        gap: 15px;
+    }
+
+    /* تحويل القائمة الجانبية إلى شريط ناعم وعريض أعلى الشاشة */
+    .my-information {
+        width: 100%;
+        padding: 12px 0;
+    }
+    
+    /* جعل أزرار القائمة تظهر بشكل أفقي ممتد وقابل للمس والتمرير السريع */
+    .my-information-buttons {
+        flex-direction: row; 
+        overflow-x: auto;
+        padding: 0 15px;
+        white-space: nowrap;
+        gap: 8px;
+        /* إخفاء شريط التمرير الافتراضي المزعج للحفاظ على المظهر النظيف */
+        -ms-overflow-style: none;
+        scrollbar-width: none; 
+    }
+    
+    .my-information-buttons::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* تحويل الأزرار إلى كبسولات (Tabs) مناسبة لتطبيقات الموبايل */
+    .sidebar-btn, .logout-link {
+        width: auto;
+        padding: 8px 16px;
+        border-radius: 20px;
+        background-color: #f1f5f9;
+        font-size: 14px;
+        justify-content: center;
+    }
+    
+    /* إخفاء الخطوط الفاصلة والعناوين الفرعية غير الضرورية في الموبايل لتوفير مساحة */
+    .my-information-divider, .my-information-content h4 {
+        display: none; 
+    }
+
+    /* ضبط مسافات الحاوية الرئيسية على الموبايل */
+    .dashboard {
+        padding: 20px 15px;
+        gap: 20px;
+    }
+
+    /* تحويل الحقول من حقلين بجانب بعضهما إلى حقل واحد تحت الآخر بالكامل */
+    .account-information, 
+    .additional-information {
+        grid-template-columns: 1fr;
+        row-gap: 15px;
+    }
+
+    /* إجبار كافة الحقول بما فيها (العريضة تلقائياً) على الالتزام بعرض السطر الواحد */
+    .full-width {
+        grid-column: span 1;
+    }
+    
+    /* جعل قسم حذف الحساب متناسقاً في المنتصف */
+    .delete-account {
+        text-align: center;
+    }
+    .delete-account a {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}

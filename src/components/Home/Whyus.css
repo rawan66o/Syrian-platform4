@@ -1,0 +1,442 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap');
+/* إعدادات الخط الأساسية والاتجاه */
+.why-us {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 52px 100px 52px 100px;
+    gap: 60px;
+    direction: rtl; /* لضمان أن النص على اليسار والصورة على اليمين */
+    background-color: #ffffff;
+    font-family: 'Tajawal',sans-serif; /* تأكد من إضافة أحد خطوط جوجل العربية لتطابق الصورة */
+}
+
+/* =========================================
+   قسم الصور (اليمين)
+   ========================================= */
+.why-us-images {
+    position: relative;
+    width: 577px;
+    min-height: 757px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+/* الخلفية الزرقاء */
+.why-us-images .babyblue {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 40px;
+    z-index: 1;
+}
+
+/* الدوائر التزيينية خلف الشخص */
+
+.circle,.circle2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    
+}
+.why-us-images .circle{
+    width: 486px;
+    height: 486px;
+    opacity: 43%;
+}
+.why-us .circle2{
+    width: 246px;
+    height: 246px;
+    opacity: 43%;
+}
+
+/* صورة الشخص */
+.why-us-images .person {
+    position: relative;
+    z-index: 3;
+    width:380px;
+    height: 662px;
+    object-fit: contain;
+}
+
+/* صندوق المحادثة الطائر */
+.why-us-message-box {
+    position: absolute;
+    top: 41px;
+    left: 62px;
+    width: 220px;
+    height: 127px;
+    background: #ffffff;
+    padding: 15px 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+/* ذيل صندوق المحادثة (السهم المتجه لأسفل) */
+.why-us-message-box::after {
+    content: '';
+    position: absolute;
+    bottom: -23px;      /* زيادة الرقم لزيادة طول الذيل */
+    right: 25px;       /* نقله إلى جهة اليمين تماماً كما في الصورة */
+    width: 0;
+    height: 0;
+    /* صنع شكل مثلث كبير ومتجه لليمين */
+    border-left: 20px solid transparent;  
+    border-right: 0px solid transparent; 
+    border-top: 25px solid white; 
+    /* إضافة ظل خفيف للذيل ليتناسب مع ظل الصندوق */
+    filter: drop-shadow(0 5px 5px rgba(0,0,0,0.1)); 
+    z-index: -1;
+}
+
+.why-us-message-box .question-mark {
+    background: #f1f3f5;
+    color: #333;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.why-us-message-box p {
+    font-size: 14px;
+    color: #222;
+    margin: 5px 0;
+    font-weight: 700;
+}
+
+.why-us-message-box h3 {
+    color: #63cce0;
+    margin: 0;
+    font-size: 19px;
+    font-weight: 800;
+}
+
+/* =========================================
+   قسم النصوص والكروت (اليسار)
+   ========================================= */
+.why-us-content {
+    width: 50%;
+}
+
+.why-us-content h4 {
+    color: #63cce0;
+    font-size: 20px;
+    margin-bottom: -24px;
+    font-weight: 800;
+   
+}
+.why-us-content a{
+    text-decoration: none;
+}
+
+
+.why-us-content h2 {
+    font-size: 38px;
+    color: #111111;
+    margin-bottom: 25px;
+    line-height: 1.4;
+    font-weight: 800;
+}
+
+.why-us-content > p {
+    color: #777777;
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    max-width: 95%;
+}
+
+/* شبكة الكروت (Grid) */
+.why-us-types {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+/* تصميم الكرت الواحد */
+.type-card {
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 20px;
+    padding: 30px 25px;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* تأثير عند المرور بالماوس (Hover) */
+.type-card:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+    transform: translateY(-5px);
+    border-color: #e0e0e0;
+}
+
+/* الأيقونة الرئيسية في الكرت */
+.type-card svg.card-icon {
+    background-color: #f5f6f8;
+    width: 62px;
+    height: 62px;
+    padding: 14px;
+    border-radius: 50%;
+    color: #222222;
+    box-sizing: border-box;
+    align-self: flex-start; /* تبقيها على اليمين مع اتجاه RTL */
+}
+
+/* سهم الزاوية العلوية اليسرى */
+.type-card svg.arrowleft {
+    position: absolute;
+    top: 30px;
+    left: 25px;
+    font-size: 22px;
+    color: #222222;
+}
+
+.type-card h5 {
+    font-size: 18px;
+    font-weight: 800;
+    color: #111111;
+    margin-bottom: 12px;
+}
+
+.type-card p {
+    font-size: 14px;
+    color: #888888;
+    line-height: 1.7;
+    margin: 0;
+}
+/* =========================================
+   TABLET
+========================================= */
+@media (max-width: 992px) {
+
+    .why-us {
+        flex-direction: column;
+        padding: 50px 40px;
+        gap: 50px;
+    }
+
+    /* الصور */
+    .why-us-images {
+        width: 100%;
+        max-width: 500px;
+        min-height: 650px;
+    }
+
+    .why-us-images .babyblue {
+        border-radius: 30px;
+    }
+
+    .why-us-images .circle {
+        width: 400px;
+        height: 400px;
+    }
+
+    .why-us .circle2 {
+        width: 200px;
+        height: 200px;
+    }
+
+    .why-us-images .person {
+        width: 330px;
+        height: 580px;
+    }
+
+    /* صندوق الرسالة */
+    .why-us-message-box {
+        width: 200px;
+        height: 115px;
+        top: 35px;
+        left: 40px;
+        padding: 14px 20px;
+    }
+
+    .why-us-message-box h3 {
+        font-size: 17px;
+    }
+
+    .why-us-message-box p {
+        font-size: 13px;
+    }
+
+    /* النص */
+    .why-us-content {
+        width: 100%;
+        text-align: center;
+    }
+
+    .why-us-content h4 {
+        font-size: 18px;
+        margin-bottom: -10px;
+    }
+
+    .why-us-content h2 {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    .why-us-content > p {
+        max-width: 100%;
+        font-size: 16px;
+        margin-bottom: 35px;
+    }
+
+    /* الكروت */
+    .why-us-types {
+        gap: 20px;
+    }
+
+    .type-card {
+        padding: 25px 20px;
+    }
+
+    .type-card h5 {
+        font-size: 17px;
+    }
+
+    .type-card p {
+        font-size: 13px;
+    }
+
+    .type-card svg.card-icon {
+        width: 55px;
+        height: 55px;
+        padding: 12px;
+    }
+
+    .type-card svg.arrowleft {
+        font-size: 20px;
+        top: 25px;
+        left: 20px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+@media (max-width: 768px) {
+
+    .why-us {
+        padding: 40px 20px;
+        gap: 40px;
+    }
+
+    /* الصور */
+    .why-us-images {
+        width: 100%;
+        min-height: 480px;
+    }
+
+    .why-us-images .babyblue {
+        border-radius: 25px;
+    }
+
+    .why-us-images .circle {
+        width: 300px;
+        height: 300px;
+    }
+
+    .why-us .circle2 {
+        width: 150px;
+        height: 150px;
+    }
+
+    .why-us-images .person {
+        width: 250px;
+        height: 430px;
+    }
+
+    /* صندوق الرسالة */
+    .why-us-message-box {
+        width: 170px;
+        height: 100px;
+        top: 20px;
+        left: 20px;
+        padding: 12px 15px;
+    }
+
+    .why-us-message-box .question-mark {
+        width: 24px;
+        height: 24px;
+        font-size: 12px;
+    }
+
+    .why-us-message-box p {
+        font-size: 11px;
+    }
+
+    .why-us-message-box h3 {
+        font-size: 15px;
+    }
+
+    /* النص */
+    .why-us-content h4 {
+        font-size: 16px;
+        margin-bottom: 0;
+    }
+
+    .why-us-content h2 {
+        font-size: 26px;
+        line-height: 1.5;
+        margin-bottom: 18px;
+    }
+
+    .why-us-content > p {
+        font-size: 14px;
+        line-height: 1.8;
+        margin-bottom: 30px;
+    }
+
+    /* الكروت */
+    .why-us-types {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .type-card {
+        padding: 22px 18px;
+        border-radius: 18px;
+    }
+
+    .type-card h5 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .type-card p {
+        font-size: 13px;
+    }
+
+    .type-card svg.card-icon {
+        width: 50px;
+        height: 50px;
+        padding: 10px;
+    }
+
+    .type-card svg.arrowleft {
+        font-size: 18px;
+        top: 22px;
+        left: 18px;
+    }
+}
+
+
