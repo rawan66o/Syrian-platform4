@@ -16,6 +16,29 @@ import Partners from "./pages/Partners/Partners";
 import Account from "./pages/Account/Account";
 import Dashboard from "./components/Account/Dashboard";
 import Profile from "./components/Account/Profile";
+import React from 'react'
+import Header from './components/Header'
+import { Route, Routes } from 'react-router-dom'
+import Register from './components/Pages/auth/Register'
+import Login from './components/Pages/auth/Login'
+import AuthLayout from './components/AuthLayout'
+import ProtectedRoute from './components/ProtectedRoute'
+import ForgetPassword from './components/Pages/auth/ForgetPassword'
+import ResetPassword from './components/Pages/auth/ResetPassword'
+import "./App.css";
+import Homeheader from './components/Home/Homeheader'
+import Herosection from './components/Home/Herosection'
+import CoursesSection from './components/Home/CoursesSection'
+import ComingSoon from './components/Home/ComingSoon'
+import Whyus from './components/Home/Whyus'
+import Projects from './components/Home/Volunteerprojects'
+import Volunteerprojects from './components/Home/Volunteerprojects'
+import Comments from './components/Home/Comments'
+import Search from './components/Home/Search'
+import Forum from './components/Home/Forum'
+import Footer from './components/Home/Footer'
+import AuthLayout2 from './components/AuthLayout2'
+import Fileforthevolunteer from './components/Fileforthevolunteer'
 function App() {
   return (
     <div className="App">
@@ -68,8 +91,85 @@ function App() {
           />
         </Route>
       </Routes>
+      
+
+      /*--------------------------------------------------*/
+      <Routes>
+        <Route element={<AuthLayout/>}>
+      <Route path='/privacypolicy' element={<h1>page to not found</h1>}/>
+      <Route path='/supportandassistance' element={<h1>not found </h1>}/>
+       <Route path='/' element={<Login/>} />
+        <Route path='/register' element={<Register/>}/>  
+         <Route path='/forgetpassword' element={<ForgetPassword/>}/>
+         <Route path='/resetpassword' element={<ResetPassword/>}/>
+        
+        </Route>
+        <Route path='/cours' element={<ComingSoon/>}/>
+        <Route path='/forum' element={<ComingSoon/>}/>
+        <Route path='/projected' element={<ComingSoon/>}/>
+        <Route path='/conected' element={<ComingSoon/>}/>
+        <Route path='/course-details' element={<ComingSoon/>}/>
+        <Route path='/courses' element={<ComingSoon/>}/>
+        <Route path='/coursessection' element={<ComingSoon/>}/>
+        <Route path='/typecourses' element={<ComingSoon/>}/>
+        <Route path='/typeprojects' element={<ComingSoon/>}/>
+        <Route path='/typeexperiences' element={<ComingSoon/>}/>
+        <Route path='typesystems' element={<ComingSoon/>}/>
+        <Route path='/showproject1' element={<ComingSoon/>}/>
+        <Route path='/showproject2' element={<ComingSoon/>}/>
+        <Route path='/showproject3' element={<ComingSoon/>}/>
+        <Route path='/projects' element={<ComingSoon/>}/>
+        <Route path='/post' element={<ComingSoon/>}/>
+        <Route path='/viewallposts' element={<ComingSoon/>}/>
+        <Route path='/whoarewe' element={<ComingSoon/>}/>
+        <Route path='/lessons' element={<ComingSoon/>}/>
+        <Route path='/footerproject' element={<ComingSoon/>}/>
+        <Route path= '/footerforum' element={<ComingSoon/>}/>
+        <Route path='/news' element={<ComingSoon/>}/>
+        <Route path='/policy' element={<ComingSoon/>}/>
+        <Route path='/partners' element={<ComingSoon/>}/>
+        <Route path='/help' element={<ComingSoon/>}/>
+        <Route path='/support' element={<ComingSoon/>}/>
+        <Route path='/profile' element={<ComingSoon/>}/>
+       <Route path='/certificate' element={<ComingSoon/>}/>
+        <Route path='/volunteerproject' element={<ComingSoon/>}/>
+         <Route path='/courses' element={<ComingSoon/>}/>
+         <Route path='/setting' element={<ComingSoon/>}/>
+
+
+
+
+
+
+
+        <Route path='/home' element={
+          <>
+          <Homeheader/>
+          <Herosection/>
+          <CoursesSection/>
+          <Whyus/>
+          <Volunteerprojects/>
+          <Comments/>
+          <Search/>
+          <Forum/>
+          <Footer/>
+          </>}
+          />
+          <Route element={<AuthLayout2/>}>
+          <Route path='/fileforthevolunteer' element={<Fileforthevolunteer/>}/>
+          
+
+          </Route>
+
+      </Routes>
+      /*--------------------------------------------------*/
+      
     </div>
+   
+   
   );
+  
 }
+
 
 export default App;
