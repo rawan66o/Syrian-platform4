@@ -1,3 +1,4 @@
+
 .login {
   width: 100%;
   min-height: calc(100vh - 62px);
@@ -7,6 +8,7 @@
   padding-top: 64px;
   direction: rtl;
   font-family: 'Tajawal', sans-serif;
+  
 }
 
 .login h1 {

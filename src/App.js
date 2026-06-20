@@ -18,11 +18,9 @@ import Dashboard from "./components/Account/Dashboard";
 import Profile from "./components/Account/Profile";
 import React from 'react'
 import Header from './components/Header'
-import { Route, Routes } from 'react-router-dom'
 import Register from './components/Pages/auth/Register'
 import Login from './components/Pages/auth/Login'
 import AuthLayout from './components/AuthLayout'
-import ProtectedRoute from './components/ProtectedRoute'
 import ForgetPassword from './components/Pages/auth/ForgetPassword'
 import ResetPassword from './components/Pages/auth/ResetPassword'
 import "./App.css";
@@ -93,7 +91,7 @@ function App() {
       </Routes>
       
 
-      /*--------------------------------------------------*/
+
       <Routes>
         <Route element={<AuthLayout/>}>
       <Route path='/privacypolicy' element={<h1>page to not found</h1>}/>
@@ -162,7 +160,7 @@ function App() {
           </Route>
 
       </Routes>
-      /*--------------------------------------------------*/
+
       
     </div>
    
