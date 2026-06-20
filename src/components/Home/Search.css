@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap');
+
+
+/* الحاوية الخارجية الكبيرة */
+.search {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 5px;
+    direction: rtl; /* لضمان الترتيب من اليمين لليسار */
+    font-family: 'Tajawal', sans-serif;
+}
+
+/* الصندوق الأزرق المتدرج */
+.search-content {
+    background: linear-gradient(90deg, #a2e1ed 0%, #63d2e4 100%);
+    width: 1240px;
+    padding: 50px 40px;
+    border-radius: 60px; /* زوايا منحنية كبيرة مثل الصورة */
+    text-align: center;
+}
+
+/* العنوان النصي */
+.search-content h2 {
+    color: white;
+    font-size: 45px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+/* شريط البحث الأبيض */
+.search-bar {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 50px; /* شكل كبسولة */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* أيقونة البحث */
+.search-bar-icon {
+    color: #888;
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+/* حقل الإدخال */
+.search-bar input {
+    flex: 1; /* يأخذ المساحة المتبقية */
+    border: none;
+    outline: none;
+    padding: 12px 15px;
+    font-size: 18px;
+    color: #666;
+    background: transparent;
+}
+
+/* تنسيق الـ Placeholder */
+.search-bar input::placeholder {
+    color: #a0a0a0;
+}
+
+/* زر البحث */
+.search-bar-btn button {
+    background-color: #76d0e3;
+    color: white;
+    border: none;
+    padding: 12px 35px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.search-bar-btn button:hover {
+    background-color: #5bbccf;
+}
+
+
+
+
+

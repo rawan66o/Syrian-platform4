@@ -1,0 +1,466 @@
+.NavBar_container {
+  display: flex;
+  flex-direction: row; /* Horizontal Flow */
+  justify-content: space-between; /* Justify */
+  align-items: center;
+
+  width: 100%; /* Fill */
+  max-width: 1240px; /* الـ 1,240px التي ذكرتها */
+  min-height: 46px; /* Hug (نستخدم min-height لضمان المرونة) */
+
+  opacity: 1;
+}
+
+.group_one {
+  /* Flow: Horizontal */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  /* Width & Height: Fixed */
+  width: auto;
+  height: 46px;
+
+  /* Gap: 24px */
+  gap: 24px;
+
+  /* Rotation: 0° */
+  transform: rotate(0deg);
+
+  /* Opacity: 1 */
+  opacity: 1;
+}
+.account_info {
+  /* Flow: Horizontal */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* Width: Fixed */
+  width: 163px;
+white-space: nowrap;
+  /* Height: Hug */
+  /* نستخدم min-height أو نتركها لتعتمد على المحتوى مع padding */
+  height: auto;
+  min-height: 32px;
+
+  /* Gap: 8px */
+  gap: 8px;
+
+  /* Rotation: 0° */
+  transform: rotate(0deg);
+
+  /* لضمان أن العناصر بداخلها لا تخرج عن العرض الثابت */
+  box-sizing: border-box;
+  overflow: hidden;
+
+  /* Smooth transitions for hover effects */
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+/* Hover effect: lift the entire container */
+.account_info:hover {
+  transform: translateY(-2px);
+}
+
+/* Hover effect: subtle zoom on avatar image */
+
+/* Hover effect: text color change on trainer name */
+.account_info:hover p {
+  color: #6dcde5;
+}
+.account_info p {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  /* Width: Fixed */
+  width: 123px;
+
+  /* Height: Hug */
+  height: auto;
+  min-height: 14px;
+
+  /* Gap: 10px (بين النص وأي عنصر داخل الـ p مثل أيقونة) */
+  gap: 10px;
+
+  /* Rotation: 0° */
+  transform: rotate(0deg);
+
+  /* إعدادات إضافية لضمان تطابق المظهر */
+  margin: 0;
+  line-height: 14px; /* ليطابق الارتفاع المطلوب */
+  font-size: 14px;
+  color: var(--text-main);
+
+  /* الخط المختار */
+  font-family: "Tajawal", sans-serif;
+
+  /* الوزن (Medium يترجم لـ 500) */
+  font-weight: 500;
+
+  /* الحجم والتباعد */
+  font-size: 14px;
+  line-height: 100%; /* تعني أن المسافة بين الأسطر تساوي حجم الخط تماماً */
+  letter-spacing: 0%;
+
+  /* المحاذاة */
+  text-align: right;
+
+  /* الوضع الطبيعي للخط (مقابل font-style: Medium في فيجما) */
+  font-style: normal;
+
+  /* Smooth transition for hover color */
+  transition: color 0.3s ease;
+}
+.imageBackground {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  /* Width & Height: Fixed (مربعة تماماً) */
+  width: 32.19139099121094;
+  height: 32.19139099121094;
+  opacity: 1;
+  border-width: 0.67px;
+
+  /* Border Radius: لجعلها دائرية أو منحنية */
+  border-radius: 50%;
+
+  /* اللون الذي اخترناه سابقاً للـ root أو لون مخصص */
+  background-color: var(--secondary-bg);
+
+  /* لجعلها دائرية إذا كانت Avatar (اختياري) */
+  /* border-radius: 50%; */
+
+  /* Rotation: 0° */
+  transform: rotate(0deg);
+
+  /* لضمان احتواء الصورة بداخلها بشكل صحيح */
+  overflow: hidden;
+  box-sizing: border-box;
+
+  /* Smooth transitions for hover glow and border */
+  transition:
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+.imageBackground img {
+  width: 32px;
+  height: 32px;
+  object-fit: cover; /* لضمان عدم تشوه الصورة بداخل المربع */
+
+  /* Smooth transition for hover zoom */
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.verticalDivider {
+  /* Width: 0px من فيجما */
+  width: 0px;
+
+  /* Height: 30px */
+  height: 30px;
+
+  /* Border & Color */
+  /* نستخدم border-left أو border-right لرسم الخط العمودي */
+  border-left: 1px solid #70798b;
+
+  /* Rotation: 0° */
+  transform: rotate(0deg);
+
+  /* لضمان عدم تأثر المساحة المحيطة به */
+  display: inline-block;
+  margin: 0 10px; /* مساحة اختيارية يميناً ويساراً لتجنب التصاقه بالعناصر */
+}
+
+.hugContainer {
+  /* Flow: Horizontal */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  /* Width: Hug (102px حالياً بناءً على المحتوى) */
+  width: fit-content;
+  min-width: 102px;
+
+  /* Height: Hug (40px حالياً بناءً على المحتوى) */
+  height: fit-content;
+  min-height: 40px;
+
+  /* Gap: 20px */
+  gap: 20px;
+
+  /* Rotation: 0° */
+  transform: rotate(0deg);
+
+  /* لضمان عدم تمدد العنصر بشكل غير متوقع */
+  box-sizing: border-box;
+}
+.group_one button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  /* Width & Height */
+  width: 41px;
+  height: 40px;
+
+  /* Gap: 10px (للمسافة بين الأيقونة والنص إن وجد) */
+  gap: 10px;
+
+  /* Padding: Other/Gap/7 */
+  /* عادة تعادل 7px أو بناءً على نظام الـ Grid لديك */
+  padding: 7px;
+
+  /* Border Radius: Other/Radius/md */
+  /* الـ md تعادل غالباً 6px إلى 8px في أنظمة التصميم */
+  border-radius: 8px;
+
+  /* Opacity & Rotation */
+  opacity: 1;
+  transform: rotate(0deg);
+  background-color: #f7f7f7;
+  /* خصائص إضافية للزر */
+  border: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+.group_one button:hover {
+  filter: brightness(1.2);
+}
+
+.searchInput {
+  display: flex;
+  align-items: center; /* لتوسيط الأيقونة والمدخل عمودياً */
+  width: 271px;
+  height: 44px;
+  border-radius: 62px;
+  background-color: #f7f7f7;
+  border: 1px solid #70798b;
+  padding: 0 15px; /* مساحة جانبية للأيقونة */
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+/* تنسيق الأيقونة */
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  color: #70798b;
+  margin-left: 8px; /* مسافة بين الأيقونة والنص (لأن الموقع عربي) */
+}
+
+/* تنسيق المدخل الفعلي (بدون حدود أو خلفية) */
+.searchInput input {
+  flex: 1; /* ليأخذ باقي المساحة المتاحة */
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-family: "Tajawal", sans-serif;
+  font-size: 14px;
+  padding: 0; /* ألغينا الـ padding هنا لأن الحاوية الأم لديها padding */
+  color: #072127;
+}
+
+/* تأثير الـ Focus على الحاوية عند النقر على المدخل */
+.searchInput:has(input:focus) {
+  border-color: #26d0ce;
+  box-shadow: 0 0 5px rgba(38, 208, 206, 0.2);
+}
+.group_two {
+  /* Flow: Horizontal */
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* لتوسيط العناصر عمودياً داخل الـ 46px */
+  justify-content: flex-start; /* أو space-between حسب توزيع العناصر بداخلها */
+
+  /* Width: Fixed (544px) */
+  width: 544px;
+
+  /* Height: Hug (46px) */
+  height: auto;
+  min-height: 46px;
+
+  /* Gap: 24px */
+  gap: 24px;
+
+  /* Rotation: 0° */
+  transform: rotate(0deg);
+
+  /* إعدادات إضافية لضمان سلامة التخطيط */
+  box-sizing: border-box;
+
+  /* إذا كنت تريد توزيع الروابط بالتساوي داخل الـ 544px */
+  /* justify-content: space-between; */
+}
+.NavBar_groupTwo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 361px;
+  height: fit-content;
+  min-height: 21px;
+  gap: 16px;
+  transform: rotate(0deg);
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+
+/* الحالة العادية للخط */
+.NavBar_groupTwo a {
+  text-decoration: none;
+  font-family: "Tajawal", sans-serif;
+  font-weight: 500; /* Medium */
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #70798b; /* اللون الافتراضي */
+  transition: all 0.3s ease; /* لإضافة نعومة عند التبديل */
+}
+
+/* الحالة عند تفعيل الرابط (Active) */
+/* ملاحظة: NavLink من React Router يضيف كلاس active تلقائياً */
+.NavBar_groupTwo a[class*="active"] {
+  font-weight: 700; /* Bold */
+  font-size: 20px;
+  line-height: 100%; /* تعادل 20px هنا */
+  letter-spacing: -1px;
+  text-align: right;
+  color: #072127; /* لون بارز للحالة النشطة */
+}
+.NavBar_groupTwo a:hover {
+  color: #26d0ce; /* نستخدم اللون البترولي/السماوي الذي استعملناه في الـ Input */
+  transform: translateY(-1px); /* رفعة بسيطة جداً تعطي شعوراً بالتفاعل */
+}
+
+/* ===========================
+   📱 Mobile & Tablet Responsive (992px and below)
+   =========================== */
+@media (max-width: 992px) {
+  /* الحاوية الرئيسية للهيدر */
+  .NavBar_container {
+    flex-wrap: wrap; /* للسماح للعناصر بالنزول لسطر جديد عند فتح القائمة */
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%; /* مساحة جانبية مريحة */
+    width: 100%;
+  }
+
+  /* المجموعة الأولى: اللوجو وزر البورغر */
+  .group_one {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1001;
+  }
+
+  /* زر البورغر - تحسين الأبعاد */
+  .burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; /* توزيع أفضل للخطوط */
+    width: 28px;
+    height: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .burger span {
+    width: 100%;
+    height: 2px; /* خط أنحف ليكون أرقى */
+    background-color: #072127;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* حركة X عند الفتح */
+  .burger.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .burger.open span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  .burger.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  /* القائمة المنسدلة */
+  .group_two {
+    display: none; /* مخفية افتراضياً */
+    width: 100%;
+    flex-direction: column;
+    background-color: #ffffff;
+    position: absolute; /* لتظهر فوق المحتوى ولا تدفعه بقوة */
+    top: 60px; /* حسب ارتفاع الهيدر عندك */
+    right: 0;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  /* عند الفتح */
+  .group_two.open {
+    display: flex;
+    animation: slideIn 0.4s ease-out forwards;
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .NavBar_groupTwo {
+    flex-direction: column;
+    align-items: flex-start; /* محاذاة لليمين أو اليسار حسب لغة الموقع */
+    gap: 20px;
+    width: 100%;
+  }
+
+  /* البحث */
+  .searchInput {
+    width: 100%;
+    margin-top: 15px;
+    order: 10; /* يظهر في الأسفل */
+  }
+
+  .verticalDivider {
+    display: none;
+  }
+}
+
+/* ===========================
+   📱 Small Mobile (480px and below)
+   =========================== */
+@media (max-width: 480px) {
+  .NavBar_container {
+    padding: 8px 12px;
+    margin-top: 50px;
+  }
+
+  
+  .imageBackground {
+    width: 24px;
+    height: 24px;
+  }
+
+  .NavBar_groupTwo a {
+    font-size: 14px;
+    width: 100%;
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0; /* خط فاصل بسيط بين الروابط */
+  }
+}

@@ -1,0 +1,453 @@
+.footer_container {
+  /* Flow: Vertical */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #04181c;
+  /* Width: Fill */
+  width: 100%;
+
+  /* Height: Hug (500px) */
+  min-height: 500px;
+  height: auto;
+
+  /* Position (Top: Normal) */
+  margin-top: 100px;
+
+  /* Padding & Gap */
+  padding-top: 70px;
+  padding-bottom: 70px;
+  gap: 40px;
+
+  /* الأساسيات لضمان عدم خروج العناصر */
+  box-sizing: border-box;
+
+  color: white;
+  font-family: "Tajawal";
+}
+
+/* --- Responsive Mobile --- */
+@media (max-width: 1440px) {
+  .footer_container {
+    /* إلغاء العرض الثابت ليتناسب مع الشاشات الأصغر */
+    width: 100%;
+    max-width: 100%;
+
+    /* تقليل المسافات لتناسب الموبايل */
+    margin-top: 100px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    gap: 30px;
+  }
+}
+
+.footer_container2 {
+  /* Flow: Vertical */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* لتوسيط المحتوى عمودياً */
+
+  /* Width: Fill */
+  width: 100%;
+  max-width: 1200px;
+
+  /* Height: Hug (360px) */
+  min-height: 360px;
+  height: auto;
+
+  /* Gap: 40px */
+  gap: 40px;
+
+  /* الأساسيات */
+  box-sizing: border-box;
+  margin: 0 auto; /* لتوسيط الحاوية في منتصف الصفحة */
+}
+
+/* --- Responsive Mobile --- */
+@media (max-width: 1200px) {
+  .footer_container2 {
+    /* تحويل العرض إلى مرن للشاشات الأصغر */
+    width: 100%;
+    max-width: 100%;
+
+    /* تقليل المسافات الجانبية والعمودية لتناسب الموبايل */
+    padding: 40px 20px;
+    gap: 30px;
+
+    /* ضمان عدم وجود ارتفاع ثابت يعيق المحتوى */
+    min-height: auto;
+  }
+}
+
+.footer_content {
+  /* Flow: Horizontal & Justify: space-between */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start; /* لتبدأ الأعمدة من الأعلى */
+
+  /* Width: Fill */
+  width: 100%;
+  max-width: 1200px;
+
+  /* Height: Hug (240px) */
+  min-height: 240px;
+  height: auto;
+
+  /* الأساسيات */
+  box-sizing: border-box;
+}
+
+/* --- Responsive Mobile --- */
+@media (max-width: 768px) {
+  .footer_content {
+    /* تحويل التوزيع من أفقي إلى عمودي في الموبايل */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    /* إلغاء الارتفاع الثابت وتقليل المسافات */
+    min-height: auto;
+    gap: 40px;
+    width: 100%;
+  }
+}
+
+.content_child {
+  /* Flow: Vertical */
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  /* Justify: space-between */
+  /* هذا سيجعل العنوان في الأعلى والروابط تتوزع لتملأ الارتفاع */
+  justify-content: space-between;
+  align-items: flex-start; /* محاذاة العناصر لليمين/البداية */
+
+  /* Width: Fill */
+  width: 100%;
+  max-width: 228px;
+
+  /* Height: Hug */
+  height: auto;
+  min-height: fit-content;
+
+  /* الأساسيات */
+  box-sizing: border-box;
+}
+
+/* --- Responsive Mobile --- */
+@media (max-width: 768px) {
+  .content_child {
+    /* في الموبايل نلغي الأبعاد الثابتة لضمان المرونة */
+    width: 100%;
+    height: auto;
+    min-height: fit-content;
+
+    /* تغيير التوزيع ليكون متقارب (Gap) بدلاً من Space-between */
+    justify-content: flex-start;
+    gap: 15px;
+
+    /* توسيط المحتوى إذا كان الفوتر ممركزاً */
+    align-items: center;
+    text-align: center;
+    margin-top: 0;
+  }
+}
+
+.content_child4 {
+  /* Flow: Vertical */
+  display: flex;
+  flex-direction: column;
+  /* Justify: space-between */
+  /* توزيع العناصر بحيث يكون الأول في الأعلى والأخير في الأسفل تماماً */
+  justify-content: space-between;
+  /* Width: Fill */
+  width: 100%;
+  max-width: 352px;
+
+  /* Height: Fill */
+  height: auto;
+  min-height: fit-content;
+
+  /* الأساسيات */
+  box-sizing: border-box;
+}
+
+/* --- Responsive Mobile --- */
+@media (max-width: 768px) {
+  .content_child4 {
+    /* إلغاء العرض الثابت ليناسب شاشة الجوال */
+    width: 100%;
+    max-width: 100%;
+
+    /* إلغاء الارتفاع الثابت ليتمدد حسب المحتوى */
+    height: auto;
+    max-height: none;
+
+    /* تغيير التوزيع ليعتمد على مسافات ثابتة (Gap) بدلاً من التوزيع الحر */
+    justify-content: flex-start;
+    gap: 20px;
+
+    /* توسيط المحتوى عمودياً وأفقياً للموبايل */
+    align-items: center;
+    text-align: center;
+  }
+}
+.child {
+  /* Flow: Vertical */
+  display: flex;
+  flex-direction: column;
+  /* Width: Fill */
+  /* العرض يملأ الحاوية الأب بحد أقصى */
+  width: 100%;
+  gap: 10px;
+  /* Height: Hug */
+  /* يلتف حول المحتوى مع حد أدنى للارتفاع */
+  height: auto;
+  min-height: 41px;
+
+  /* Gap: 14px */
+  gap: 14px;
+
+  /* الأساسيات */
+  box-sizing: border-box;
+}
+
+/* --- Responsive Mobile --- */
+@media (max-width: 768px) {
+  .child {
+    /* جعل العرض كاملاً في الموبايل وتوسيط المحتوى */
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+
+    /* تقليل المسافات قليلاً إذا لزم الأمر */
+    gap: 10px;
+  }
+}
+
+.line {
+  /* Width: 57px */
+  width: 57px;
+
+  /* Height: 0px (لأنه خط) */
+  height: 0px;
+
+  /* Rotation: 0° */
+  transform: rotate(0deg);
+
+  /* Border & Gradient */
+  border: none; /* إلغاء الحدود الافتراضية */
+  border-top: 1px solid; /* وضع الحدود في الأعلى فقط لتمثيل الخط */
+  border-image-source: linear-gradient(90deg, #04181c 0%, #6dcde5 100%);
+  border-image-slice: 1;
+
+  /* الأساسيات */
+  box-sizing: border-box;
+  display: block;
+}
+
+/* --- Responsive Mobile --- */
+@media (max-width: 768px) {
+  .line {
+    /* في الموبايل، إذا كان الخط فاصلاً تحت عنوان، قد ترغب في توسيطه */
+    margin: 0 auto;
+
+    /* يمكن زيادة العرض قليلاً في الموبايل ليكون أوضح */
+    /* width: 80px; */
+  }
+}
+.footer_logo_img {
+  /* Width: التقريب إلى أقرب بكسل لضمان الوضوح */
+  width: 162px;
+
+  /* Height: 62px */
+  height: 62px;
+
+  /* Angle: 0 deg */
+  transform: rotate(0deg);
+
+  /* Opacity: 1 */
+  opacity: 1;
+
+  /* إضافات هامة لضمان جودة الصورة */
+  object-fit: contain; /* للحفاظ على أبعاد الشعار دون تمطيط */
+  display: block;
+}
+
+/* --- Responsive Mobile --- */
+@media (max-width: 768px) {
+  .footer_logo_img {
+    /* تصغير الشعار قليلاً ليناسب شاشات الموبايل */
+    width: 130px;
+    height: auto; /* ترك الارتفاع يتناسب تلقائياً مع العرض الجديد */
+  }
+}
+.content_child4 {
+  width: 352px;
+  height: 240px;
+  opacity: 1;
+
+  gap: 50px;
+  /* لتفعيل توزيع العناصر بالداخل */
+  display: flex;
+  justify-content: space-between;
+
+  /* الطريقة الصحيحة لضبط الزاوية في CSS */
+  transform: rotate(0deg);
+}
+
+.horizontal_divider {
+  /* Width: Fill */
+  width: 100%;
+  max-width: 1200px;
+
+  /* Height: 0px */
+  height: 0px;
+
+  /* Border: 1px solid with specific color */
+  border: none; /* إزالة الحدود الافتراضية */
+  border-top: 1px solid var(--Strok, #d9e5dd);
+
+  /* Opacity: 25% */
+  opacity: 0.25;
+
+  /* لضمان التمركز داخل الحاوية الأب */
+  margin: 0 auto;
+  margin-top: 0;
+  box-sizing: border-box;
+}
+
+/* --- Responsive Mobile --- */
+@media (max-width: 1200px) {
+  .horizontal_divider {
+    /* في الشاشات الأصغر يملأ العرض المتاح مع ترك مسافات جانبية */
+    width: calc(100% - 40px);
+    max-width: 100%;
+  }
+}
+.footer_bottom {
+  /* Flow: Horizontal & Justify: space-between */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; /* لتوسيط النصوص والأيقونات عمودياً */
+
+  /* Width: Fill */
+  width: 100%;
+  max-width: 1200px;
+
+  /* Height: Hug (40px) */
+  min-height: 40px;
+  height: auto;
+
+  /* الأساسيات */
+  box-sizing: border-box;
+  margin: 0 auto; /* لضمان التمركز في منتصف الفوتر */
+}
+
+/* --- Responsive Mobile --- */
+@media (max-width: 768px) {
+  .footer_bottom {
+    /* تحويل العناصر لتصبح فوق بعضها في الموبايل */
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+
+    /* إلغاء الارتفاع الصغير ليتناسب مع العناصر العمودية */
+    min-height: auto;
+    padding: 10px 0;
+  }
+}
+
+.bottom_icons {
+  /* Flow: Horizontal */
+  display: flex;
+  flex-direction: row;
+
+  /* محاذاة العناصر */
+  align-items: center;
+  justify-content: flex-start; /* أو flex-end حسب موقعها في التصميم */
+
+  /* مسافات بين الأيقونات */
+  gap: 16px;
+
+  /* لضمان عدم تمدد الأيقونات بشكل مشوه */
+  height: 100%;
+}
+
+/* التنسيق الخاص بالأيقونات نفسها بداخل الحاوية */
+.bottom_icons img,
+.bottom_icons svg {
+  width: 24px; /* حجم قياسي للأيقونات */
+  height: 24px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.bottom_icons img:hover {
+  transform: translateY(-3px); /* تأثير بسيط عند التمرير */
+}
+
+/* --- Responsive Mobile --- */
+@media (max-width: 768px) {
+  .bottom_icons {
+    /* توسيط الأيقونات في منتصف الشاشة في الموبايل */
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+  }
+}
+
+.icon {
+  /* الأبعاد الثابتة */
+  width: 40px;
+  height: 40px;
+
+  /* Radius: 20px (نصف القطر لجعلها دائرة كاملة) */
+  border-radius: 20px;
+
+  /* لضمان توسيط الأيقونة أو الصورة بداخل الدائرة */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* يمكنك إضافة خلفية أو حدود حسب التصميم */
+  background-color: #ffffff;
+  border: 1px solid rgba(217, 229, 221, 0.2);
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* التنسيق للصورة بداخل الأيقونة */
+.icon img {
+  width: 20px; /* حجم الأيقونة الداخلية */
+  height: 20px;
+  object-fit: contain;
+}
+
+/* تأثير التمرير (Hover) */
+.icon:hover {
+  background-color: #6dcde5; /* تغيير اللون عند التمرير */
+  transform: scale(1.1);
+}
+
+.content_child a:hover {
+  background-color: #6dcde5; /* تغيير اللون عند التمرير */
+  transform: scale(1.1);
+}
+
+.content_child4 a:hover {
+  transform: scale(1.1);
+}
+
+.content_child4 a {
+  transition: transform 0.3s ease;
+}
+
+.content_child a {
+  transition: transform 0.3s ease;
+}

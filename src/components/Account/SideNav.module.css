@@ -1,0 +1,111 @@
+.SideNav {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 356px;
+  max-width: 100%;
+  height: auto;
+  padding: 40px 24px 32px 24px;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+  flex: 0 0 356px;
+}
+.myInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  height: auto;
+}
+.navSelection {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+.navSelection a {
+  color: var(--text-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  padding: 10px 12px;
+}
+
+.navSelection a:hover,
+.navSelection a:focus {
+  background: #6dcde5;
+  border-radius: 6px;
+  color: white;
+}
+
+.active {
+  background: #6dcde5;
+  border-radius: 6px;
+  color: white;
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  fill: var(--text-main);
+  color: var(--text-main);
+}
+
+/* Override any hardcoded fills inside the SVG */
+.icon path,
+.icon g,
+.icon circle,
+.icon rect {
+  fill: var(--text-main) !important;
+  stroke: var(--text-main) !important;
+}
+
+/* Medium screens: slightly narrower sidebar */
+@media (max-width: 1024px) {
+  .SideNav {
+    width: 280px;
+    flex: 0 0 280px;
+    padding: 28px 18px;
+  }
+}
+
+/* Small screens: make sidebar flow above content and allow horizontal nav */
+@media (max-width: 768px) {
+  .SideNav {
+    width: 100%;
+    flex: none;
+    padding: 12px 16px;
+    background-color: transparent;
+    gap: 12px;
+  }
+
+  .myInfo,
+  .Others,
+  .navSelection {
+    width: 100%;
+  }
+
+  /* Make the primary navigation horizontally scrollable to save vertical space */
+  .navSelection {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 8px;
+  }
+
+  .navSelection a {
+    flex: 0 0 auto;
+    padding: 8px 10px;
+    white-space: nowrap;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+  .SideNav p {
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,26 @@
+.coming-soon{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.coming-title{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.home-link{
+    text-decoration: none;
+    background-color: #66c7e8;
+    color: white;
+    padding: 14px 30px;
+    border-radius: 30px;
+    
+}
+
+.home-link:hover{
+    background-color: #4db6d8;
+}

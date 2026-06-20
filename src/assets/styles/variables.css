@@ -1,0 +1,95 @@
+:root {
+  --text-main: #072127;
+  --text-mainb: #6dcde5;
+
+  --text-secondary: #708387;
+}
+@font-face {
+  font-family: "Tajawal";
+  src: url("../fonts/Tajawal/Tajawal-Medium.ttf") format("truetype");
+  font-weight: 500; /* الوزن الفعلي لملف الـ Medium */
+  font-style: normal;
+  font-display: swap;
+}
+/* Light */
+@font-face {
+  font-family: "Tajawal";
+  src: url("../fonts/Tajawal/Tajawal-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Regular */
+@font-face {
+  font-family: "Tajawal";
+  src: url("../fonts/Tajawal/Tajawal-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Medium */
+@font-face {
+  font-family: "Tajawal";
+  src: url("../fonts/Tajawal/Tajawal-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Bold */
+@font-face {
+  font-family: "Tajawal";
+  src: url("../fonts/Tajawal/Tajawal-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  font-family: "Tajawal", sans-serif; /* إضافة sans-serif كخيار احتياطي */
+  color: var(--text-main); /* استخدام المتغيرات التي عرفتها */
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+body {
+  font-family: "Tajawal";
+}
+/* Modern CSS Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* يمنع الـ padding من زيادة حجم العنصر */
+}
+
+html {
+  -webkit-text-size-adjust: 100%; /* لمنع تغيير حجم الخط تلقائياً في آيفون */
+  scroll-behavior: smooth; /* حركة تنقل ناعمة داخل الصفحة */
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased; /* لجعل الخطوط تبدو أنعم في متصفحات معينة */
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%; /* لضمان أن الصور لا تخرج عن إطار الحاوية */
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit; /* لكي تأخذ الحقول نفس خط الموقع بدلاً من خط النظام */
+}

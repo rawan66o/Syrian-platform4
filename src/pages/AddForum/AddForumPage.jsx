@@ -1,8 +1,10 @@
 import React, { useState, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/layout/Navbar";
 import "./AddForumPage.css";
 
-const AddForumPage = ({ onBack }) => {
+const AddForumPage = () => {
+  const navigate = useNavigate();
   // حالة بيانات المنشور
   const [postData, setPostData] = useState({
     title: "",
@@ -73,7 +75,7 @@ const AddForumPage = ({ onBack }) => {
       fullDescription: "",
     });
 
-    if (onBack) onBack();
+    navigate(-1);
   };
 
   return (
@@ -245,7 +247,7 @@ const AddForumPage = ({ onBack }) => {
           <button className="addforum-btn-next" onClick={handleSubmit}>
             نشر المنشور
           </button>
-          <button className="addforum-btn-prev" onClick={onBack}>
+          <button className="addforum-btn-prev" onClick={() => navigate(-1)}>
             السابق
           </button>
         </div>
