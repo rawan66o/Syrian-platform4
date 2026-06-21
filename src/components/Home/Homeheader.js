@@ -14,7 +14,7 @@ const Homeheader = () => {
               <span className="home-header-divider"></span>
                <div className="home-header-link">
               <NavLink to="/home">الرئيسية</NavLink>
-              <NavLink to="/cours">الكورسات</NavLink>
+              <NavLink to="/courses">الكورسات</NavLink>
               <NavLink to="/forum">المنتدى</NavLink>
               <NavLink to="/projected">المشاريع</NavLink>
               <NavLink to="/conected">اتصل بنا</NavLink>
