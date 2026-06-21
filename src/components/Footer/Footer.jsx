@@ -16,7 +16,7 @@ const Footer = () => {
         <div className={styles.footer_content}>
           <div className={styles.content_child4}>
             <div className={styles.child}>
-              <Link to="/">
+              <Link to="/home">
                 <img className={styles.footer_logo_img} src={logo} alt="" />
               </Link>
             </div>

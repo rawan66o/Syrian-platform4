@@ -22,7 +22,7 @@ const Herosection = () => {
                  لتسهيل الوصول الى المعرفة  في أي وقت ومكان.
                  </p>
              <div className='hero-section-button'>
-                <Link to='/coursessection'>الكورسات</Link>
+                <Link to='/courses'>الكورسات</Link>
                 <span>أو</span>
                 <Link to='/showmore'>عرض المزيد</Link>
              </div>

@@ -36,7 +36,7 @@ const Whyus = () => {
             </p>
             
             <div className='why-us-types'>
-                <Link to='/typecourses' className='type-card'>
+                <Link to='/courses' className='type-card'>
                     <LiaGraduationCapSolid className='card-icon'/>
                     <FiArrowUpLeft className='arrowleft'/>
                     <h5>الكورسات</h5>

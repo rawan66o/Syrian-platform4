@@ -59,7 +59,7 @@ const NavBar = () => {
             {" "}
             <span>الكورسات</span>
           </NavLink>
-          <NavLink to={"/"}>
+          <NavLink to={"/home"}>
             {" "}
             <span>الرئيسية</span>
           </NavLink>
