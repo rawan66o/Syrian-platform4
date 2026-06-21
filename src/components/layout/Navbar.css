@@ -1,0 +1,148 @@
+.custom-navbar {
+  height: 80px;
+  background: #ffffff;
+  border-bottom: 1px solid #D9E4E5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 100px;
+  direction: rtl;
+}
+
+/* القسم الأيمن (اللوغو والصفحة الرئيسية) */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+}
+
+.main-logo {
+  width: 220px;
+  height: auto;
+  object-fit: contain;
+}
+
+.nav-divider {
+  width: 1px;
+  height: 30px;
+  background-color: #70798B;
+}
+
+.nav-link-active {
+  font-family: 'Tajawal', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: #072127;
+  letter-spacing: -1px;
+}
+
+/* القسم الأيسر */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+/* المربع الرمادي خلف الأيقونات */
+.icon-wrapper {
+  width: 40px;
+  height: 40px;
+  background: #F7F7F7;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+/* الأيقونات نفسها */
+.icon-wrapper i {
+  color: #072127;
+  font-size: 20px;
+}
+
+.notification-dot {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 8px;
+  height: 8px;
+  background-color: #FE5527;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+
+/* الخط الفاصل */
+.vertical-separator {
+  width: 1px;
+  height: 30px;
+  background-color: #70798B;
+  margin: 0 10px;
+}
+
+/* قسم البروفايل */
+.user-profile-nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-name {
+  font-family: 'Tajawal', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #072127;
+}
+
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 0.67px solid #FFFFFF;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .custom-navbar {
+    padding: 0 30px;
+  }
+  
+  .navbar-left {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .custom-navbar {
+    padding: 0 16px;
+  }
+  
+  .main-logo {
+    width: 80px;
+    height: 30px;
+  }
+  
+  .nav-link-active {
+    font-size: 14px;
+  }
+  
+  .user-name {
+    display: none;
+  }
+  
+  .navbar-left {
+    gap: 12px;
+  }
+  
+  .icon-wrapper {
+    width: 35px;
+    height: 35px;
+  }
+}
