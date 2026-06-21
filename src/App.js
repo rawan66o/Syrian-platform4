@@ -92,9 +92,10 @@ function App() {
             path="courses/:id/startCourse/startCourse2/startCourse3/startCourse4/startCourse5/startCourse6/startCourse7/startCourse8/startCourse9"
             element={<StartCourse9 />}
           />
-          <Route path="add-course" element={<AddCoursePage />} />
-          <Route path="add-forum" element={<AddForumPage />} />
         </Route>
+
+        <Route path="add-course" element={<AddCoursePage />} />
+        <Route path="add-forum" element={<AddForumPage />} />
 
         <Route path="/cours" element={<ComingSoon />} />
         <Route path="/forum" element={<ComingSoon />} />

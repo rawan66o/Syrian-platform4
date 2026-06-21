@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import { CourseProvider, useCourse } from "./context/CourseContext";
 import { useCourseValidation } from "./hooks/useCourseValidation";
 import Navbar from "../../components/layout/Navbar";
