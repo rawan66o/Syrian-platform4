@@ -70,15 +70,15 @@ function App() {
 
         {/* 3. صفحات التطبيق والـ Dashboard التي تظهر داخل الـ MainLayout بعد تسجيل الدخول */}
         {/* تم جعل المسار يبدأ بـ /app أو يمكنك تركه فارغاً، هنا جعلناه يندرج تحت /dashboard أو مسارات نسبية */}
+        <Route path="account" element={<Account />}>
+          <Route path="dashboard" element={<Dashboard />} />
+          <Route path="profile" element={<Profile />} />
+        </Route>
         <Route element={<MainLayout />}>
           <Route path="courses" element={<Courses />} />
           <Route path="partners" element={<Partners />} />
 
           {/* مسارات الحساب المتداخلة */}
-          <Route path="account" element={<Account />}>
-            <Route path="dashboard" element={<Dashboard />} />
-            <Route path="profile" element={<Profile />} />
-          </Route>
 
           {/* مسارات الكورسات المتداخلة (تم إزالة السلاش / لتصبح نسبية وصحيحة) */}
           <Route path="courses/:id" element={<CourseView />} />

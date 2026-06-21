@@ -1,3 +1,8 @@
+.Account_page {
+  width: 100%;
+  background-color: #fff;
+}
+
 .Account_container {
   display: flex;
   gap: 40px;
@@ -5,6 +10,14 @@
   align-items: flex-start;
   padding: 24px;
   box-sizing: border-box;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.Account_content {
+  flex: 1;
+  min-width: 0;
 }
 
 /* Make account layout stack on small screens */
