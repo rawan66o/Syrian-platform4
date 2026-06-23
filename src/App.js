@@ -37,14 +37,15 @@ import Fileforthevolunteer from "./components/Fileforthevolunteer";
 
 import AddCoursePage from "./pages/AddCourse/AddCoursePage";
 import AddForumPage from "./pages/AddForum/AddForumPage";
-
+import AddVolunteerProjectPage from "./pages/AddVolunteerProject/AddVolunteerProjectPage";
+import GuideLifePage from "./pages/Guides/GuideLifePage";
+import GuideVolunteerPage from "./pages/Guides/GuideVolunteerPage";
+import GuideTrainerPage from "./pages/Guides/GuideTrainerPage";
 
 function App() {
   return (
     <div className="App">
       <Routes>
-
-        
         {/* 1. صفحات تسجيل الدخول والـ Auth وتظهر مباشرة في الـ Root "/" */}
         <Route element={<AuthLayout />}>
           <Route path="/" element={<Login />} />
@@ -75,50 +76,16 @@ function App() {
 
         {/* 3. صفحات التطبيق والـ Dashboard التي تظهر داخل الـ MainLayout بعد تسجيل الدخول */}
         {/* تم جعل المسار يبدأ بـ /app أو يمكنك تركه فارغاً، هنا جعلناه يندرج تحت /dashboard أو مسارات نسبية */}
-        <Route  element={<MainLayout />}>
-          <Route path="courses" element={<Courses />} />
-          <Route path="partners" element={<Partners />} />
-          
-          {/* مسارات الحساب المتداخلة */}
-=======
-        <Route element={<AuthLayout />}>
-          <Route path="/" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/forgetpassword" element={<ForgetPassword />} />
-          <Route path="/resetpassword" element={<ResetPassword />} />
-          <Route path="/privacypolicy" element={<h1>page not found</h1>} />
-          <Route path="/supportandassistance" element={<h1>page not found</h1>} />
-        </Route>
-
-        <Route element={<AuthLayout2 />}>
-          <Route path="/fileforthevolunteer" element={<Fileforthevolunteer />} />
-        </Route>
-
         <Route element={<MainLayout />}>
           <Route path="courses" element={<Courses />} />
+          <Route path="partners" element={<Partners />} />
 
           <Route path="account" element={<Account />}>
             <Route path="dashboard" element={<Dashboard />} />
             <Route path="profile" element={<Profile />} />
           </Route>
 
-
           {/* مسارات الكورسات المتداخلة (تم إزالة السلاش / لتصبح نسبية وصحيحة) */}
-          <Route path="courses/:id" element={<CourseView />} />
-          <Route path="courses/:id/startCourse" element={<StartCourse />} />
-          <Route path="courses/:id/startCourse/startCourse2" element={<StartCourse2 />} />
-          <Route path="courses/:id/startCourse/startCourse2/startCourse3" element={<StartCourse3 />} />
-          <Route path="courses/:id/startCourse/startCourse2/startCourse3/startCourse4" element={<StartCourse4 />} />
-          <Route path="courses/:id/startCourse/startCourse2/startCourse3/startCourse4/startCourse5" element={<StartCourse5 />} />
-          <Route path="courses/:id/startCourse/startCourse2/startCourse3/startCourse4/startCourse5/startCourse6" element={<StartCourse6 />} />
-          <Route path="courses/:id/startCourse/startCourse2/startCourse3/startCourse4/startCourse5/startCourse6/startCourse7" element={<StartCourse7 />} />
-          <Route path="courses/:id/startCourse/startCourse2/startCourse3/startCourse4/startCourse5/startCourse6/startCourse7/startCourse8" element={<StartCourse8 />} />
-          <Route path="courses/:id/startCourse/startCourse2/startCourse3/startCourse4/startCourse5/startCourse6/startCourse7/startCourse8/startCourse9" element={<StartCourse9 />} />
-        </Route>
-
-        {/* 4. صفحات قريباً (Coming Soon) والصفحات الأخرى */}
-
-          <Route path="partners" element={<Partners />} />
           <Route path="courses/:id" element={<CourseView />} />
           <Route path="courses/:id/startCourse" element={<StartCourse />} />
           <Route path="courses/:id/startCourse/startCourse2" element={<StartCourse2 />} />
@@ -150,11 +117,14 @@ function App() {
             path="courses/:id/startCourse/startCourse2/startCourse3/startCourse4/startCourse5/startCourse6/startCourse7/startCourse8/startCourse9"
             element={<StartCourse9 />}
           />
+          <Route path="guide-life" element={<GuideLifePage />} />
+          <Route path="guide-volunteer" element={<GuideVolunteerPage />} />
+          <Route path="guide-trainer" element={<GuideTrainerPage />} />
         </Route>
 
         <Route path="add-course" element={<AddCoursePage />} />
         <Route path="add-forum" element={<AddForumPage />} />
-
+        <Route path="add-volunteer-project" element={<AddVolunteerProjectPage />} />
 
         <Route path="/cours" element={<ComingSoon />} />
         <Route path="/forum" element={<ComingSoon />} />
@@ -195,37 +165,9 @@ function App() {
         <Route element={<AuthLayout2 />}>
           <Route path="/fileforthevolunteer" element={<Fileforthevolunteer />} />
         </Route>
-
-
-        <Route path="/help" element={<ComingSoon />} />
-        <Route path="/support" element={<ComingSoon />} />
-        <Route path="/profile" element={<ComingSoon />} />
-        <Route path="/certificate" element={<ComingSoon />} />
-        <Route path="/volunteerproject" element={<ComingSoon />} />
-        <Route path="/setting" element={<ComingSoon />} />
-        <Route
-          path="/home"
-          element={
-            <>
-              <Homeheader />
-              <Herosection />
-              <CoursesSection />
-              <Whyus />
-              <Volunteerprojects />
-              <Comments />
-              <Search />
-              <Forum />
-              <Footer />
-            </>
-          }
-        />
-
       </Routes>
     </div>
   );
 }
 
-
 export default App;
-
-
