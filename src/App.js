@@ -44,7 +44,6 @@ function App() {
     <div className="App">
       <Routes>
 
-        
         {/* 1. صفحات تسجيل الدخول والـ Auth وتظهر مباشرة في الـ Root "/" */}
         <Route element={<AuthLayout />}>
           <Route path="/" element={<Login />} />
@@ -75,12 +74,16 @@ function App() {
 
         {/* 3. صفحات التطبيق والـ Dashboard التي تظهر داخل الـ MainLayout بعد تسجيل الدخول */}
         {/* تم جعل المسار يبدأ بـ /app أو يمكنك تركه فارغاً، هنا جعلناه يندرج تحت /dashboard أو مسارات نسبية */}
-        <Route  element={<MainLayout />}>
+        <Route path="account" element={<Account />}>
+          <Route path="dashboard" element={<Dashboard />} />
+          <Route path="profile" element={<Profile />} />
+        </Route>
+        <Route element={<MainLayout />}>
           <Route path="courses" element={<Courses />} />
           <Route path="partners" element={<Partners />} />
-          
+
           {/* مسارات الحساب المتداخلة */}
-=======
+
         <Route element={<AuthLayout />}>
           <Route path="/" element={<Login />} />
           <Route path="/register" element={<Register />} />
@@ -107,13 +110,34 @@ function App() {
           <Route path="courses/:id" element={<CourseView />} />
           <Route path="courses/:id/startCourse" element={<StartCourse />} />
           <Route path="courses/:id/startCourse/startCourse2" element={<StartCourse2 />} />
-          <Route path="courses/:id/startCourse/startCourse2/startCourse3" element={<StartCourse3 />} />
-          <Route path="courses/:id/startCourse/startCourse2/startCourse3/startCourse4" element={<StartCourse4 />} />
-          <Route path="courses/:id/startCourse/startCourse2/startCourse3/startCourse4/startCourse5" element={<StartCourse5 />} />
-          <Route path="courses/:id/startCourse/startCourse2/startCourse3/startCourse4/startCourse5/startCourse6" element={<StartCourse6 />} />
-          <Route path="courses/:id/startCourse/startCourse2/startCourse3/startCourse4/startCourse5/startCourse6/startCourse7" element={<StartCourse7 />} />
-          <Route path="courses/:id/startCourse/startCourse2/startCourse3/startCourse4/startCourse5/startCourse6/startCourse7/startCourse8" element={<StartCourse8 />} />
-          <Route path="courses/:id/startCourse/startCourse2/startCourse3/startCourse4/startCourse5/startCourse6/startCourse7/startCourse8/startCourse9" element={<StartCourse9 />} />
+          <Route
+            path="courses/:id/startCourse/startCourse2/startCourse3"
+            element={<StartCourse3 />}
+          />
+          <Route
+            path="courses/:id/startCourse/startCourse2/startCourse3/startCourse4"
+            element={<StartCourse4 />}
+          />
+          <Route
+            path="courses/:id/startCourse/startCourse2/startCourse3/startCourse4/startCourse5"
+            element={<StartCourse5 />}
+          />
+          <Route
+            path="courses/:id/startCourse/startCourse2/startCourse3/startCourse4/startCourse5/startCourse6"
+            element={<StartCourse6 />}
+          />
+          <Route
+            path="courses/:id/startCourse/startCourse2/startCourse3/startCourse4/startCourse5/startCourse6/startCourse7"
+            element={<StartCourse7 />}
+          />
+          <Route
+            path="courses/:id/startCourse/startCourse2/startCourse3/startCourse4/startCourse5/startCourse6/startCourse7/startCourse8"
+            element={<StartCourse8 />}
+          />
+          <Route
+            path="courses/:id/startCourse/startCourse2/startCourse3/startCourse4/startCourse5/startCourse6/startCourse7/startCourse8/startCourse9"
+            element={<StartCourse9 />}
+          />
         </Route>
 
         {/* 4. صفحات قريباً (Coming Soon) والصفحات الأخرى */}
@@ -197,6 +221,7 @@ function App() {
         </Route>
 
 
+
         <Route path="/help" element={<ComingSoon />} />
         <Route path="/support" element={<ComingSoon />} />
         <Route path="/profile" element={<ComingSoon />} />
@@ -220,6 +245,7 @@ function App() {
           }
         />
 
+
       </Routes>
     </div>
   );
@@ -227,5 +253,3 @@ function App() {
 
 
 export default App;
-
-
