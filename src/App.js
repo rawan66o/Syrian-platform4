@@ -32,7 +32,7 @@ import Volunteerprojects from "./components/Home/Volunteerprojects";
 import Comments from "./components/Home/Comments";
 import Search from "./components/Home/Search";
 import Forum from "./components/Home/Forum";
-import Footer from "./components/Home/Footer";
+import HomeFooter from "./components/Home/Footer";
 import AuthLayout2 from "./components/AuthLayout2";
 import Fileforthevolunteer from "./components/Fileforthevolunteer";
 
@@ -63,7 +63,7 @@ function App() {
               <Comments />
               <Search />
               <Forum />
-              <Footer />
+              <HomeFooter />
             </>
           }
         />
