@@ -101,8 +101,7 @@ function App() {
           <Route path="/fileforthevolunteer" element={<Fileforthevolunteer />} />
         </Route>
 
-=======
->>>>>>> d8289a2a7012e0e7e0a6c9430a945fb90b5be37c
+
         <Route element={<MainLayout />}>
           <Route path="courses" element={<Courses />} />
           <Route path="partners" element={<Partners />} />
