@@ -37,7 +37,10 @@ import Fileforthevolunteer from "./components/Fileforthevolunteer";
 
 import AddCoursePage from "./pages/AddCourse/AddCoursePage";
 import AddForumPage from "./pages/AddForum/AddForumPage";
-
+import AddVolunteerProjectPage from "./pages/AddVolunteerProject/AddVolunteerProjectPage";
+import GuideLifePage from "./pages/Guides/GuideLifePage";
+import GuideVolunteerPage from "./pages/Guides/GuideVolunteerPage";
+import GuideTrainerPage from "./pages/Guides/GuideTrainerPage";
 
 function App() {
   return (
@@ -74,6 +77,7 @@ function App() {
 
         {/* 3. صفحات التطبيق والـ Dashboard التي تظهر داخل الـ MainLayout بعد تسجيل الدخول */}
         {/* تم جعل المسار يبدأ بـ /app أو يمكنك تركه فارغاً، هنا جعلناه يندرج تحت /dashboard أو مسارات نسبية */}
+
         <Route path="account" element={<Account />}>
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="profile" element={<Profile />} />
@@ -97,19 +101,22 @@ function App() {
           <Route path="/fileforthevolunteer" element={<Fileforthevolunteer />} />
         </Route>
 
+=======
+>>>>>>> d8289a2a7012e0e7e0a6c9430a945fb90b5be37c
         <Route element={<MainLayout />}>
           <Route path="courses" element={<Courses />} />
+          <Route path="partners" element={<Partners />} />
 
           <Route path="account" element={<Account />}>
             <Route path="dashboard" element={<Dashboard />} />
             <Route path="profile" element={<Profile />} />
           </Route>
 
-
           {/* مسارات الكورسات المتداخلة (تم إزالة السلاش / لتصبح نسبية وصحيحة) */}
           <Route path="courses/:id" element={<CourseView />} />
           <Route path="courses/:id/startCourse" element={<StartCourse />} />
           <Route path="courses/:id/startCourse/startCourse2" element={<StartCourse2 />} />
+
           <Route
             path="courses/:id/startCourse/startCourse2/startCourse3"
             element={<StartCourse3 />}
@@ -146,6 +153,7 @@ function App() {
           <Route path="courses/:id" element={<CourseView />} />
           <Route path="courses/:id/startCourse" element={<StartCourse />} />
           <Route path="courses/:id/startCourse/startCourse2" element={<StartCourse2 />} />
+
           <Route
             path="courses/:id/startCourse/startCourse2/startCourse3"
             element={<StartCourse3 />}
@@ -174,11 +182,14 @@ function App() {
             path="courses/:id/startCourse/startCourse2/startCourse3/startCourse4/startCourse5/startCourse6/startCourse7/startCourse8/startCourse9"
             element={<StartCourse9 />}
           />
+          <Route path="guide-life" element={<GuideLifePage />} />
+          <Route path="guide-volunteer" element={<GuideVolunteerPage />} />
+          <Route path="guide-trainer" element={<GuideTrainerPage />} />
         </Route>
 
         <Route path="add-course" element={<AddCoursePage />} />
         <Route path="add-forum" element={<AddForumPage />} />
-
+        <Route path="add-volunteer-project" element={<AddVolunteerProjectPage />} />
 
         <Route path="/cours" element={<ComingSoon />} />
         <Route path="/forum" element={<ComingSoon />} />
@@ -220,8 +231,6 @@ function App() {
           <Route path="/fileforthevolunteer" element={<Fileforthevolunteer />} />
         </Route>
 
-
-
         <Route path="/help" element={<ComingSoon />} />
         <Route path="/support" element={<ComingSoon />} />
         <Route path="/profile" element={<ComingSoon />} />
@@ -250,6 +259,5 @@ function App() {
     </div>
   );
 }
-
 
 export default App;

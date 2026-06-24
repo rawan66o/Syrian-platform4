@@ -1,0 +1,132 @@
+[33mcommit ba1af3b723bc8b8912656a0479bfe3dc21fb174b[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mRojeena[m[33m, [m[1;31morigin/Rojeena[m[33m)[m
+Author: Rojeena <rojeena.2004@gmail.com>
+Date:   Tue Jun 23 19:32:23 2026 +0300
+
+    Added AddVolunteerProject page + GuideLife, GuideTrainer, GuideVolunteer pages with full routing and layout integration
+
+[33mcommit b67da3872f5f655d0a9dbd6d18438f4a11ebd2ac[m[33m ([m[1;31morigin/develop[m[33m)[m
+Merge: 906c4c9 ea78ad2
+Author: Rawan Khalifeh <rawankhalifeh2003@gmail.com>
+Date:   Sun Jun 21 21:48:50 2026 +0300
+
+    Save local changes
+
+[33mcommit 906c4c9ff149aad5923730a9473cb9cf81c73f58[m
+Merge: 772ed70 52a8082
+Author: Rawan Khalifeh <rawankhalifeh2003@gmail.com>
+Date:   Sun Jun 21 12:30:27 2026 +0300
+
+    Merge branch 'Dev-Louiy' of https://github.com/rawan66o/Syrian-platform4 into develop
+
+[33mcommit 52a80825c6a92e8c0470cdebf82b026abbee9a17[m
+Author: Louiy Koja <louiykoja38@gmail.com>
+Date:   Sun Jun 21 06:04:59 2026 +0300
+
+    update routing paths for navigation and footer links
+
+[33mcommit ea78ad2cddb240912c6850f3d5f817082cfb1cfa[m
+Author: Rojeena <rojeena.2004@gmail.com>
+Date:   Sun Jun 21 03:40:26 2026 +0300
+
+    merged  AddCourse and AddForum with the whole project and edited app routes
+
+[33mcommit 6a5a4ddb3125b43cdeb416683ecd10631ce61cab[m
+Merge: 34c32eb 772ed70
+Author: Rojeena <rojeena.2004@gmail.com>
+Date:   Sun Jun 21 01:08:44 2026 +0300
+
+    Merge develop into Rojeena
+    Merge branch 'develop' of https://github.com/rawan66o/Syrian-platform4 into Rojeena
+
+[33mcommit 772ed70da40e032ae21e0ef22d86f6b6bac9ec57[m
+Author: Rawan Khalifeh <rawankhalifeh2003@gmail.com>
+Date:   Sat Jun 20 23:14:46 2026 +0300
+
+    Save local changes
+
+[33mcommit 894bfdf807ef1dea14ed17fcadd78400ae87b2e8[m
+Author: rehamkh740-coder <rehamkh740@gmail.com>
+Date:   Sat Jun 20 21:06:00 2026 +0300
+
+    add auth folder
+
+[33mcommit efa3f6b12c8f1792aaeedee4f606dc9649881c21[m[33m ([m[1;31morigin/reham[m[33m, [m[1;32mreham[m[33m)[m
+Author: rehamkh740-coder <rehamkh740@gmail.com>
+Date:   Wed Jun 17 17:16:30 2026 +0300
+
+    add auth file
+
+[33mcommit 56edde4ca07ed305e135b439bbca8e5332f827f4[m
+Author: rehamkh740-coder <rehamkh740@gmail.com>
+Date:   Tue Jun 16 01:39:13 2026 +0300
+
+    add auth file
+
+[33mcommit ff0825db50c50df0cd8c7e9a66c840ac88ac3177[m
+Author: rehamkh740-coder <rehamkh740@gmail.com>
+Date:   Tue Jun 16 01:27:29 2026 +0300
+
+    add auth file
+
+[33mcommit 383e42b6eb3e742b8d54c4bf6c55d16478cfe345[m
+Author: rehamkh740-coder <rehamkh740@gmail.com>
+Date:   Tue Jun 16 01:25:24 2026 +0300
+
+    add auth file
+
+[33mcommit 0ef9bdefd0c5999cb26747ef5be6d5866e0cd209[m
+Author: rehamkh740-coder <rehamkh740@gmail.com>
+Date:   Tue Jun 16 01:21:54 2026 +0300
+
+    add auth file
+
+[33mcommit cd16e537a47e460fa17810ae86e5ef7fb380de9c[m
+Author: rehamkh740-coder <rehamkh740@gmail.com>
+Date:   Tue Jun 16 01:15:45 2026 +0300
+
+    add auth file
+
+[33mcommit 34c32eb1ab41113bf847839462d557b7ff7c58d3[m
+Author: Rojeena <rojeena.2004@gmail.com>
+Date:   Sat Jun 13 22:18:01 2026 +0300
+
+    Added course and forum pages
+
+[33mcommit 8a82b13cb9f6026acf8bb8c8d3c8e37eefef1a7f[m
+Author: Rawan Khalifeh <rawankhalifeh2003@gmail.com>
+Date:   Sat Jun 13 14:34:04 2026 +0300
+
+    first commit
+
+[33mcommit 44c30004a0f7d60196d7d6d637c8d3ee652d2915[m[33m ([m[1;31morigin/Dev-Louiy[m[33m, [m[1;32mDev-Louiy[m[33m)[m
+Author: Louiy Koja <louiykoja38@gmail.com>
+Date:   Thu Jun 11 14:03:17 2026 +0300
+
+    feat: add Partners page with responsive design and partner logos
+    
+    - Created Partners.jsx component to display partner logos with links.
+    - Added Partners.module.css for styling the Partners page with responsive grid layout.
+    - Included multiple partner logos and structured the layout for various screen sizes.
+    
+    chore: initialize API calls and external services structure
+    
+    - Created a new file for API calls and external services.
+    
+    chore: initialize state management structure
+    
+    - Created a new file for state management (Redux or Context).
+    
+    feat: add CourseState with dummy course data
+    
+    - Implemented CourseState.jsx to manage course data including titles, descriptions, instructors, and reviews.
+    - Added sample course data with features, chapters, and reviews.
+    
+    chore: initialize utility functions structure
+    
+    - Created a new file for utility functions helpers.
+
+[33mcommit cbfc6913d92d70f2d47060f10d59ad4413ac7e05[m[33m ([m[1;31morigin/sana[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Author: Rawan Khalifeh <rawankhalifeh2003@gmail.com>
+Date:   Sun Jun 7 21:35:07 2026 +0300
+
+    first commit

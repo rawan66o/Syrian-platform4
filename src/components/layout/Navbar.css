@@ -1,7 +1,7 @@
 .custom-navbar {
   height: 80px;
   background: #ffffff;
-  border-bottom: 1px solid #D9E4E5;
+  border-bottom: 1px solid #d9e4e5;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -30,15 +30,20 @@
 .nav-divider {
   width: 1px;
   height: 30px;
-  background-color: #70798B;
+  background-color: #70798b;
 }
 
 .nav-link-active {
-  font-family: 'Tajawal', sans-serif;
+  font-family: "Tajawal", sans-serif;
   font-weight: 500;
   font-size: 18px;
   color: #072127;
   letter-spacing: -1px;
+}
+
+/* Hover color for the "الصفحة الرئيسية" link */
+.nav-link-active:hover {
+  color: #5ec6bd;
 }
 
 /* القسم الأيسر */
@@ -52,7 +57,7 @@
 .icon-wrapper {
   width: 40px;
   height: 40px;
-  background: #F7F7F7;
+  background: #f7f7f7;
   border-radius: 8px;
   display: flex;
   justify-content: center;
@@ -73,7 +78,7 @@
   right: 8px;
   width: 8px;
   height: 8px;
-  background-color: #FE5527;
+  background-color: #fe5527;
   border-radius: 50%;
   border: 1px solid white;
 }
@@ -82,7 +87,7 @@
 .vertical-separator {
   width: 1px;
   height: 30px;
-  background-color: #70798B;
+  background-color: #70798b;
   margin: 0 10px;
 }
 
@@ -94,7 +99,7 @@
 }
 
 .user-name {
-  font-family: 'Tajawal', sans-serif;
+  font-family: "Tajawal", sans-serif;
   font-weight: 500;
   font-size: 14px;
   color: #072127;
@@ -105,7 +110,7 @@
   height: 32px;
   border-radius: 50%;
   object-fit: cover;
-  border: 0.67px solid #FFFFFF;
+  border: 0.67px solid #ffffff;
 }
 
 /* Responsive */
@@ -113,7 +118,7 @@
   .custom-navbar {
     padding: 0 30px;
   }
-  
+
   .navbar-left {
     gap: 16px;
   }
@@ -123,24 +128,24 @@
   .custom-navbar {
     padding: 0 16px;
   }
-  
+
   .main-logo {
     width: 80px;
     height: 30px;
   }
-  
+
   .nav-link-active {
     font-size: 14px;
   }
-  
+
   .user-name {
     display: none;
   }
-  
+
   .navbar-left {
     gap: 12px;
   }
-  
+
   .icon-wrapper {
     width: 35px;
     height: 35px;

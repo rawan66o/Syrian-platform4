@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../../assets/images/logo.png";
 import profileImg from "../../assets/images/profile-image.jpeg";
@@ -14,7 +15,7 @@ const Navbar = () => {
           <img src={logo} alt="Syrian Platform" className="main-logo" />
         </div>
         <div className="nav-divider"></div>
-        <span className="nav-link-active">الصفحة الرئيسية</span>
+        <Link to="/home" className="nav-link-active">الصفحة الرئيسية</Link>
       </div>
 
       {/* القسم الأيسر: الإشعارات واللغة والبروفايل */}
