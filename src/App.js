@@ -16,6 +16,8 @@ import Partners from "./pages/Partners/Partners";
 import Account from "./pages/Account/Account";
 import Dashboard from "./components/Account/Dashboard";
 import Profile from "./components/Account/Profile";
+import Header from "./components/Headers/Header";
+import Footer from "./components/Footer/Footer";
 import React from "react";
 import Register from "./components/Pages/auth/Register";
 import Login from "./components/Pages/auth/Login";
@@ -71,8 +73,26 @@ function App() {
         {/* 3. صفحات التطبيق والـ Dashboard التي تظهر داخل الـ MainLayout بعد تسجيل الدخول */}
         {/* تم جعل المسار يبدأ بـ /app أو يمكنك تركه فارغاً، هنا جعلناه يندرج تحت /dashboard أو مسارات نسبية */}
         <Route path="account" element={<Account />}>
-          <Route path="dashboard" element={<Dashboard />} />
-          <Route path="profile" element={<Profile />} />
+          <Route
+            path="dashboard"
+            element={
+              <>
+                <Header />
+                <Dashboard />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="profile"
+            element={
+              <>
+                <Header />
+                <Profile />
+                <Footer />
+              </>
+            }
+          />
         </Route>
         <Route element={<MainLayout />}>
           <Route path="courses" element={<Courses />} />
