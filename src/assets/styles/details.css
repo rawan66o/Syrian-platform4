@@ -1,0 +1,608 @@
+/* ..........start styles the details section .......... */
+.details-page {
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+  gap: 32px;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  margin-bottom: 357px;
+  padding: 110px 20px 20px 20px;
+
+  .post-details {
+    box-shadow: 0px 0px 5px 0px #00000026;
+
+    display: flex;
+    flex-direction: column;
+    direction: rtl;
+    justify-content: center;
+    padding: 32px 24px;
+    width: 812px;
+    align-items: centers;
+    box-shadow: 0px 0px 5px 0px #00000026;
+    background-color: #ffffff;
+
+    .title-post h2 {
+      font-family: "Tajawal", sans-serif;
+      font-weight: bold;
+      font-size: 22px;
+      line-height: 100%;
+      letter-spacing: 0;
+      color: #072127;
+      margin: 0;
+    }
+    .title-post .title-with-back {
+      display: flex;
+      flex-direction: row;
+      gap: 16px;
+      align-items: center;
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+    .login-volunteer {
+      text-decoration: none;
+    }
+    .post-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .post-date {
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        /* justify-content: space-between; */
+        margin-bottom: 24px;
+        margin-top: 20px;
+        padding-bottom: 20px;
+        width: 100%;
+        border-bottom: 1px solid #d9e4e5;
+
+        .date-and-share {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 20px;
+        }
+        .login-volunteer {
+          color: #ffffff;
+          font-family: "Tajawal", sans-serif;
+          font-weight: bold;
+          font-size: 18px;
+          line-height: 100%;
+          letter-spacing: 0;
+          background-color: #6dcde5;
+          border: none;
+          border-radius: 6px;
+          text-align: center;
+          padding: 16px 100px;
+        }
+
+        div {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-direction: row;
+          gap: 7px;
+
+          .calender {
+            width: 20px;
+            height: 20px;
+            color: #072127;
+          }
+          .thedate {
+            direction: rtl; /* لجعل النص يبدأ من اليمين */
+            unicode-bidi: plaintext;
+            font-family: "Tajawal", sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 100%;
+            letter-spacing: 0;
+            color: #072127;
+          }
+        }
+        button {
+          display: flex;
+          gap: 8px;
+          justify-content: center;
+          align-items: center;
+          flex-direction: row;
+          padding: 8px 12px;
+          border: 0.5px solid #d9e4e5;
+          border-radius: 1px;
+          background-color: initial;
+
+          span {
+            font-family: "Tajawal", sans-serif;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 100%;
+            letter-spacing: 0;
+            color: #0a1826;
+          }
+          img {
+            width: 13px;
+            height: 16px;
+            color: #072127;
+          }
+        }
+      }
+      .image-Post {
+        width: 764px;
+
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+      .project-details {
+        width: 100%;
+        display: flex;
+        /* flex-direction: row; */
+        align-items: center;
+        justify-content: space-between;
+        padding: 24px;
+      }
+      /* شاشات الموبايل والتابلت (أقل من 768 بكسل) */
+      @media (max-width: 768px) {
+        .project-details {
+          flex-direction: column; /* تحويل العناصر لتصبح تحت بعضها عمودياً */
+          align-items: center; /* محاذاة العناصر للبداية (اختياري، يمكنك تغييرها إلى center إذا أردت السنترة) */
+          gap: 20px; /* إضافة مسافة عمودية بين العناصر بعد نزولها */
+        }
+      }
+
+      .project-details .start-date {
+        gap: 12px;
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #d9e4e5;
+        border-radius: 6px;
+        padding: 20px;
+        /* align-items: center; */
+        /* justify-content: center; */
+
+        h5 {
+          margin: 0;
+          font-family: "Tajawal", sans-serif;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 12px;
+          letter-spacing: 0;
+          color: #708387;
+        }
+        .day {
+          font-family: "Tajawal", sans-serif;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 14px;
+          letter-spacing: 0;
+          color: #072127;
+        }
+        .date {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 7px;
+
+          span {
+            font-family: "Tajawal", sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 100%;
+            letter-spacing: 0;
+            color: #072127;
+          }
+        }
+      }
+      @media (max-width: 768px) {
+        .project-details .start-date {
+          width: 90%; /* يصبح العرض كاملاً 100% على الموبايل */
+        }
+      }
+      .start-date div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .project-details .organiztion {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        align-items: flex-start;
+
+        h2 {
+          margin: 0;
+          font-family: "Tajawal", sans-serif;
+          font-weight: bold;
+          font-size: 16px;
+          line-height: 100%;
+          letter-spacing: 0;
+          color: #072127;
+        }
+        img {
+          padding-left: 24px;
+        }
+      }
+      @media (max-width: 768px) {
+        .project-details .organiztion {
+          width: 90%;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+        }
+      }
+
+      .post-description {
+        text-align: right;
+        max-width: 764px;
+        padding-bottom: 24px;
+        margin-bottom: 24px;
+        border-bottom: 1px solid #d9e4e5;
+        border-top: 1px solid #d9e4e5;
+        padding-top: 24px;
+
+        h2 {
+          font-family: "Tajawal", sans-serif;
+          font-weight: bold;
+          font-size: 20px;
+          line-height: 100%;
+          letter-spacing: 0;
+          color: #072127;
+        }
+
+        p {
+          font-family: "Tajawal", sans-serif;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 160%;
+          letter-spacing: 0;
+          color: #708387;
+        }
+      }
+      /* حاوية المتطوعين الرئيسية */
+      .volunteers-section {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        border-bottom: 1px solid #d9e4e5;
+        margin-bottom: 24px;
+        padding-bottom: 24px;
+        box-sizing: border-box;
+      }
+
+      /* شريط التنقل العلوي للمتطوعين */
+      .nav-volunteers {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap; /* يسمح بنزول العناصر لسطر جديد في الشاشات الصغيرة */
+        gap: 12px;
+        width: 100%;
+
+        .number-needed {
+          background-color: #6dcde526;
+          padding: 10px 15px;
+          font-family: "Tajawal", sans-serif;
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 25px;
+          letter-spacing: 0;
+          color: #072127;
+          border-radius: 4px;
+
+          span {
+            font-family: "Tajawal", sans-serif;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 25px;
+            letter-spacing: 0;
+            color: #072127;
+          }
+        }
+
+        .title-volunteers {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: 8px;
+
+          h1 {
+            font-family: "Tajawal", sans-serif;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 100%;
+            letter-spacing: 0;
+            color: #072127;
+            margin: 0;
+          }
+
+          span {
+            font-family: "Tajawal", sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 100%;
+            letter-spacing: 0;
+            color: #708387;
+          }
+        }
+      }
+
+      /* شبكة الكروت الرئيسية */
+      .volunteers-grid {
+        display: grid;
+        /* تم تعديل الحد الأدنى للكارت ليكون 200px ليتناسب مع الشاشات الصغيرة جداً */
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 16px;
+        padding: 20px 0;
+
+        .volunteer-card {
+          direction: ltr;
+        }
+
+        img {
+          transform: scaleX(-1);
+        }
+      }
+
+      /* تنسيق الكارت الفردي */
+      .volunteer-card {
+        background-color: #f8f9fa;
+        border-radius: 8px;
+        padding: 16px; /* تقليل البادينغ قليلاً للمرونة */
+        display: flex;
+        flex-direction: row-reverse;
+        /* justify-content: flex-end; */
+        align-items: center;
+        gap: 15px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+      }
+
+      .volunteer-card .avatar {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        object-fit: cover;
+        flex-shrink: 0; /* يمنع انضغاط الصورة في الشاشات الصغيرة */
+      }
+
+      .volunteer-card .info {
+        text-align: right;
+      }
+
+      .volunteer-card .name {
+        margin: 0 0 5px 0;
+        font-size: 16px;
+        color: #333;
+      }
+
+      .volunteer-card .role {
+        font-size: 14px;
+        color: #777;
+      }
+
+      /* قسم الصور - تم إلغاء العرض الثابت 764px ليتجاوب تلقائياً */
+      .images {
+        width: 100%;
+        max-width: 764px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-bottom: 24px;
+        margin-bottom: 24px;
+        border-bottom: 1px solid #d9e4e5;
+        box-sizing: border-box;
+      }
+
+      .images .title-images {
+        font-family: "Tajawal", sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 100%;
+        letter-spacing: 0;
+        color: #072127;
+      }
+
+      /* حاوية الصور المرنة */
+      .images .images-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap; /* تضمن نزول الصور تحت بعضها بشكل متجاوب على الموبايل */
+        gap: 16px;
+        margin-top: 16px;
+      }
+
+      /* تنسيق الكارت الموحد لجميع العناصر */
+      .images .images-container .card {
+        position: relative;
+        width: calc(33.333% - 11px); /* تقسيم المساحة بالتساوي على 3 أعمدة */
+        min-width: 180px; /* تمنع اختناق الكارت على الشاشات المتوسطة والصغيرة */
+        flex-grow: 1;
+        border-radius: 12px;
+        overflow: hidden;
+        aspect-ratio: 240 / 196; /* يحافظ على النسبة الهندسية للأبعاد الأصلية للصورة تلقائياً */
+      }
+
+      /* جعل الصور تملأ الحاوية بالكامل بدون أبعاد بكسل ثابتة تفسد التجاوب */
+      .images .images-container .card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      /* الطبقة فوق الصورة المتجاوبة */
+      .images .images-container .overlay {
+        position: absolute;
+        background: rgba(0, 0, 0, 0.65); /* درجة عتمة متوازنة كالصورة المرفقة */
+        color: #ffffff;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+      }
+
+      /* توسط نصوص العداد */
+      .images .images-container .text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: #ffffff;
+        width: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
+      }
+
+      .images .images-container .count {
+        font-family: "Tajawal", sans-serif;
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 100%;
+        color: #ffffff;
+        direction: ltr;
+        display: block;
+        margin-bottom: 4px;
+      }
+
+      .images .images-container .label {
+        font-family: "Tajawal", sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 100%;
+        color: #ffffff;
+      }
+    }
+
+    /* زر عرض الكل */
+    .btn-all-volunteers {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+
+      button {
+        padding: 8px 16px;
+        border: 1px solid #d9e4e5;
+        background-color: #f2f2f280;
+        font-family: "Tajawal", sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 25px;
+        letter-spacing: 0;
+        cursor: pointer;
+        border-radius: 4px;
+        width: auto;
+        max-width: 100%;
+      }
+    }
+
+    /* شاشات الموبايل الصغيرة جداً (أقل من 480px) */
+    @media (max-width: 480px) {
+      .nav-volunteers {
+        flex-direction: column; /* جعل العناوين والعداد تحت بعضها عمودياً */
+        align-items: flex-start;
+      }
+      .nav-volunteers .title-volunteers {
+        justify-content: flex-start;
+      }
+      /* 4. صور الملحقات (إذا كانت لا تزال موجودة في هذا القسم) */
+      .images-container {
+        gap: 10px !important;
+      }
+
+      .images-container img,
+      .images-container .card {
+        height: 150px !important; /* تصغير الارتفاع لتوفير مساحة طولية */
+      }
+      /* 1. حاوية قسم الصور بالكامل */
+      .details-page .post-details .images {
+        width: 100% !important;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+      }
+
+      /* 2. عنوان القسم */
+      .title-images {
+        font-size: 18px !important; /* تصغير العنوان قليلاً */
+        text-align: right;
+        margin-bottom: 15px;
+      }
+
+      /* 3. حاوية الصور (تغيير الترتيب من أفقي إلى عمودي) */
+      .images-container {
+        flex-direction: column !important; /* الصور تحت بعضها */
+        gap: 15px !important; /* مسافة عمودية بين الصور */
+        align-items: center;
+        width: 100%;
+      }
+
+      /* 4. الصور الفردية والـ Card (الذي يحتوي على +20 صورة) */
+      .images-container img,
+      .images-container .card {
+        width: 100% !important; /* الصورة تأخذ كامل عرض الشاشة المتاح */
+        height: 220px !important; /* ارتفاع ثابت ومناسب لتبدو واضحة */
+        border-radius: 12px; /* الحفاظ على انحناء الحواف */
+        object-fit: cover; /* لضمان عدم تمطط الصورة */
+      }
+
+      /* 5. تعديل الطبقة السوداء (Overlay) فوق الصورة الأخيرة */
+      .images-container .card .overlay {
+        width: 100% !important; /* تغطية كامل عرض الصورة الجديد */
+        height: 100% !important;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .images-container .card .overlay .text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .images-container .card .overlay .count {
+        font-size: 24px !important; /* تكبير الرقم ليصبح واضحاً */
+        font-weight: bold;
+      }
+
+      .images-container .card .overlay .label {
+        font-size: 16px !important;
+      }
+    }
+  }
+}
+/* شاشات الموبايل (أقل من 768px) */
+@media (max-width: 768px) {
+}
+/* --- التابلت والموبايل (أقل من 1024px) --- */
+@media (max-width: 1024px) {
+  .details-page {
+    flex-direction: column !important; /* المقالات ستصبح تحت المحتوى */
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 100px; /* تقليل المارجن الكبير */
+  }
+
+  .post-details {
+    width: 100% !important; /* جعل المحتوى يأخذ كامل العرض */
+    padding: 20px 15px;
+  }
+}
+@media (max-width: 400px) {
+}
+/* --- الموبايلات الصغيرة جداً (أقل من 375px) --- */
+@media (max-width: 375px) {
+}
+@media (max-width: 480px) {
+}

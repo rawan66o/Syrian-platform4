@@ -1,0 +1,169 @@
+/* التنسيق العلوي للكارد */
+.card-top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.card-project-title {
+  font-family: "Tajawal", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #072127;
+  line-height: 1.6;
+  margin: 0;
+  flex: 1;
+}
+
+/* دائرة الصورة الكبيرة على اليسار */
+.project-image-circle {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.project-image-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* القسم الأوسط */
+.card-meta-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+/* المتطوعون */
+.volunteers-block {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-direction: row-reverse; /* لترتيب الأفاتار أولاً من اليمين ثم النص */
+}
+.avatar-group {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  position: relative;
+}
+
+/* تنسيق الصورة الفردية الدائرية */
+.avatar-img {
+  width: 23px;
+  height: 23px;
+  border-radius: 50%; /* لجعل الصورة دائرية تماماً */
+  border: 2px solid #fff; /* إطار أبيض يفصل الصور المتداخلة */
+  margin-right: -10px; /* القيمة السالبة هي السر وراء تداخل الصور فوق بعضها */
+  object-fit: cover;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1); /* ظل خفيف خلف الصور */
+}
+/* تنسيق علامة الزائد */
+.plus-sign {
+  position: absolute;
+  left: -17px; /* يثبتها فوق الصورة الأخيرة تماماً (الموجودة في أقصى اليسار) */
+  top: 0;
+  width: 23px; /* نفس عرض الصورة تماماً */
+  height: 23px; /* نفس ارتفاع الصورة تماماً */
+  border-radius: 50%;
+
+  /* تأثير الخلفية الشفافة الداكنة لتظهر علامة الزائد بوضوح */
+  background-color: #ffff;
+  color: #cccccc;
+  font-size: 16px;
+  font-weight: 400;
+
+  /* توسيط إشارة الـ + داخل الدائرة */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  pointer-events: none; /* لتجنب حجب الضغط عن الصورة */
+  z-index: 2; /* يضمن ظهورها فوق الصورة وليس خلفها */
+}
+
+.avatars-stack {
+  display: flex;
+  align-items: center;
+}
+
+.stack-avatar {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  object-fit: cover;
+  margin-left: -8px; /* لتراكب الصور */
+}
+
+.plus-indicator {
+  font-family: "Tajawal", sans-serif;
+  font-size: 13px;
+  color: #a3b2b5;
+  margin-left: 4px;
+}
+
+.volunteers-count {
+  font-family: "Tajawal", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #072127;
+  padding-right: 12px;
+
+  strong {
+    font-weight: bold;
+  }
+}
+
+/* التاريخ */
+.date-block {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.calendar-icon-svg {
+  width: 20px;
+  height: 20px;
+  /* opacity: 0.8; */
+}
+
+.date-text-span {
+  font-family: "Tajawal", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #072127;
+}
+
+.view-project-full-btn {
+  /* width: 100%; */
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  padding: 20px 40px;
+  border-bottom: 1px solid #072127;
+}
+
+.view-project-full-btn span {
+  font-family: "Tajawal", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #072127;
+}
+
+.arrow-left-svg {
+  width: 6px;
+  height: 11px;
+  transform: rotate(180deg); /* تدوير السهم ليتجه لليسار تماماً كالصورة */
+}

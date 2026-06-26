@@ -1,0 +1,113 @@
+/*..........start styles the pagination section............ */
+
+.pagination-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  /* margin: 30px 0;
+  direction: ltr; مهم جداً لجعل الأسهم والأرقام تترتب صح */
+}
+/* القائمة الأساسية */
+.pagination {
+  display: flex;
+  list-style: none;
+  padding: 0;
+
+  gap: 40px; /* المسافة بين الأرقام */
+}
+/* شكل الرقم الواحد */
+.page-item {
+  cursor: pointer;
+  font-family: "Tajawal", sans-serif;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 100%;
+  letter-spacing: 0;
+  color: #ffffff;
+}
+.page-link {
+  width: 32px;
+  height: 32px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #708387;
+  font-family: "Tajawal", sans-serif;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 100%;
+  letter-spacing: 0;
+}
+/* شكل الرقم النشط (السماوي مثل الصورة) */
+.active .page-link {
+  background-color: #6dcde5 !important; /* اللون السماوي من صورتك */
+  color: white !important;
+  width: 32px;
+  height: 32px;
+  padding: 8px;
+  border-radius: 8px;
+}
+/* تأثير عند تمرير الماوس */
+.page-link:hover {
+  background-color: #e2e6ea;
+  color: #333;
+}
+/* تنسيق الأسهم */
+.prev .page-link,
+.next .page-link {
+  background-color: transparent;
+  width: 32px;
+  height: 32px;
+  padding: 8px;
+  /* font-size: 18px; */
+  color: #072127;
+  border: 1px solid #d9e4e5;
+  border-radius: 8px;
+}
+/*..........end styles the pagination section............ */
+/* شاشات الموبايل (أقل من 768px) */
+@media (max-width: 768px) {
+  .pagination-wrapper {
+    margin-top: 20px;
+    margin-bottom: 40px; /* تقليل المارجن السفلي */
+  }
+
+  .pagination {
+    gap: 10px; /* مسافة صغيرة جداً لتناسب عرض الموبايل */
+  }
+
+  .page-link {
+    width: 28px; /* تصغير حجم الدائرة قليلاً */
+    height: 28px;
+    font-size: 16px; /* تصغير حجم الرقم */
+    padding: 5px;
+  }
+
+  .active .page-link {
+    width: 28px;
+    height: 28px;
+  }
+
+  .prev .page-link,
+  .next .page-link {
+    width: 28px;
+    height: 28px;
+  }
+}
+/* --- التابلت والموبايل (أقل من 1024px) --- */
+@media (max-width: 1024px) {
+  .pagination {
+    gap: 20px; /* تقليل المسافة بين الأرقام في التابلت */
+  }
+}
+@media (max-width: 400px) {
+}
+/* --- الموبايلات الصغيرة جداً (أقل من 375px) --- */
+@media (max-width: 375px) {
+  .pagination {
+    gap: 5px; /* أقل مسافة ممكنة */
+  }
+}
+@media (max-width: 480px) {
+}

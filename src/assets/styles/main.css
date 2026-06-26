@@ -1,0 +1,136 @@
+/* ..........styles the main section.......... */
+.main-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 40px;
+  padding-top: 100px;
+  background: linear-gradient(
+    101.6deg,
+    #e9f0e8 0.88%,
+    rgba(177, 211, 229, 0.66) 28.52%,
+    rgba(210, 244, 234, 0.58) 51.4%,
+    rgba(177, 211, 229, 0.6) 76.65%,
+    #e9f0e8 100%
+  );
+
+  width: 100%;
+
+  .content-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    padding-top: 50px;
+    padding-bottom: 42px;
+    width: 100%;
+  }
+  .no-content {
+    width: 30%;
+    height: 52px;
+  }
+  .title-main h2 {
+    font-family: "Tajawal", sans-serif;
+    font-weight: 700;
+    font-style: bold;
+    font-size: 34px;
+    line-height: 100%;
+    letter-spacing: 0;
+    color: #000000;
+    text-align: center;
+    height: 52%;
+  }
+  .title-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+  }
+  .btn-open-topic {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .btn-open-topic button {
+    /* width: 219px;*/
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-direction: row-reverse;
+    gap: 8px;
+    padding: 15px 49px;
+    border-radius: 100px;
+    border: none;
+    background-color: #6dcde5;
+    font-family: "Tajawal", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 0;
+    color: #ffffff;
+
+    .add-square {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  .topics-navbar {
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+
+    width: 100%;
+    height: 67px;
+    gap: 40px;
+    background: #ffffff80;
+
+    .topics {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row-reverse;
+      gap: 40px;
+      padding: 24px 0;
+
+      a {
+        font-family: "Tajawal", sans-serif;
+        font-weight: 500;
+        font-style: medium;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: 0;
+        color: #0c1c2f;
+        text-decoration: none;
+      }
+
+      a:nth-child(1) {
+        font-family: "Tajawal", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        color: #072127;
+        font-weight: bold;
+        font-size: 16px;
+      }
+    }
+  }
+}
+/*..........end styles the main section.......... */
+/* شاشات الموبايل (أقل من 768px) */
+@media (max-width: 768px) {
+  .main-section {
+    margin-bottom: 20px;
+  }
+}
+/* --- التابلت والموبايل (أقل من 1024px) --- */
+@media (max-width: 1024px) {
+}
+@media (max-width: 400px) {
+}
+/* --- الموبايلات الصغيرة جداً (أقل من 375px) --- */
+@media (max-width: 375px) {
+}
+@media (max-width: 480px) {
+}

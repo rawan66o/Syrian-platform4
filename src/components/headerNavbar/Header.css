@@ -1,0 +1,332 @@
+/*.......... styles the header.......... */
+.right-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row-reverse;
+  gap: 24px;
+
+  .logo {
+    width: 120px;
+    height: 46px;
+    object-fit: cover;
+  }
+
+  .links-navbar {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 16px;
+
+    a {
+      font-family: "Tajawal", sans-serif;
+      font-weight: 500;
+      font-style: normal;
+      font-size: 16px;
+      line-height: 25px;
+      letter-spacing: 0;
+      color: #70798b;
+      text-decoration: none;
+    }
+
+    a:nth-child(1) {
+      color: #072127;
+      font-weight: bold;
+      font-size: 20px;
+    }
+  }
+  .search {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    /* justify-content: center; */
+    gap: 10px;
+    width: 271px;
+    height: 44px;
+    border-radius: 62px;
+    background-color: #f7f7f7;
+    margin: 0 32px;
+
+    .search-icone {
+      width: 24px;
+      height: 24px;
+      color: #708387;
+      margin-right: 20px;
+    }
+    input {
+      width: 126px;
+      text-align: right;
+      font-family: Tajawal;
+      font-weight: 500;
+      font-size: 18px;
+      border: none;
+      background-color: #f7f7f7;
+      line-height: 100%;
+      letter-spacing: 0;
+      outline: none;
+    }
+  }
+  .navbar-icons {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 20px;
+    width: 102px;
+    height: 40px;
+
+    div {
+      display: flex;
+      width: 24px;
+      height: 24px;
+      background-color: #f7f7f7;
+      align-items: center;
+      justify-content: center;
+      padding: 9px;
+      border-radius: 10px;
+    }
+
+    .icone {
+      color: #151b33;
+      font-size: 20px;
+      /* padding: 9px; */
+      /* font-weight: 300; */
+    }
+    div:nth-child(1) {
+      position: relative; /* لجعل النقطة تتحرك بالنسبة لهذا الصندوق */
+      display: inline-block;
+    }
+
+    .red-dot {
+      position: absolute;
+      top: 11px;
+      left: 23.5px;
+      width: 5px;
+      height: 5px;
+      background-color: #fe5527;
+      border-radius: 50%;
+      border: 0.5px solid #151b33;
+    }
+  }
+  .auth-id {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    .auth-image {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    p {
+      font-family: "Tajawal", sans-serif;
+      font-weight: 500;
+      font-style: normal;
+      font-size: 14px;
+      line-height: 100%;
+      letter-spacing: 0;
+      color: #072127;
+    }
+  }
+}
+.vertical-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1px;
+  height: 30px;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  background-color: #70798b;
+  font-weight: 500;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #fff;
+  height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 47px 0px #0000000d;
+
+  /* padding: 27px 100px; */
+}
+/* --- إعدادات افتراضية لإخفاء عناصر الموبايل في الديسكتوب --- */
+.menu-icon {
+  display: none; /* مخفي في اللابتوب */
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.mobile-search {
+  display: none;
+}
+/*..........end styles the header.......... */
+/* شاشات الموبايل (أقل من 768px) */
+@media (max-width: 768px) {
+  .navbar {
+    height: 70px; /* تقليل الارتفاع قليلاً */
+    padding: 0 15px;
+  }
+
+  /* تصغير اللوغو ليتناسب مع الشاشة الصغيرة */
+  .logo {
+    width: 90px;
+    height: auto;
+  }
+
+  /* تحسين شكل القائمة المنسدلة في الموبايل */
+  .links-navbar {
+    top: 70px; /* نفس ارتفاع الناف بار الجديد */
+    gap: 20px;
+    padding-top: 30px;
+    align-items: center; /* توسيط الروابط */
+  }
+
+  .links-navbar a {
+    font-size: 18px; /* تكبير الخط قليلاً ليسهل الضغط عليه بالإصبع */
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0; /* خط خفيف بين الروابط */
+  }
+
+  /* إلغاء الـ Border عن آخر رابط */
+  .links-navbar a:last-child {
+    border-bottom: none;
+  }
+
+  /* تعديل صندوق البحث داخل القائمة ليناسب عرض الموبايل */
+  .mobile-search {
+    /* display: none; */
+    width: 90% !important;
+    margin: 20px auto !important;
+    height: 40px;
+  }
+
+  .mobile-search input {
+    width: 100%;
+    /* ليأخذ كامل مساحة الصندوق */
+    font-size: 16px;
+  }
+
+  /* صورة المستخدم: يفضل تصغيرها قليلاً */
+  .auth-image {
+    width: 35px;
+    height: 35px;
+  }
+  /* إخفاء أي فواصل أو عناصر قد تسبب خروج المحتوى عن العرض (Overflow) */
+  .vertical-line {
+    display: none;
+  }
+  .navbar-icons {
+    display: none !important;
+  }
+  .btn-open-topic button {
+    padding: 10px 30px; /* تقليل حجم الزر ليناسب يد المستخدم */
+    font-size: 16px;
+    height: 46px;
+  }
+
+  /* جعل شريط الروابط الصغير قابل للتمرير يميناً ويساراً */
+  .topics-navbar {
+    height: auto !important;
+    overflow-x: auto; /* السماح بالتمرير الأفقي */
+    justify-content: flex-start !important; /* البدء من اليمين */
+    padding: 10px 15px;
+    white-space: nowrap; /* منع الروابط من النزول لسطر جديد */
+  }
+
+  .topics {
+    gap: 25px !important; /* تقليل المسافات بين الروابط */
+    padding: 10px 0 !important;
+  }
+
+  /* إخفاء شريط التمرير (Scrollbar) ليكون الشكل أنيقاً */
+  .topics-navbar::-webkit-scrollbar {
+    display: none;
+  }
+  .topics-navbar {
+    -webkit-overflow-scrolling: touch; /* تمرير ناعم على أجهزة آيفون */
+    scroll-behavior: smooth;
+  }
+}
+/* --- التابلت والموبايل (أقل من 1024px) --- */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 0 20px;
+    height: 80px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .right-section {
+    width: 100%;
+    flex-direction: row; /* العودة للاتجاه الطبيعي لسهولة التوزيع */
+  }
+
+  .menu-icon {
+    display: block; /* إظهار زر القائمة */
+    order: 3;
+  }
+
+  .logo {
+    order: 2;
+    width: 100px;
+  }
+
+  .auth-id {
+    order: 1;
+  }
+  .user-name {
+    display: none;
+  } /* إخفاء الاسم وإبقاء الصورة فقط لتوفير مساحة */
+
+  /* تحويل الروابط إلى قائمة عمودية منسدلة */
+  .links-navbar {
+    position: absolute;
+    top: 80px;
+    right: -120%; /* مخفية خارج الشاشة يميناً */
+    width: 100%;
+    /* height: calc(100vh); */
+    background: white;
+    flex-direction: column !important;
+    gap: 30px;
+    transition: 0.4s ease;
+    z-index: 1000;
+    box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.1);
+    padding-top: 50px;
+  }
+
+  .links-navbar.active {
+    right: 0; /* تظهر عند الضغط على الزر */
+  }
+
+  /* إخفاء البحث من الهيدر وإظهاره داخل القائمة */
+  .vertical-line {
+    display: none !important;
+  }
+
+  .mobile-search {
+    display: flex;
+    margin: 0;
+    width: 60%;
+  }
+}
+@media (max-width: 400px) {
+}
+/* --- الموبايلات الصغيرة جداً (أقل من 375px) --- */
+@media (max-width: 375px) {
+}
+@media (max-width: 480px) {
+}

@@ -1,0 +1,79 @@
+.content-container {
+  display: flex;
+  flex-direction: column; /* ترتيب الكاردات ثم الباجينيشن تحتها */
+  align-items: center; /* توسيط المحتوى كاملاً */
+  width: 100%;
+}
+.content-page {
+  display: flex;
+  /* flex-direction: column; */
+  /* flex-direction: row-reverse; لضمان ترتيب الـ 3 أعمدة من اليمين لليسار */
+  justify-content: center;
+  gap: 32px;
+  width: 100%;
+  max-width: 1300px; /* يمكنك تعديله حسب رغبتك */
+  margin: 0 auto;
+  margin-bottom: 357px;
+  padding: 20px;
+}
+
+.first-col,
+.second-col,
+.third-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+/* شاشات الموبايل (أقل من 768px) */
+@media (max-width: 768px) {
+  .content-page {
+    padding: 10px;
+    margin-bottom: 50px;
+  }
+  /* في الموبايل، يفضل أن يكون الفلتر في البداية لكي يختار المستخدم التصنيف */
+  .content-page {
+    display: flex;
+    flex-direction: column; /* الفلتر (third-col) سيظهر أولاً ثم البوستات */
+  }
+  .first-col,
+  .second-col,
+  .third-col {
+    width: 80%;
+    gap: 20px;
+  }
+}
+/* --- التابلت والموبايل (أقل من 1024px) --- */
+@media (max-width: 1024px) {
+  .content-main {
+    flex-direction: column !important; /* تحويل العناصر لتصبح فوق بعضها */
+    gap: 20px;
+    padding-top: 30px !important;
+  }
+
+  .no-content {
+    display: none; /* إلغاء المساحة الفارغة لأننا لم نعد بحاجتها للتوازن */
+  }
+
+  .title-main,
+  .btn-open-topic {
+    width: 100% !important; /* جعل العناصر تأخذ كامل العرض */
+  }
+
+  .title-main h2 {
+    font-size: 28px; /* تصغير العنوان قليلاً */
+  }
+  .content-page {
+    flex-direction: column-reverse; /* وضع الفلاتر والمقالات في الأعلى أو الأسفل حسب الرغبة */
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 100px; /* تقليل المارجن الكبير */
+  }
+}
+@media (max-width: 400px) {
+}
+/* --- الموبايلات الصغيرة جداً (أقل من 375px) --- */
+@media (max-width: 375px) {
+}
+@media (max-width: 480px) {
+}

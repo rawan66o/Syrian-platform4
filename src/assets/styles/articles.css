@@ -1,0 +1,138 @@
+/*..........start styles the articles section............ */
+.latest-articles {
+  direction: rtl; /* لضمان الاتجاه العربي */
+  padding-top: 24px;
+  padding-right: 24px;
+  padding-left: 24px;
+  padding-bottom: 32px;
+  box-shadow: 0px 0px 5px 0px #00000026;
+  background-color: #ffffff;
+  width: 356px;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+
+  width: 100% !important; /* إلغاء الـ 356px ليكون مرناً */
+  max-width: 356px; /* يبقى بهذا العرض في الديسكتوب */
+  box-sizing: border-box;
+
+  .article-content {
+    width: auto !important; /* إلغاء الـ 192px الثابتة ليتمدد النص حسب المساحة المتاحة */
+    flex: 1; /* جعل النص يأخذ المساحة المتبقية بجانب الصورة */
+    text-align: right;
+  }
+
+  .section-title {
+    /* text-align: right; */
+    font-family: "Tajawal", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0;
+    color: #000000;
+    padding-bottom: 21px;
+    margin-bottom: 24px;
+    /* padding-top: 11px; */
+    border-bottom: 1px solid #d9e4e5;
+  }
+
+  .article-card {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row-reverse;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #f0f0f0; /* الخط الفاصل بين المقالات */
+    gap: 16px;
+    /* width: 308px;
+  height: 116px; */
+  }
+
+  .article-card:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .article-content {
+    width: 192px;
+    /* display: flex;
+  align-items: center;
+  justify-content: center;
+  */
+  }
+
+  .article-content p {
+    font-family: "Tajawal", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0;
+    color: #072127;
+    margin: 0;
+  }
+  .article-image {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .article-image img {
+    width: 100px; /* حجم الصورة كما في الصورة */
+    height: 68px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+}
+/*..........end styles the articles section............ */
+/* شاشات الموبايل (أقل من 768px) */
+@media (max-width: 768px) {
+  .articles-container {
+    grid-template-columns: 1fr; /* العودة لعمود واحد في الموبايل */
+  }
+
+  .latest-articles {
+    padding: 15px; /* تقليل البادينغ */
+  }
+
+  .article-card {
+    gap: 12px; /* تقليل المسافة بين الصورة والنص */
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .article-image img {
+    width: 80px; /* تصغير الصورة قليلاً في الموبايل */
+    height: 55px;
+  }
+
+  .article-content p {
+    font-size: 13px; /* تصغير الخط قليلاً */
+    line-height: 20px;
+  }
+}
+/* --- التابلت والموبايل (أقل من 1024px) --- */
+@media (max-width: 1024px) {
+  .latest-articles {
+    max-width: 100%; /* يأخذ كامل العرض في التابلت والموبايل */
+    border-radius: 16px;
+    /* margin-top: 20px; */
+  }
+
+  .article-card {
+    border-bottom: none; /* إلغاء الخط الفاصل في نظام الشبكة */
+    margin-bottom: 0;
+  }
+  .articals {
+    width: 100% !important; /* المقالات الجانبية تأخذ كامل العرض */
+  }
+}
+@media (max-width: 400px) {
+}
+/* --- الموبايلات الصغيرة جداً (أقل من 375px) --- */
+@media (max-width: 375px) {
+}
+@media (max-width: 480px) {
+}

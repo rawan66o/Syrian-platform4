@@ -1,0 +1,146 @@
+/*..........styles the category section............ */
+.filter-sidebar {
+  width: 356px;
+  padding: 24px;
+  box-shadow: 0px 0px 5px 0px #00000026;
+  padding-top: 24px;
+  padding-right: 24px;
+  padding-left: 24px;
+  padding-bottom: 32px;
+  background-color: #ffffff;
+
+  h3 {
+    text-align: right;
+    font-family: "Tajawal", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0;
+    color: #000000;
+    padding-bottom: 21px;
+    margin-bottom: 24px;
+    /* padding-top: 11px; */
+    border-bottom: 1px solid #d9e4e5;
+  }
+
+  /* الحاوية الكبيرة لكل خيار */
+  .category-item {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between; /*  يرمي العدد لليسار والنص لليمين */
+    align-items: center;
+    padding: 12px 0;
+    cursor: pointer;
+    /* border-bottom: 1px solid #f0f0f0; */
+    direction: rtl; /* لضمان البدء من اليمين */
+
+    div:nth-child(1) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  /* الحاوية التي تجمع النص والدائرة */
+  .text-with-radio {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 10px; /* مسافة بين الدائرة والنص */
+  }
+
+  /* إخفاء دائرة الراديو الأصلية */
+  .text-with-radio input {
+    display: none;
+  }
+
+  /* تصميم الدائرة المخصصة */
+  .custom-checkmark {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+  }
+
+  /* شكل الدائرة عند الاختيار (زرقاء) */
+  .category-item input:checked + .custom-checkmark {
+    border-color: #6dcde5;
+    background-color: #6dcde5;
+  }
+
+  /* النقطة البيضاء الصغيرة داخل الدائرة عند الاختيار */
+  .category-item input:checked + .custom-checkmark::after {
+    content: "✔";
+    color: white;
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .count {
+    font-family: "Tajawal", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0;
+    color: #747474;
+  }
+
+  .cat-name {
+    font-family: "Tajawal", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0;
+    color: #747474;
+  }
+}
+/*..........end styles the category section............ */
+
+/* شاشات الموبايل (أقل من 768px) */
+@media (max-width: 768px) {
+  .filter-sidebar {
+    padding: 15px; /* تقليل البادينغ */
+  }
+
+  .filter-sidebar h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+  }
+
+  .category-item {
+    padding: 10px 0; /* تقليل المسافة بين التصنيفات */
+  }
+
+  .cat-name,
+  .count {
+    font-size: 14px; /* تصغير الخط قليلاً ليناسب الموبايل */
+  }
+
+  .custom-checkmark {
+    width: 16px;
+    height: 16px;
+  }
+}
+/* --- التابلت والموبايل (أقل من 1024px) --- */
+@media (max-width: 1024px) {
+  .filter-sidebar {
+    width: 100% !important; /* يأخذ كامل العرض المتاح */
+    max-width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    border-radius: 16px; /* إضافة لمسة جمالية */
+  }
+}
+@media (max-width: 400px) {
+}
+/* --- الموبايلات الصغيرة جداً (أقل من 375px) --- */
+@media (max-width: 375px) {
+}
+@media (max-width: 480px) {
+}
