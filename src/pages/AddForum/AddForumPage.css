@@ -1,0 +1,316 @@
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap");
+
+/* Wrapper للصفحة */
+.addforum-page-wrapper {
+  direction: rtl;
+  font-family: "Tajawal", sans-serif;
+  background-color: #ffffff;
+  min-height: 100vh;
+  padding-bottom: 120px;
+}
+/* ========== منزلة 103 - إضافة منتدى (منشور) ========== */
+
+.addforum-page-container {
+  direction: rtl;
+  font-family: "Tajawal", sans-serif;
+  background-color: #ffffff;
+  min-height: 100vh;
+  padding-bottom: 120px;
+}
+
+/* البطاقة الرئيسية */
+.addforum-main-card {
+  width: 700px;
+  max-width: 100%;
+  margin: 40px auto 0;
+  background: transparent;
+}
+
+/* عنوان الصفحة */
+.addforum-header {
+  width: 100%;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.addforum-title {
+  font-family: "Tajawal", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 100%;
+  color: #232323;
+  text-align: center;
+  margin: 0;
+}
+
+/* محتوى البطاقة */
+.addforum-content-card {
+  width: 100%;
+  background: #fefeff;
+  border-radius: 8px;
+  border-right: 6px solid #6dcde5;
+  box-shadow: 0px 0px 11px 0px #0000001a;
+  padding: 30px 20px;
+}
+
+/* الفورم */
+.addforum-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* مجموعة الحقول */
+.addforum-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: right;
+}
+
+/* التسميات */
+.addforum-input-label {
+  font-family: "Tajawal", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #000000;
+  margin: 0;
+}
+
+/* النص المساعد */
+.addforum-input-hint {
+  font-family: "Tajawal", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: #708387;
+  margin: 0;
+}
+
+/* الحقول */
+.addforum-custom-input,
+.addforum-custom-textarea,
+.addforum-custom-select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #70838766;
+  border-radius: 8px;
+  font-family: "Tajawal", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #708387;
+  background: #ffffff;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.addforum-custom-input:focus,
+.addforum-custom-textarea:focus,
+.addforum-custom-select:focus {
+  border-color: #6dcde5;
+}
+
+.addforum-custom-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23708387' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: left 15px center;
+  background-size: 16px;
+}
+
+.addforum-custom-textarea {
+  resize: vertical;
+}
+
+.addforum-textarea-small {
+  min-height: 83px;
+}
+
+/* ===== رفع الملفات ===== */
+.addforum-upload-box {
+  width: 100%;
+  min-height: 107px;
+  background: #6dcde50d;
+  border: 1px dashed #6dcde5;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 20px;
+}
+
+.addforum-upload-box:hover {
+  background: #6dcde51a;
+}
+
+.addforum-upload-icon {
+  width: 67px;
+  height: 67px;
+  background: #6dcde51a;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.addforum-upload-plus-box {
+  width: 25px;
+  height: 25px;
+  background: #6dcde5;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.addforum-upload-plus-box span {
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+}
+
+.addforum-upload-filename {
+  font-size: 12px;
+  color: #6dcde5;
+}
+
+.addforum-upload-hint {
+  font-size: 12px;
+  color: #708387;
+}
+
+/* قائمة المرفقات */
+.addforum-attachments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.addforum-attachment-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8f9fa;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  color: #072127;
+}
+
+.addforum-remove-attachment {
+  background: none;
+  border: none;
+  color: #ff5b5b;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* ===== الفوتر الثابت ===== */
+.addforum-fixed-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #ffffff;
+  border-top: 1px solid #d9e4e5;
+  box-shadow: 0px -2px 37.4px 0px #0000001a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 16px 0;
+}
+
+.addforum-footer-buttons {
+  width: 100%;
+  max-width: 562px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-direction: row;
+}
+
+.addforum-btn-next {
+  width: 396px;
+  height: 56px;
+  background-color: #6dcde5;
+  color: white;
+  border: none;
+  border-radius: 100px;
+  font-family: "Tajawal", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.addforum-btn-next:hover {
+  background-color: #4bb8d1;
+}
+
+.addforum-btn-prev {
+  width: 146px;
+  height: 56px;
+  background-color: transparent;
+  color: #072127;
+  border: 1px solid #d9e4e5;
+  border-radius: 100px;
+  font-family: "Tajawal", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.addforum-btn-prev:hover {
+  background-color: #f5f5f5;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
+  .addforum-main-card {
+    width: 95%;
+  }
+
+  .addforum-btn-next {
+    width: 200px;
+    height: 45px;
+    font-size: 16px;
+  }
+
+  .addforum-btn-prev {
+    width: 100px;
+    height: 45px;
+    font-size: 16px;
+  }
+
+  .addforum-title {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .addforum-content-card {
+    padding: 16px;
+  }
+
+  .addforum-btn-next {
+    width: 160px;
+    font-size: 14px;
+  }
+
+  .addforum-btn-prev {
+    width: 80px;
+    font-size: 14px;
+  }
+
+  .addforum-title {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,1029 @@
+.courseView_container {
+  /* التموضع والتدفق */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 0 auto;
+
+  /* الأبعاد الثابتة من التصميم */
+  width: 100%;
+  /* نستخدم min-height بدلاً من height الثابت لضمان مرونة المحتوى */
+  min-height: 3228px;
+
+  /* الخصائص الجمالية */
+  background-color: #ffffff; /* أو حسب لون خلفية الموقع */
+  opacity: 1;
+  overflow-x: hidden; /* لمنع ظهور شريط تمرير أفقي */
+
+  /* لضمان احتساب الأبعاد والبادينج بشكل صحيح */
+  box-sizing: border-box;
+}
+
+/* --- Responsive Full (التجاوب الكامل) --- */
+
+/* للشاشات المتوسطة (Tablets & Laptops) */
+@media (max-width: 1200px) {
+  .courseView_container {
+    max-width: 100%;
+    min-height: auto; /* ترك الارتفاع يتحدد تلقائياً حسب المحتوى */
+    padding: 0 20px;
+  }
+}
+
+/* للشاشات الصغيرة (Mobile) */
+@media (max-width: 768px) {
+  .courseView_container {
+    /* إلغاء أي قيود على الارتفاع ليتناسب مع ترتيب العناصر العمودي */
+    min-height: auto;
+    padding: 0 15px;
+
+    /* التأكد من أن العناصر الداخلية مثل Sidebar و Grid ستنزل تحت بعضها */
+    gap: 40px;
+  }
+}
+
+/* تحسين تجربة التصفح في الشاشات العريضة جداً */
+@media (min-width: 1441px) {
+  .courseView_container {
+    /* إضافة ظل خفيف على الجوانب لتمييز الحاوية المركزية */
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.05);
+  }
+}
+.heroSection_container {
+  /* التموضع */
+  position: relative;
+
+  /* الأبعاد */
+  width: 100%; /* لضمان ملء عرض المتصفح */
+  height: 366px;
+  background: linear-gradient(90deg, #6dcde5 24.52%, #c0eaf4 100%);
+  /* التنسيق الداخلي */
+  display: flex;
+  align-items: center; /* توسيط المحتوى عمودياً */
+  justify-content: center; /* توسيط المحتوى أفقياً */
+
+  /* المسافات الجانبية لضمان عدم التصاق المحتوى بالحواف في الشاشات الأصغر */
+  padding: 0 5%;
+  margin: 0 auto; /* لتوسيط القسم في الشاشات العريضة جداً */
+
+  /* الخصائص الجمالية */
+  opacity: 1;
+  background-color: var(--hero-bg, #f0f4f4); /* خلفية افتراضية */
+
+  /* لضمان احتساب الأبعاد بشكل صحيح */
+  box-sizing: border-box;
+}
+
+/* --- Responsive (التجاوب) --- */
+
+@media (max-width: 1024px) {
+  .heroSection_container {
+    height: auto; /* ترك الارتفاع يتحدد بالمحتوى في الشاشات المتوسطة */
+    min-height: 300px;
+    top: 80px; /* تقليل المسافة العلوية قليلاً */
+    padding: 40px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroSection_container {
+    top: 70px;
+    height: auto;
+    padding: 60px 15px;
+    text-align: center; /* توسيط النصوص في الجوال */
+    flex-direction: column; /* ترتيب العناصر عمودياً إذا كان هناك صورة ونص */
+  }
+}
+
+.heroSection_title {
+  /* التموضع */
+  position: absolute;
+  /* بدلاً من Left الثابت، نستخدم Right ليتناسب مع التصميم العربي ويبعد عن الحافة */
+  right: calc(100% - 740px - 600px);
+
+  /* الأبعاد */
+  width: 600px;
+  height: 236px;
+
+  /* التنسيق الداخلي (إذا كان يحتوي على سطرين أو أكثر) */
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+
+  /* الخصائص الجمالية */
+  opacity: 1;
+  transform: rotate(0deg);
+
+  /* تنسيق الخط الافتراضي */
+  color: #04181c; /* لون داكن للتباين مع الخلفية الفاتحة */
+  line-height: 1.4;
+  text-align: right;
+}
+
+/* --- Responsive (التجاوب الكامل) --- */
+
+@media (max-width: 1200px) {
+  .heroSection_title {
+    /* إلغاء التموضع المطلق في الشاشات الأصغر لتجنب المشاكل */
+    position: static;
+    width: 90%;
+    height: auto;
+    margin: 40px auto;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroSection_title {
+    width: 100%;
+    top: 0;
+    gap: 15px; /* تقليل المسافة بين العناصر في الجوال */
+  }
+
+  .heroSection_title h1 {
+    font-size: 28px; /* تصغير الخط ليناسب شاشة الجوال */
+  }
+}
+
+.title_icon {
+  /* التموضع */
+  left: 500px;
+  align-self: flex-end;
+  /* الأبعاد الثابتة */
+  width: 100px;
+  height: 40px;
+
+  /* الخلفية والحدود */
+  background: #ffffff;
+  border: 1px solid #6dcde5;
+  border-width: 1px;
+
+  /* الزوايا الكبسولية */
+  border-radius: 150.04px;
+  padding: 10px;
+  /* التنسيق الداخلي */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  /* الخصائص الجمالية */
+  opacity: 1;
+  transform: rotate(0deg);
+  box-sizing: border-box;
+
+  /* إضافة ظل خفيف ليعطي عمقاً فوق التدرج اللوني */
+  box-shadow: 0 2px 8px rgba(109, 205, 229, 0.2);
+}
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+  .title_icon {
+    /* في الشاشات الأصغر يفضل إلغاء التموضع الثابت left: 500px */
+    position: static;
+    margin: 0 auto 20px auto;
+  }
+}
+
+.title_icon:hover {
+  background: #6dcde5;
+  color: white;
+  transition: 0.3s;
+}
+.Course_title p {
+  /* الخط والنص */
+  font-family: "Tajawal", sans-serif;
+  font-weight: 700; /* Bold */
+  font-size: 32px;
+  text-align: right;
+  color: #ffffff;
+  /* المسافات والارتفاع */
+  line-height: 100%; /* 100% تعني أن الارتفاع مساوٍ تماماً لحجم الخط */
+  letter-spacing: 0%;
+
+  /* مظهر النص */
+  margin-bottom: 24px; /* مسافة افتراضية أسفل العنوان */
+
+  /* تحسينات إضافية */
+  font-style: normal; /* "Bold" في CSS تعبر عنها بـ font-weight */
+  direction: rtl; /* لضمان محاذاة النص العربي بشكل صحيح */
+}
+
+/* --- Responsive (التجاوب) --- */
+
+@media (max-width: 768px) {
+  .Course_title p {
+    /* تصغير الخط قليلاً في الجوال ليتناسب مع عرض الشاشة */
+    font-size: 26px;
+    margin-bottom: 16px;
+    text-align: center; /* اختيارياً: توسيط العنوان في الجوال */
+  }
+}
+.heroTitle_text {
+  color: #ffffff;
+}
+
+.Features_card {
+  /* التموضع */
+  position: absolute; /* بناءً على وجود قيم top و left دقيقة */
+  top: 261px;
+  left: 100px;
+
+  /* الأبعاد الثابتة */
+  width: 390px;
+  height: 516px;
+
+  /* الخلفية والظلال */
+  background: #ffffff;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25); /* #00000040 تعادل 25% opacity */
+  border-radius: 26px;
+  /* التنسيق الداخلي */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  /* الخصائص الجمالية */
+  opacity: 1;
+  transform: rotate(0deg);
+  border-radius: 16px; /* إضافة زوايا منحنية لتتناسب مع روح التصميم السابق */
+
+  /* لضمان بقاء العناصر داخل الحدود */
+  box-sizing: border-box;
+  overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* تأثير عند التمرير (Hover) لزيادة التفاعل */
+.Features_card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 15px 0px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Responsive (التجاوب الكامل) --- */
+
+@media (max-width: 1200px) {
+  .Features_card {
+    /* إلغاء التموضع المطلق ليسمح للبطاقات بالترتيب بجانب بعضها (Flex/Grid) */
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    max-width: 390px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .Features_card {
+    height: auto; /* ترك الارتفاع يتحدد بالمحتوى في الجوال */
+    min-height: 400px;
+    padding: 20px;
+  }
+}
+
+.Features_card img {
+  /* التموضع (إذا كنت تستخدم absolute داخل البطاقة) */
+  /* يفضل وضعها كأول عنصر داخل البطاقة لتأخذ مكانها تلقائياً */
+  position: relative;
+
+  /* الأبعاد الدقيقة من التصميم */
+  width: 390px;
+  height: 201px;
+
+  /* لضمان عدم تشوه الصورة عند اختلاف أبعاد المصدر */
+  object-fit: cover;
+
+  /* التمركز */
+  display: block;
+  margin: 0 auto;
+
+  /* الزوايا: يفضل أن تتبع زوايا البطاقة العلوية فقط لدمجها بانسجام */
+  border-radius: 16px 16px 0 0;
+
+  /* الخصائص الجمالية من طلبك */
+  opacity: 1;
+  transform: rotate(0deg);
+
+  /* تحسين جودة العرض */
+  image-rendering: -webkit-optimize-contrast;
+}
+
+/* --- Responsive (التجاوب الكامل) --- */
+
+@media (max-width: 768px) {
+  .Features_card img {
+    /* في الجوال، نجعل الصورة مرنة العرض مع الحفاظ على التناسب */
+    width: 100%;
+    height: auto;
+    max-height: 201px; /* لضمان عدم تمددها بشكل مفرط */
+  }
+}
+
+.dot {
+  /* الأبعاد */
+  width: 10px;
+  height: 10px;
+
+  /* اللون (الأزرق السماوي المطلوب) */
+  background-color: #6dcde5;
+
+  /* الشكل الدائري */
+  border-radius: 50%; /* هذا هو السر لتحويل المربع إلى دائرة */
+
+  /* التموضع (اختياري، لضمان ظهورها بشكل جيد) */
+  display: inline-block; /* لكي تعمل الأبعاد مع النص */
+  vertical-align: middle; /* لتوسيطها عمودياً مع النص المجاور */
+
+  /* منع التمدد أو التقلص */
+  flex-shrink: 0;
+
+  /* تحسين جودة الحواف */
+  box-sizing: border-box;
+}
+
+/* الحاوية التي قمنا بتنسيقها سابقاً */
+.Features_card_text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* المسافة العمودية بين الأسطر */
+  text-align: right;
+  direction: rtl;
+  align-self: center;
+}
+
+/* سطر الميزة الواحدة */
+.feature_item {
+  display: flex;
+  align-items: center; /* لتوسيط الدائرة مع النص عمودياً */
+  gap: 12px; /* المسافة بين الدائرة والنص */
+}
+
+/* الدائرة 10x10 */
+
+.feature_item p {
+  margin: 0;
+  font-family: "Tajawal", sans-serif;
+  font-size: 16px;
+  color: #4a5568;
+}
+.Features_card_buttun {
+  /* position: absolute; */
+  /* top: 665px; */
+  /* left: 133px; */
+  width: 323px;
+  height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  opacity: 1;
+  transform: rotate(0deg);
+  box-sizing: border-box;
+  flex-direction: column;
+}
+
+/* تنسيق الزر الفعلي داخل الحاوية لملء المساحة */
+.Features_card_buttun button {
+  width: 100%;
+  height: 50px; /* ارتفاع الزر القياسي المناسب للعين */
+  background-color: #6dcde5;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-family: "Tajawal", sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.Features_card_buttun button:hover {
+  background-color: #5bb3c9;
+}
+
+/* --- Responsive --- */
+@media (max-width: 1200px) {
+  .Features_card_buttun {
+    position: static;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    padding: 10px 0;
+  }
+}
+
+.main_container {
+  /* إزالة التموضع المطلق لجعل العنصر في التدفق الطبيعي للصفحة */
+  position: relative; /* أو static إذا لم تكن هناك حاجة لتموضع خاص */
+  width: 100%;
+  max-width: 716px;
+  height: auto; /* تغيير من ارتفاع ثابت إلى تلقائي */
+  min-height: auto;
+  opacity: 1;
+  /* إلغاء القيم الثابتة للتموضع المطلق */
+  top: auto;
+  left: auto;
+  gap: 32px;
+  transform: rotate(0deg);
+  display: flex;
+  flex-direction: column;
+  padding: 20px; /* إضافة حشوة بدلاً من التموضع الثابت */
+  align-self: self-start;
+  margin-right: 10vw;
+}
+@media (max-width: 1024px) {
+  .main_container {
+    width: 100%;
+    max-width: 716px;
+    height: auto;
+    top: auto;
+    left: auto;
+    margin: 0 auto;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main_container {
+    width: 100%;
+    gap: 20px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main_container {
+    gap: 16px;
+  }
+}
+.showMore_bttn {
+  width: 139px;
+  height: 40px;
+  opacity: 1;
+  border-radius: 150.04px;
+  color: #072127;
+  border: 1px solid #d9e4e5;
+}
+.descreption_container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.descreption_container p {
+  color: var(--2, #4a5568);
+}
+.horizontal_line {
+  width: 716px; /* يمكن تقريب الرقم إلى 716px */
+  height: 0px;
+  transform: rotate(180deg); /* لتطبيق زاوية الدوران */
+  opacity: 1;
+  border-width: 1px;
+  border: 1px solid #d9e4e5;
+}
+.lessonsList_container {
+  width: 100%;
+  max-width: 716px; /* الحد الأقصى للعرض */
+  height: auto; /* بدلاً من 677px ثابت ليتكيف مع المحتوى */
+  min-height: 677px; /* ارتفاع أدنى إذا لزم الأمر */
+  opacity: 1;
+  gap: 20px;
+  box-sizing: border-box;
+  margin: 0 auto; /* توسيط الحاوية */
+  padding: 20px; /* إضافة حشوة للهوامش الداخلية */
+  display: flex;
+  flex-direction: column; /* ترتيب العناصر عمودياً */
+  /* يمكن تغيير التوجيه حسب الحاجة */
+}
+
+/* تحسين الاستجابة للشاشات الصغيرة */
+@media (max-width: 768px) {
+  .lessonsList_container {
+    max-width: 100%;
+    min-height: auto;
+    padding: 10px;
+    gap: 15px; /* تقليل الفجوة قليلاً */
+  }
+}
+
+@media (max-width: 480px) {
+  .lessonsList_container {
+    padding: 5px;
+    gap: 10px;
+  }
+}
+/* ... existing code ... */
+
+.lesson_continer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  /* الأبعاد */
+  width: 711px;
+  height: auto; /* تغيير من ارتفاع ثابت إلى تلقائي لتجنب تجاوز المحتوى */
+  min-height: 178px; /* الحفاظ على الحد الأدنى للارتفاع المطلوب */
+  box-sizing: border-box; /* منع الحشوة والحدود من زيادة حجم العنصر */
+
+  /* المظهر */
+  opacity: 1;
+  border-radius: 20px;
+  background: #e5f6f980; /* لون 8 خانات (الخانتان الأخيرتان 80 = 50% شفافية) يدعمه المتصفحات الحديثة */
+  padding: 16px; /* حشوة داخلية لتجنب التصاق المحتوى بالحواف */
+}
+
+/* تكييف الشاشات المتوسطة (تابلت ≤768px) */
+@media (max-width: 768px) {
+  .lesson_continer {
+    width: 100%;
+    max-width: 100%; /* ترك العرض يتكيف مع الشاشة الصغيرة */
+    left: 0; /* إلغاء المسافة الثابتة من اليسار لتجنب التجاوز الأفقي */
+    top: 20px; /* تقليل المسافة العلوية */
+    min-height: 160px;
+    padding: 12px;
+    border-radius: 16px;
+  }
+}
+
+/* تكييف الشاشات الصغيرة (هاتف ≤480px) */
+@media (max-width: 480px) {
+  .lesson_continer {
+    position: relative; /* التبديل إلى تموضع نسبي لتجنب مشاكل التموضع المطلق في الشاشات الصغيرة */
+    top: 0;
+    left: 0;
+    min-height: 140px;
+    padding: 8px;
+    border-radius: 12px;
+  }
+}
+
+/* ... existing code ... */
+/* ... existing code ... */
+
+.lesson_container p {
+  font-family: "Tajawal", sans-serif; /* إضافة sans-serif كاحتياطي */
+  font-weight: 400;
+  font-style: normal; /* Regular تعني normal في CSS */
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: 0; /* بدلاً من 0% لأن letter-spacing لا تقبل النسب المئوية */
+  text-align: right;
+  color: var(--2, #4a5568);
+  /* leading-trim غير مدعومة في CSS القياسية، لذا تم تجاهلها */
+  margin: 0; /* إزالة الهوامش الافتراضية للفقرات إذا لزم الأمر */
+  padding: 8px; /* إضافة حشوة بسيطة للنص */
+  border-radius: 4px; /* حواف بسيطة لتناسب الخلفية */
+}
+
+/* تحسين الاستجابة لحجم الخط على الشاشات المتوسطة */
+@media (max-width: 768px) {
+  .lesson_container p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+/* تحسين الاستجابة لحجم الخط على الشاشات الصغيرة */
+@media (max-width: 480px) {
+  .lesson_container p {
+    font-size: 13px;
+    line-height: 22px;
+    padding: 6px;
+  }
+}
+
+/* ... existing code ... */
+/* ... existing code ... */
+
+.courseTrainers_container {
+  width: 100%;
+  max-width: 716px; /* الحد الأقصى للعرض */
+  height: auto; /* بدلاً من ارتفاع ثابت 655px ليتكيف مع المحتوى */
+  min-height: 655px; /* ارتفاع أدنى إذا لزم الأمر */
+  opacity: 1;
+  gap: 20px;
+  box-sizing: border-box;
+  margin: 0 auto; /* توسيط الحاوية */
+  padding: 20px; /* حشوة داخلية */
+  display: flex;
+  flex-direction: column; /* ترتيب العناصر عمودياً - يمكن تغييرها حسب الحاجة */
+}
+
+/* تحسين الاستجابة للشاشات المتوسطة */
+@media (max-width: 768px) {
+  .courseTrainers_container {
+    max-width: 100%;
+    min-height: auto;
+    padding: 15px;
+    gap: 15px; /* تقليل الفجوة قليلاً */
+  }
+}
+
+/* تحسين الاستجابة للشاشات الصغيرة */
+@media (max-width: 480px) {
+  .courseTrainers_container {
+    padding: 10px;
+    gap: 10px;
+  }
+}
+
+/* ... existing code ... */
+/* ... existing code ... */
+
+.trainerCourse_conatiner {
+  width: 100%;
+  max-width: 716px; /* الحد الأقصى للعرض */
+  height: auto; /* يتكيف مع المحتوى */
+  min-height: 296px; /* الحد الأدنى للارتفاع */
+  opacity: 1;
+  border-radius: 18px;
+  background: #f9f9f9;
+  box-sizing: border-box;
+  margin: 0 auto; /* توسيط الحاوية */
+  padding: 20px; /* حشوة داخلية لتجنب التصاق المحتوى */
+  gap: 20px;
+  flex-direction: column;
+  display: flex;
+}
+
+/* تكييف الشاشات المتوسطة (تابلت وأصغر) */
+@media (max-width: 768px) {
+  .trainerCourse_conatiner {
+    max-width: 100%;
+    min-height: auto; /* إلغاء الحد الأدنى للارتفاع على الشاشات الصغيرة إذا لزم الأمر */
+    padding: 15px;
+    border-radius: 16px; /* تقليل نصف القطر قليلاً */
+  }
+}
+
+/* تكييف الشاشات الصغيرة (هاتف) */
+@media (max-width: 480px) {
+  .trainerCourse_conatiner {
+    padding: 10px;
+    border-radius: 12px;
+  }
+}
+
+/* ... existing code ... */
+.trainerNameInfo_container {
+  display: flex;
+  gap: 20px;
+}
+/* ... existing code ... */
+
+.trainerNameInfo_container img {
+  width: 82.33px; /* تقريب العرض المحدد */
+  height: 84.24px; /* تقريب الارتفاع المحدد */
+  opacity: 1;
+  border-radius: 50%; /* "شوي radius" - قيمة بسيطة لجعل الحواف دائرية قليلاً */
+  object-fit: cover; /* لضبط الصورة داخل الأبعاد مع الحفاظ على النسبة وعدم تشويهها */
+  display: block; /* لإزالة أي مسافات إضافية أسفل الصورة */
+}
+
+/* تحسين الاستجابة على الشاشات المتوسطة */
+@media (max-width: 768px) {
+  .trainerNameInfo_container img {
+    width: 70px; /* تصغير قليل */
+    height: auto; /* الحفاظ على النسبة تلقائياً */
+    aspect-ratio: 82.33 / 84.24; /* الحفاظ على نسبة العرض إلى الارتفاع الأصلية */
+  }
+}
+
+/* تحسين الاستجابة على الشاشات الصغيرة */
+@media (max-width: 480px) {
+  .trainerNameInfo_container img {
+    width: 60px;
+    height: auto;
+    aspect-ratio: 82.33 / 84.24;
+  }
+}
+
+/* ... existing code ... */
+.trainerInfo_container p {
+  font-family: "Tajawal", sans-serif; /* تأكد من استيراد خط Tajawal في HTML */
+  font-weight: 500; /* Medium يقابل القيمة 500 */
+  font-style: normal; /* قيمة Medium غير صالحة لـ font-style، لذا تم ضبطها للوضع العادي */
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0; /* letter-spacing لا تقبل النسب المئوية */
+  text-align: right;
+  color: #708387;
+  padding: 8px 12px; /* حشوة داخلية لتحسين المظهر */
+  border-radius: 4px; /* حواف بسيطة تتناسب مع الخلفية */
+  margin: 0 0 10px 0;
+}
+/* ... existing code ... */
+
+/* ... existing code ... */
+
+.commentsSection_container {
+  width: 100%;
+  max-width: 1240px;
+  height: auto;
+  min-height: 306px;
+  opacity: 1;
+  gap: 32px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  /* التأكد من عدم وجود تموضع مطلق هنا */
+  position: relative; /* وضع نسبي لضمان ظهوره بعد main_container */
+  top: auto;
+  left: auto;
+}
+
+/* ... existing code ... */
+
+/* تكييف الشاشات المتوسطة (تابلت ≤768px) */
+@media (max-width: 768px) {
+  .commentsSection_container {
+    max-width: 100%;
+    min-height: auto; /* إلغاء الحد الأدنى للارتفاع على الشاشات الصغيرة */
+    padding: 16px;
+    gap: 24px; /* تقليل الفجوة قليلاً */
+  }
+}
+
+/* تكييف الشاشات الصغيرة (هاتف ≤480px) */
+@media (max-width: 480px) {
+  .commentsSection_container {
+    padding: 12px;
+    gap: 16px; /* تقليل الفجوة أكثر للشاشات الصغيرة */
+  }
+}
+
+/* ... existing code ... */
+/* ... existing code ... */
+
+.commentsSection_child1 {
+  width: 100%;
+  max-width: 1240px; /* العرض الأقصى */
+  height: 40px; /* ارتفاع ثابت */
+  opacity: 1;
+  display: flex;
+  justify-content: space-between; /* توزيع العناصر الداخلية على الأطراف */
+  align-items: center; /* توسيط العناصر عمودياً */
+  box-sizing: border-box;
+  margin: 0 auto; /* توسيط الحاوية */
+  padding: 0 16px; /* حشوة أفقية لتجنب التصاق المحتوى بالحواف */
+}
+
+/* تكييف الشاشات المتوسطة (تابلت ≤768px) */
+@media (max-width: 768px) {
+  .commentsSection_child1 {
+    max-width: 100%;
+    padding: 0 12px;
+  }
+}
+
+/* تكييف الشاشات الصغيرة (هاتف ≤480px) */
+@media (max-width: 480px) {
+  .commentsSection_child1 {
+    padding: 0 8px;
+    /* إذا كانت العناصر الداخلية تتطلب تعديلاً، يمكن إضافة flex-direction: column هنا */
+  }
+}
+
+/* ... existing code ... */
+.arrow_buttons {
+  display: flex;
+  gap: 15px;
+}
+.arrow_buttons button {
+  width: 40px;
+  height: 40px;
+  opacity: 1;
+  border-radius: 10px;
+  border: 1px solid #d9e4e5; /* تم دمج border-width و border هنا */
+  padding: 10px;
+  background: transparent; /* يفضل تحديد خلفية شفافة أو حسب التصميم */
+  box-sizing: border-box; /* لضمان أن الحشوة والحدود مش محسوبة خارج الأبعاد */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease; /* إضافة تأثير عند التحويم */
+}
+
+/* تحسين الاستجابة للشاشات الصغيرة (تصغير الأزرار قليلاً إذا لزم الأمر) */
+@media (max-width: 480px) {
+  .arrow_buttons button {
+    width: 36px;
+    height: 36px;
+    padding: 8px;
+    border-radius: 8px;
+  }
+
+  .arrow_buttons {
+    gap: 8px;
+  }
+}
+/* ... existing code ... */
+
+/* ... existing code ... */
+
+.commentsSection_child2 {
+  width: 100%;
+  max-width: 1504px;
+  height: auto;
+  min-height: 234px;
+  opacity: 1;
+  gap: 32px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap; /* منع العناصر من النزول لسطر جديد */
+  justify-content: flex-start;
+  padding: 20px 0;
+  overflow-x: auto; /* السماح بالتمرير الأفقي عند زيادة المحتوى */
+  -webkit-overflow-scrolling: touch; /* تحسين التمرير على iOS */
+}
+
+/* منع العناصر الداخلية من التقلص لضمان بقائها بأحجامها */
+.commentsSection_child2 > * {
+  flex-shrink: 0;
+}
+
+/* تكييف الشاشات المتوسطة */
+@media (max-width: 1200px) {
+  .commentsSection_child2 {
+    max-width: 100%;
+    min-height: auto;
+    /* الإبقاء على التمرير الأفقي في الشاشات الأصغر */
+  }
+}
+
+/* تكييف الشاشات الصغيرة */
+@media (max-width: 768px) {
+  .commentsSection_child2 {
+    padding: 15px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .commentsSection_child2 {
+    padding: 10px 0;
+    gap: 16px; /* تقليل الفجوة قليلاً للشاشات الصغيرة */
+  }
+}
+
+/* ... existing code ... */
+.commentsSection_child2_childs {
+  /* الأبعاد - تم تحويل العرض الثابت إلى متجاوب */
+  width: 100%;
+  max-width: 480px; /* الحد الأقصى للعرض من التصميم */
+  height: auto; /* تغيير من ارتفاع ثابت إلى تلقائي لتجنب تجاوز المحتوى */
+  min-height: 234px; /* الحد الأدنى للارتفاع المطلوب */
+  box-sizing: border-box; /* منع الحشوة والحدود من زيادة الحجم */
+
+  /* المظهر */
+  opacity: 1;
+  border-radius: 18px;
+  border: 1px solid #d9e4e5; /* دمج border-width مع border */
+  padding: 20px 16px; /* دمج أربعة اتجاهات للحشوة: top:20, right:16, bottom:20, left:16 */
+
+  /* الترتيب الداخلي (لأن الخاصية تحتوي على gap، نفترض وجود عناصر داخلية) */
+  display: flex;
+  flex-direction: column; /* ترتيب العناصر الداخلية عمودياً - يمكن تغييرها لـ row إذا لزم الأمر */
+  gap: 23px; /* المسافة بين العناصر الداخلية كما ورد */
+
+  /* ملاحظة حول left: 1024px: 
+     هذه الخاصية تعمل فقط مع position: absolute/fixed، 
+     ولكن كعنصر ابن لـ flex container، يفضل إلغاؤها لضمان ترتيب تلقائي، 
+     إذا كنت بحاجة للتموضع المطلق، أضف الكود التالي وأضف position: relative لـ .commentsSection_child2 */
+  /* position: absolute; */
+  /* left: 1024px; */
+}
+
+/* تكييف الشاشات المتوسطة (≤1200px) */
+@media (max-width: 1200px) {
+  .commentsSection_child2_childs {
+    max-width: 100%; /* شغل كامل عرض الحاوية الأب */
+    min-height: auto; /* إلغاء الحد الأدنى للارتفاع في الشاشات الأصغر */
+  }
+}
+
+/* تكييف الشاشات الصغيرة (تابلت ≤768px) */
+@media (max-width: 768px) {
+  .commentsSection_child2_childs {
+    padding: 16px 12px;
+    border-radius: 16px;
+    gap: 20px; /* تقليل المسافة الداخلية قليلاً */
+  }
+}
+
+/* تكييف شاشات الهاتف (≤480px) */
+@media (max-width: 480px) {
+  .commentsSection_child2_childs {
+    padding: 12px 8px;
+    border-radius: 12px;
+    gap: 16px;
+    min-height: auto; /* السماح للارتفاع بالتكيف بالكامل */
+  }
+}
+
+/* ... existing code ... */
+.studentNameInfo_container {
+  display: flex;
+  gap: 20px;
+}
+
+.studentNameInfo_container img {
+  width: 82.33px; /* تقريب العرض المحدد */
+  height: 84.24px; /* تقريب الارتفاع المحدد */
+  opacity: 1;
+  border-radius: 50%; /* "شوي radius" - قيمة بسيطة لجعل الحواف دائرية قليلاً */
+  object-fit: cover; /* لضبط الصورة داخل الأبعاد مع الحفاظ على النسبة وعدم تشويهها */
+  display: block; /* لإزالة أي مسافات إضافية أسفل الصورة */
+}
+/* ... existing code ... */
+
+/* إذا كانت الصورة داخل .commentsSection_child2_childs */
+.commentsSection_child2_childs img {
+  width: 43px;
+  height: 44px;
+  opacity: 1;
+  object-fit: cover; /* لضبط الصورة داخل الأبعاد المحددة مع الحفاظ على النسبة */
+  display: block; /* لإزالة أي مسافات إضافية أسفل الصورة */
+}
+
+/* تحسين الاستجابة للشاشات المتوسطة */
+@media (max-width: 768px) {
+  .commentsSection_child2_childs img {
+    width: 40px; /* تصغير قليل */
+    height: auto; /* الحفاظ على النسبة */
+    aspect-ratio: 43 / 44; /* الحفاظ على نسبة العرض إلى الارتفاع */
+  }
+}
+
+/* تحسين الاستجابة للشاشات الصغيرة */
+@media (max-width: 480px) {
+  .commentsSection_child2_childs img {
+    width: 36px;
+    height: auto;
+    aspect-ratio: 43 / 44;
+  }
+}
+
+/* ... existing code ... */
+/* ... existing code ... */
+
+.studentEvaluation_container {
+  width: 100%;
+  max-width: 448px; /* العرض الأقصى */
+  height: 20px; /* ارتفاع ثابت */
+  opacity: 1;
+  display: flex;
+  justify-content: space-between; /* توزيع العناصر الداخلية على الأطراف */
+  align-items: center; /* توسيط العناصر عمودياً */
+  box-sizing: border-box;
+  margin: 0; /* يمكن تعديل الهوامش حسب الحاجة */
+}
+
+/* تكييف الشاشات المتوسطة */
+@media (max-width: 768px) {
+  .studentEvaluation_container {
+    max-width: 100%; /* شغل العرض المتاح */
+  }
+}
+
+/* تكييف الشاشات الصغيرة */
+@media (max-width: 480px) {
+  .studentEvaluation_container {
+    height: auto; /* السماح للارتفاع بالتكيف إذا زاد المحتوى */
+    min-height: 20px;
+    flex-wrap: wrap; /* السماح بالالتفاف إذا لزم الأمر */
+    gap: 8px; /* إضافة فجوة صغيرة عند الالتفاف */
+  }
+}
+
+/* ... existing code ... */
+.starsEvaluation {
+  display: flex;
+  gap: 10px;
+}
+/* ... existing code ... */
+
+.studentEvaluation_container img {
+  width: 20.26px;
+  height: 20.26px;
+  object-fit: cover; /* لضبط الصورة داخل الأبعاد المحددة مع الحفاظ على النسبة */
+  display: block; /* لإزالة أي مسافات إضافية أسفل الصورة */
+  flex-shrink: 0; /* منع الصورة من التقلص داخل flex container */
+}
+
+/* تحسين الاستجابة للشاشات الصغيرة - تصغير طفيف إذا لزم الأمر */
+@media (max-width: 480px) {
+  .studentEvaluation_container img {
+    width: 18px; /* تصغير قليل للشاشات الصغيرة ليتناسب مع المساحة */
+    height: 18px;
+  }
+}
+
+/* ... existing code ... */
+.studentEvaluation_container span {
+  display: flex;
+  gap: 10px;
+}

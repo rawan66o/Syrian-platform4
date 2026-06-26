@@ -1,0 +1,39 @@
+.CoursesHeader_container {
+  /* القيم الأساسية من فيجما */
+  width: 100%; /* نستخدم 100% بدلاً من 1440 ليكون مرناً */
+  height: 100px; /* الارتفاع ثابت كما في التصميم */
+  opacity: 1; /* القيمة الافتراضية */
+
+  /* التموضع والتوزيع */
+  display: flex;
+  align-items: center; /* لسنترة العناصر عمودياً */
+  justify-content: center; /* توزيع اللوغو والروابط على الأطراف */
+  gap: 10px; /* المسافة بين العناصر الداخلية */
+
+  /* البادينج من فيجما */
+  padding: 25px 100px; /* Top/Bottom: 25px, Left/Right: 100px */
+
+  /* لضمان الحساب الصحيح للأبعاد */
+  box-sizing: border-box;
+
+  /* اختيارياً: خط فاصل ناعم */
+  border-bottom: 1px solid var(--secondary-bg);
+  box-shadow: 0px 0px 47px 0px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #ffffff;
+}
+@media (max-width: 1024px) {
+  .CoursesHeader_container {
+    padding: 25px 50px; /* تقليل المسافات الجانبية */
+  }
+}
+
+/* لشاشات الجوال (Mobile) */
+@media (max-width: 768px) {
+  .CoursesHeader_container {
+    height: 80px; /* تقليل الارتفاع قليلاً ليناسب الجوال */
+    padding: 15px 20px; /* مسافات ضيقة لتناسب عرض الهاتف */
+  }
+}

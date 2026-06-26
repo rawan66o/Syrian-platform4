@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap');
+.volunteer-projects {
+  direction: rtl; /* للتأكد من الاتجاه العربي */
+  padding: 60px 20px;
+  background-color: #F9F9F9;
+  text-align: center;
+ font-family: 'Tajawal', sans-serif;
+
+}
+
+.volunteer-projects-content h4 {
+  color: #55b6d8; /* اللون السماوي للعنوان الصغير */
+  font-size: 1.1rem;
+  margin-bottom: -25px;
+}
+
+.volunteer-projects-content h3 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.volunteer-projects-cards {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  width: 390px; /* نفس العرض المطلوب في الصورة */
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); /* ظل خفيف جداً */
+  border: 1px solid #f0f0f0;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: #55b6d8; /* تغيير اللون عند التمرير كما في البطاقة اليمنى */
+}
+
+.project-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.date {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* التاريخ لجهة اليسار في التصميم العربي */
+  padding: 15px 20px 5px;
+  gap: 5px;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.date-icon {
+  font-size: 1.1rem;
+}
+
+.project-title {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #1a1a1a;
+  line-height: 1.5;
+  text-align: right;
+  min-height: 70px;
+}
+
+.projects-students {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  gap: 0px; /* لجعل الصور متداخلة قليلاً */
+}
+
+.projects-students img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  margin-left: -10px; /* تداخل الصور */
+}
+
+.projects-students span {
+  background-color:white;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  margin-left: -10px;
+  border: 2px solid #fff;
+}
+
+.projects-students p {
+  margin-right: 10px;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.showproject-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px 20px 0 auto;
+  gap: 5px;
+  color: #0b1e33;
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 2px solid #0b1e33;
+  width: fit-content;
+  padding-bottom: 3px;
+}
+
+.projects-btn {
+  margin-top: 50px;
+}
+
+.projects-btn a {
+  background-color: #386d8c; /* لون الزر السفلي */
+  color: white;
+  padding: 12px 40px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.projects-btn a:hover {
+  background-color: #2a526a;
+}

@@ -1,38 +1,160 @@
-.App {
-  text-align: center;
-}
+/* ===== Responsive ===== */
+/*“إذا الشاشة أصغر من 768px (يعني موبايل/تابلت صغير) → طبق هاد الكود*/
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+@media (max-width: 768px) {
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  /* ===== Header ===== */
+  .header {
+    height: auto;
+    padding: 18px 20px;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .header-right,
+  .header-left {
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .header-logo {
+    width: 78px;
+  }
+
+  .header-divider {
+    display: none;
+  }
+
+  .header-link,
+  .language select {
+    font-size: 12px;
+  }
+
+  /* ===== Pages ===== */
+  .register,
+  .login,
+  .forget-password,
+  .reset-password {
+    min-height: auto;
+    padding: 30px 16px 50px;
+  }
+
+  /* ===== Titles ===== */
+  .register h1,
+  .login h1,
+  .forget-password h1,
+  .reset-password h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .register>p,
+  .login>p,
+  .forget-password>p,
+  .reset-password>p {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  /* ===== Forms ===== */
+  .form-register,
+  .form-login,
+  .form-forgetpassword,
+  .form-resetpassword {
+    width: 100%;
+    max-width: 420px;
+  }
+
+  /* ===== Social Buttons ===== */
+  .register-button,
+  .login-button {
+    width: 100%;
+    max-width: 420px;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .register-button button,
+  .login-button button {
+    width: 100%;
+  }
+
+  /* ===== Actions (Forget + Reset) ===== */
+  .forget-actions {
+    flex-direction: row-reverse;
+    gap: 12px;
+    width: 100%;
+
+  }
+
+  .forget-actions button {
+    width: 100%;
+  }
+
+  /* إذا ما عندك reset-actions استخدم هاد */
+  .form-resetpassword button {
+    width: 100%;
+  }
+
+  /* ===== Submit Buttons ===== */
+  .submit-btn-register,
+  .submit-btn {
+    width: 100%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+@media (max-width: 480px) {
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  /* ===== Header ===== */
+  .header {
+    padding: 16px 14px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .header-left {
+    gap: 14px;
+  }
+
+  /* ===== Pages ===== */
+  .register,
+  .login,
+  .forget-password,
+  .reset-password {
+    padding: 26px 12px 40px;
+  }
+
+  /* ===== Inputs ===== */
+  .form-register input,
+  .form-login input,
+  .form-forgetpassword input,
+  .form-resetpassword input,
+  .password-field input,
+  .password-field-login input,
+  .reset-password-field input {
+    height: 40px;
+    font-size: 12px;
+  }
+
+  /* مهم للعين 👇 */
+  .reset-password-field input,
+  .password-field input {
+    padding-left: 45px;
+  }
+
+  /* ===== Buttons ===== */
+  .submit-btn-register,
+  .submit-btn,
+  .forget-actions button,
+  .form-resetpassword button {
+    height: 42px;
+    font-size: 14px;
+  }
+
+  /* ===== Titles smaller ===== */
+  .register h1,
+  .login h1,
+  .forget-password h1,
+  .reset-password h1 {
+    font-size: 18px;
   }
 }

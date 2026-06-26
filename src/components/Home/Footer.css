@@ -1,0 +1,159 @@
+/* الحاوية الرئيسية */
+.footer {
+  background-color: #031316; /* لون الخلفية الداكن جداً */
+  color: #ffffff;
+  padding: 60px 8% 30px 8%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  direction: rtl; /* لضمان ترتيب العناصر من اليمين لليسار */
+}
+
+.footer-content {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* توزيع الأعمدة العلوية */
+.footer-right-center-left {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+/* قسم اللوجو والوصف (اليمين) */
+.footer-right {
+  flex: 1.5;
+  min-width: 250px;
+}
+
+.footer-logo {
+  width: 180px;
+  margin-bottom: 25px;
+}
+
+.footer-right p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #b0b0b0;
+  max-width: 350px;
+}
+
+/* تنسيق القوائم (الرئيسية والتنقلات) */
+.footer-main, .footer-transfers {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-main h5, .footer-transfers h5, .conect-us h5 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+/* الخط الصغير تحت العنوان */
+.small-footer-line {
+  width: 30px;
+  height: 2px;
+  background: linear-gradient(to left, #4ed1e9, transparent);
+  margin-bottom: 20px;
+  display: block;
+}
+
+.footer-main a, .footer-transfers a {
+  text-decoration: none;
+  color: #b0b0b0;
+  font-size: 14px;
+  margin-bottom: 12px;
+  transition: 0.3s;
+}
+
+.footer-main a:hover, .footer-transfers a:hover {
+  color: #4ed1e9;
+}
+
+/* قسم اتصل بنا */
+.conect-us {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+}
+
+.location, .email, .conect-number {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+  color: #b0b0b0;
+  font-size: 13px;
+}
+
+.location-icon, .email--icon, .conect-icon {
+  font-size: 20px;
+  color: #4ed1e9;
+}
+
+.location span {
+  line-height: 1.5;
+}
+
+/* الخط الفاصل الطويل */
+.footer-line {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #1a2a2d;
+  margin: 20px 0;
+}
+
+/* القسم السفلي (الحقوق والسوشيال ميديا) */
+.footer-end {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap-reverse; /* لضمان الترتيب في الشاشات الصغيرة */
+  padding-top: 10px;
+}
+
+.footer-end p {
+  font-size: 14px;
+  color: #b0b0b0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.copyright-icon {
+  font-size: 16px;
+}
+
+/* أيقونات السوشيال ميديا الدائرية */
+.social-midea {
+  display: flex;
+  gap: 15px;
+}
+
+.social-midea svg {
+  background-color: #ffffff;
+  color: #031316;
+  width: 35px;
+  height: 35px;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+/* تمييز أيقونة تويتر بلونها الخاص كما في التصميم */
+.social-midea .twitter {
+  background-color: #4ed1e9;
+  color: #ffffff;
+  box-shadow: 0 0 10px rgba(78, 209, 233, 0.4);
+}
+
+.social-midea svg:hover {
+  transform: translateY(-5px);
+}

@@ -1,0 +1,67 @@
+/* ========== Stage 6 - Certificate Upload ========== */
+
+/* Upload Box خاص بمنزلة 95 */
+.upload-box-certificate {
+  width: 100%;
+  min-height: 107px;
+  background: #6dcde50d;
+  border: 1px dashed #6dcde5;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 20px;
+}
+
+.upload-box-certificate:hover {
+  background: #6dcde51a;
+}
+
+.upload-icon-certificate {
+  width: 67px;
+  height: 67px;
+  background: #6dcde51a;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.upload-hint-text {
+  font-size: 12px;
+  color: #708387;
+}
+
+/* ========== Responsive - Stage 6 ========== */
+@media (max-width: 768px) {
+  .upload-box-certificate {
+    min-height: 90px;
+    padding: 15px;
+  }
+
+  .upload-icon-certificate {
+    width: 55px;
+    height: 55px;
+  }
+
+  .upload-hint-text {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .upload-box-certificate {
+    min-height: 80px;
+    gap: 6px;
+  }
+
+  .upload-icon-certificate {
+    width: 50px;
+    height: 50px;
+  }
+}

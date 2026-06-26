@@ -1,0 +1,507 @@
+.Courses_container {
+  /* لترتيب السايدبار والكورسات بجانب بعضهما */
+  display: flex;
+  flex-direction: row; /* أفقي في الشاشات الكبيرة */
+
+  /* المساحة الكاملة */
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  /* مسافة بين السايدبار ومحتوى الكورسات */
+  gap: 30px;
+
+  /* الحشوة الجانبية */
+  padding: 40px 20px;
+
+  box-sizing: border-box;
+  min-height: 100vh; /* ليأخذ كامل ارتفاع الشاشة */
+}
+
+/* --- Responsive Mobile --- */
+@media (max-width: 1024px) {
+  .Courses_container {
+    /* في الشاشات الصغيرة ينزل السايدبار فوق الكورسات أو يتم إخفاؤه */
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 15px;
+  }
+}
+
+.sidebar {
+  /* Flow: Vertical */
+  display: flex;
+  flex-direction: column;
+
+  /* Width & Height: Fixed */
+  width: 356px;
+  height: 1424px;
+
+  /* Position: 
+     استخدام Absolute يعتمد على أن الأب (container) يمتلك position: relative */
+
+  /* Padding */
+  padding-top: 40px;
+  padding-right: 60px;
+  padding-bottom: 32px;
+  padding-left: 24px;
+
+  /* Gap */
+  gap: 24px;
+
+  /* Background */
+  background: var(--background-cards, #f9f9f9);
+
+  /* لضمان احتساب البادينج ضمن العرض الكلي */
+  box-sizing: border-box;
+}
+
+/* --- Responsive Mobile --- */
+@media (max-width: 1440px) {
+  .sidebar {
+    /* عند صغر الشاشة، نلغي التموضع المطلق ليأخذ مكانه الطبيعي في الـ Flex */
+    position: static;
+    width: 100%;
+    max-width: 356px;
+    height: auto; /* نجعل الارتفاع مرناً في الموبايل */
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    max-width: 100%;
+    padding: 20px;
+    top: 0;
+  }
+}
+
+.courses_grid_wrapper {
+  /* Flow: Vertical */
+  display: flex;
+  flex-direction: column;
+
+  /* Width: Fixed (952px) */
+  width: 952px;
+
+  /* Height: Hug (1,244.94px) */
+  min-height: 1244.94px;
+  height: auto;
+
+  /* Position (بناءً على فيجما) */
+
+  /* Gap: 40px */
+  gap: 40px;
+
+  /* الأساسيات */
+  box-sizing: border-box;
+}
+
+/* --- Responsive Mobile --- */
+@media (max-width: 1440px) {
+  .courses_grid_wrapper {
+    /* إلغاء التموضع المطلق ليتناسب مع تدفق الصفحة */
+    position: static;
+    width: 100%;
+    max-width: 952px;
+    margin: 0 auto;
+    padding: 20px;
+
+    /* إلغاء الارتفاع الثابت الصغير */
+    min-height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .courses_grid_wrapper {
+    /* تقليل الفجوات في الموبايل */
+    gap: 20px;
+  }
+}
+
+.courses_grid {
+  display: grid;
+  /* توزيع الكورسات: 3 أعمدة إذا كان العرض 952px */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.sidebar_inner {
+  /* Flow: Vertical */
+  display: flex;
+  flex-direction: column;
+
+  /* Width: Fill (272px) */
+  /* بما أنه Fill، فهو يأخذ كامل عرض الأب المتاح بحد أقصى 272px */
+  width: 100%;
+  max-width: 272px;
+
+  /* Height: Hug (496px) */
+  /* يلتف حول المحتوى بحد أدنى للارتفاع لضمان التناسق */
+  height: auto;
+  min-height: 496px;
+
+  /* Gap: 24px */
+  gap: 24px;
+
+  /* الأساسيات */
+  box-sizing: border-box;
+}
+
+/* --- Responsive Mobile --- */
+@media (max-width: 768px) {
+  .sidebar_inner {
+    /* في الموبايل، نلغي العرض المحدد ليملأ الشاشة */
+    max-width: 100%;
+    min-height: auto;
+
+    /* تقليل المسافات قليلاً في الشاشات الصغيرة */
+    gap: 16px;
+  }
+}
+
+.inner_title {
+  /* Flow: Horizontal */
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* لتوسيط النص أو الأيقونة عمودياً داخل الـ 50px */
+
+  /* Width: Fill (272px) */
+  width: 100%;
+  max-width: 272px;
+
+  /* Height: Fixed (50px) */
+  height: 50px;
+
+  /* Border: Bottom 1px */
+  border: none; /* إزالة أي حدود افتراضية */
+  border-bottom: 1px solid var(--Strok, #d9e5dd); /* يمكنك تغيير اللون حسب الحاجة */
+
+  /* Padding: Bottom 10px */
+  padding-bottom: 10px;
+
+  /* Gap: 10px */
+  gap: 10px;
+
+  /* الأساسيات */
+  box-sizing: border-box;
+
+  border-bottom: 1px solid #d9e4e5;
+}
+
+/* --- Responsive Mobile --- */
+@media (max-width: 768px) {
+  .inner_title {
+    /* في الموبايل، قد ترغب في جعل العرض كاملاً */
+    max-width: 100%;
+
+    /* إذا كان العنوان طويلاً جداً، يفضل إلغاء الارتفاع الثابت */
+    height: auto;
+    min-height: 50px;
+  }
+}
+
+.inner_nav {
+  /* Flow: Horizontal */
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* لتوسيط المحتوى عمودياً */
+
+  /* Width: Fill (272px) */
+  width: 100%;
+  max-width: 272px;
+
+  /* Height: Fixed (44px) */
+  height: 44px;
+
+  /* Radius: 8px */
+  border-radius: 8px;
+
+  /* Padding: 10px */
+  padding: 10px;
+
+  /* Gap: 10px */
+  gap: 10px;
+
+  /* الأساسيات */
+  box-sizing: border-box;
+  cursor: pointer;
+  transition:
+    opacity 0.3s ease,
+    transform 0.2s ease;
+}
+
+/* تأثير عند التمرير لجعل العنصر تفاعلياً */
+.inner_nav:hover {
+  opacity: 0.9;
+  transform: translateX(-2px); /* حركة بسيطة لليمين بما أن الاتجاه RTL */
+  background: #6dcde5;
+}
+.inner_nav:hover * {
+  color: white;
+}
+
+/* التنسيق للنص أو الأيقونات بداخلها */
+.inner_nav span,
+.inner_nav a {
+  color: #708387; /* لون النص المفترض ليتناسب مع الخلفية السماوية */
+  font-weight: 500;
+  text-decoration: none;
+}
+.wrapper_header {
+  /* تفعيل نظام الفليكس لتوزيع العناصر بالداخل */
+  display: flex;
+  align-items: center; /* لمحاذاة العناصر عمودياً في المنتصف */
+  justify-content: space-between; /* توزيع العناصر (اللوجو جهة والروابط جهة) */
+
+  /* الحجم */
+  width: 952px;
+  height: 52px;
+
+  /* الشفافية والتدوير */
+  opacity: 1;
+  transform: rotate(0deg); /* الطريقة الصحيحة لكتابة angle */
+
+  /* نصيحة: اجعل العرض مرناً للموبايل */
+  max-width: 100%;
+  margin: 0 auto; /* لتوسيط الهيدر في منتصف الشاشة */
+  position: relative;
+  z-index: 999;
+}
+/* الحاوية الكبيرة (شريط البحث) */
+.header_searchInput {
+  width: 434px;
+  height: 52px;
+  background: #ffffff;
+  border: 1px solid #d9e4e5;
+  border-radius: 41px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px 0 20px; /* تقليل البادينج اليمين لكي يقترب الزر من الحافة */
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* حقل الإدخال */
+.header_searchInput input {
+  border: none;
+  background: transparent;
+  outline: none;
+  flex: 1; /* ليأخذ كل المساحة المتبقية قبل الزر */
+  font-size: 14px;
+  color: #072127;
+}
+
+/* زر البحث (المطلوب) */
+.search_buttn {
+  width: 76px;
+  height: 40px;
+  background: #6dcde5;
+  border: 1px solid #6dcde5;
+  border-radius: 48px;
+
+  /* المسافات والترتيب الداخلي */
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+
+  /* خصائص إضافية */
+  cursor: pointer;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+/* تأثير عند تمرير الماوس على الزر */
+.search_buttn:hover {
+  background: #5bbcd4; /* درجة أغمق قليلاً */
+  border-color: #5bbcd4;
+}
+.header_sort_title {
+  /* الأبعاد الأساسية */
+  width: 519px;
+  height: 40px;
+  max-width: 100%; /* لضمان عدم خروج العنصر عن الشاشة في الموبايل */
+
+  /* ترتيب العناصر بالداخل (مثل الروابط أو النصوص) */
+  display: flex;
+  align-items: center; /* توسيط العناصر عمودياً */
+  justify-content: flex-start; /* تبدأ العناصر من اليمين (لو الموقع عربي) */
+  gap: 24px; /* المسافة بين كل عنصر والآخر */
+
+  /* الخصائص الإضافية */
+  opacity: 1;
+  transform: rotate(0deg); /* البديل الصحيح لـ angle */
+
+  /* نصيحة: إذا كانت هذه قائمة روابط، يفضل إضافة: */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* تنسيق العناصر التي بداخلها (اختياري - لضمان المظهر) */
+.header_sort_title a,
+.header_sort_title span {
+  text-decoration: none;
+  color: #072127; /* لون متناسق مع تصميمك السابق */
+  font-size: 14px;
+  white-space: nowrap; /* لمنع انكسار السطر في الكلمات الطويلة */
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.header_sort_title a:hover {
+  color: #6dcde5; /* استخدام نفس لون الزر الذي صممناه سابقاً للهوفر */
+}
+/* الحاوية الكبرى للأرقام */
+.wrapper_pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 299px; /* العرض المطلوب */
+  height: 32px; /* الارتفاع المطلوب */
+  gap: 24px; /* المسافة بين العناصر كما طلبت */
+  opacity: 1;
+  transform: rotate(0deg);
+  margin: 40px auto; /* لتوسيط المكون في الصفحة */
+  direction: rtl; /* لضمان الترتيب الصحيح للعربية */
+}
+
+/* التنسيق المشترك لجميع الأزرار (أرقام وأسهم) */
+.wrapper_pagination button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px; /* العرض المحدد للزر */
+  height: 32px; /* الارتفاع المحدد للزر */
+  padding: 10px; /* البادينج المطلوب */
+  gap: 10px;
+  border-radius: 8px; /* الحواف المطلوبة */
+  border: 1px solid #d9e4e5; /* اللون المحدد للحدود */
+  background-color: #ffffff;
+  color: #072127; /* لون النص الأساسي */
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  opacity: 1;
+}
+/* ===========================
+   📱 تابلت (768px – 1024px)
+   =========================== */
+@media (max-width: 1024px) {
+  .wrapper_header {
+    width: 100%;
+    padding: 0 16px;
+    gap: 16px;
+  }
+
+  .header_sort_title {
+    width: auto;
+    gap: 16px;
+  }
+
+  .header_searchInput {
+    width: 360px;
+  }
+}
+
+/* ===========================
+   📱 موبايل (أقل من 768px)
+   =========================== */
+@media (max-width: 768px) {
+  .wrapper_header {
+    flex-direction: column;
+    height: auto;
+    gap: 20px;
+    padding: 0 12px;
+  }
+
+  .header_sort_title {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .header_searchInput {
+    width: 100%;
+    height: 48px;
+    padding: 0 16px;
+  }
+
+  .search_buttn {
+    width: 70px;
+    height: 36px;
+  }
+}
+
+/* ===========================
+   📱 موبايل صغير جداً (480px)
+   =========================== */
+@media (max-width: 480px) {
+  .wrapper_header {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  .header_sort_title {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .header_searchInput {
+    height: 44px;
+    padding: 0 12px;
+  }
+
+  .search_buttn {
+    width: 64px;
+    height: 34px;
+    font-size: 13px;
+  }
+
+  .header_searchInput input {
+    font-size: 13px;
+  }
+}
+/* تنسيق الزر النشط (Active) */
+.active {
+  background: #6dcde5 !important; /* اللون السماوي المطلوب */
+  color: #ffffff !important; /* تغيير النص للأبيض للوضوح */
+  border: none !important; /* إزالة الحدود في الحالة النشطة */
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* تنسيق النقاط (...) */
+.wrapper_pagination span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  color: #d9e4e5;
+}
+
+/* تأثير التمرير (Hover) للأزرار غير النشطة */
+.wrapper_pagination button:hover:not(.active) {
+  border-color: #6dcde5;
+  color: #6dcde5;
+}
+
+/* responsive: لضمان عدم تداخل الأرقام في الشاشات الصغيرة جداً */
+@media (max-width: 480px) {
+  .wrapper_pagination {
+    width: 100%;
+    gap: 8px; /* تقليل الفجوة في الموبايل ليتناسب مع العرض */
+  }
+}

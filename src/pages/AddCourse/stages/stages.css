@@ -1,0 +1,1875 @@
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap");
+
+* {
+  font-family: "Tajawal", sans-serif;
+  box-sizing: border-box;
+}
+
+.stage-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+  direction: rtl;
+}
+
+/* ========== البطاقات الرئيسية ========== */
+.main-card {
+  width: 700px;
+  max-width: 100%;
+  background: #fefeff;
+  border-radius: 8px;
+  border-right: 6px solid #6dcde5;
+  box-shadow: 0px 0px 11px 0px #0000001a;
+  padding: 30px 20px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ========== الحقول والنماذج ========== */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: right;
+}
+
+.input-label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #000000;
+}
+
+.input-hint {
+  font-size: 12px;
+  font-weight: 400;
+  color: #708387;
+}
+
+.custom-input,
+.custom-textarea,
+.custom-select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #70838766;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #708387;
+  background: #ffffff;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.custom-input:focus,
+.custom-textarea:focus,
+.custom-select:focus {
+  border-color: #6dcde5;
+}
+
+.custom-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23708387' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: left 15px center;
+  background-size: 16px;
+}
+
+/* ========== رفع الملفات ========== */
+.upload-box {
+  width: 100%;
+  min-height: 107px;
+  background: #6dcde50d;
+  border: 1px dashed #6dcde5;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 20px;
+}
+
+.upload-box:hover {
+  background: #6dcde51a;
+}
+
+.upload-icon {
+  width: 67px;
+  height: 67px;
+  background: #6dcde51a;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.upload-plus-box {
+  width: 25px;
+  height: 25px;
+  background: #6dcde5;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.upload-icon span {
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+}
+
+.upload-plus {
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+}
+
+.upload-box-cyan {
+  width: 100%;
+  min-height: 107px;
+  background: #6dcde50d;
+  border: 1px dashed #6dcde5;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 20px;
+}
+
+.upload-box-cyan:hover {
+  background: #6dcde51a;
+}
+
+.upload-icon-cyan {
+  width: 67px;
+  height: 67px;
+  background: #6dcde51a;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.upload-icon-cyan span {
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+}
+
+.upload-filename {
+  font-size: 12px;
+  color: #6dcde5;
+}
+
+/* ========== منزلة 89 - إضافة وحدة ========== */
+.add-unit-card {
+  width: 700px;
+  max-width: 100%;
+  min-height: 132px;
+  background: #fefeff;
+  border-right: 6px solid #6dcde5;
+  border-radius: 8px;
+  box-shadow: 0px 0px 11px 0px #0000001a;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.add-unit-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.add-unit-title {
+  font-weight: 500;
+  font-size: 20px;
+  color: #072127;
+  margin: 0;
+}
+
+.add-unit-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #6dcde51a;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-weight: 700;
+  font-size: 14px;
+  color: #6dcde5;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add-unit-button:hover {
+  background: #6dcde533;
+}
+
+.add-unit-icon-wrapper {
+  width: 20px;
+  height: 20px;
+  background: #6dcde51a;
+  border: 1px solid #6dcde5;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-unit-icon {
+  font-size: 14px;
+  font-weight: bold;
+  color: #6dcde5;
+}
+
+/* قائمة الوحدات المضافة */
+.units-list-container {
+  width: 700px;
+  max-width: 100%;
+  margin-top: 20px;
+}
+
+.units-list-title {
+  font-weight: 600;
+  font-size: 16px;
+  color: #333333;
+  margin-bottom: 12px;
+  text-align: right;
+}
+
+.unit-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border: 1px solid #70838766;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  background: #f8f9fa;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.unit-item:hover {
+  background: #ebf9fb;
+  border-color: #6dcde5;
+}
+
+.unit-item-name {
+  font-weight: 600;
+  font-size: 14px;
+  color: #1a2b3c;
+}
+
+.unit-item-status {
+  font-size: 12px;
+  color: #708387;
+}
+
+/* ========== منزلة 90 - إضافة وحدة (Unit Form) ========== */
+.unit-form-card {
+  min-height: auto;
+}
+
+.unit-title-header-center {
+  font-weight: 500;
+  font-size: 20px;
+  color: #072127;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.unit-actions-row {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.btn-add-lesson {
+  background: #6dcde5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 30px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-add-lesson:hover {
+  background: #4bb8d1;
+}
+
+.btn-add-quiz {
+  background: #6dcde51a;
+  color: #072127;
+  border: 1px solid #6dcde5;
+  border-radius: 6px;
+  padding: 10px 30px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn-add-quiz:hover {
+  background: #6dcde533;
+}
+
+/* ========== بوكس إضافة وحدة (السفلي) ========== */
+.add-unit-outer-simple {
+  width: 700px;
+  max-width: 100%;
+  min-height: 132px;
+  background: #fefeff;
+  border: 1px solid #6dcde5;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.add-unit-outer-simple:hover {
+  background: #f8fbfc;
+}
+
+.add-unit-title-simple {
+  font-weight: 500;
+  font-size: 20px;
+  color: #072127;
+  margin: 0;
+  text-align: center;
+}
+
+.add-unit-button-simple {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #6dcde51a;
+  border: 1px solid #6dcde5;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-weight: 700;
+  font-size: 14px;
+  color: #6dcde5;
+  cursor: pointer;
+}
+
+.add-unit-button-simple:hover {
+  background: #6dcde533;
+}
+
+.add-unit-icon-wrapper-simple {
+  width: 20px;
+  height: 20px;
+  background: #6dcde51a;
+  border: 1px solid #6dcde5;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-unit-icon-simple {
+  font-size: 14px;
+  font-weight: bold;
+  color: #6dcde5;
+}
+
+/* ========== منزلة 94 - إضافة درس ========== */
+.lesson-form-card {
+  min-height: auto;
+}
+
+.unit-readonly-info {
+  background: #f8f9fa;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.info-row {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.info-row:last-child {
+  margin-bottom: 0;
+}
+
+.info-label {
+  font-weight: 700;
+  color: #1a2b3c;
+  min-width: 100px;
+  font-size: 14px;
+}
+
+.info-value {
+  color: #666;
+  font-size: 14px;
+}
+
+.lessons-tabs {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 10px;
+}
+
+.lesson-tab {
+  background: #f8f9fa;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #1a2b3c;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.lesson-tab:hover {
+  background: #ebf9fb;
+  border-color: #6dcde5;
+}
+
+.lesson-tab.active {
+  background: #6dcde5;
+  border-color: #6dcde5;
+  color: white;
+}
+
+.lesson-internal-box {
+  background: #f8f9fa;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.lesson-number-title {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a2b3c;
+  margin: 0 0 10px 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.radio-group {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+
+.radio-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.radio-item.active {
+  background: #ebf9fb;
+}
+
+.radio-item input[type="radio"] {
+  accent-color: #6dcde5;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+/* ========== منزلة 93 - عرض الدروس والاختبارات ========== */
+.lessons-quizzes-card {
+  min-height: auto;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a2b3c;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #6dcde5;
+  display: inline-block;
+}
+
+.lessons-section,
+.quizzes-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px 12px;
+  background: #f9f9f980;
+  border-radius: 8px;
+  margin-bottom: 32px;
+}
+
+.empty-message {
+  text-align: center;
+  color: #708387;
+  padding: 16px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  margin: 8px 0;
+}
+
+/* بطاقة الدرس */
+.lesson-item-card {
+  background: #f8f9fa;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.lesson-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.lesson-item-header:hover {
+  background: #f0f0f0;
+}
+
+.lesson-item-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.lesson-number {
+  font-size: 15px;
+  font-weight: 600;
+  color: #6dcde5;
+}
+
+.lesson-title-preview {
+  font-size: 14px;
+  color: #1a2b3c;
+}
+
+.lesson-item-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.delete-lesson-btn {
+  background: none;
+  border: none;
+  color: #ff5b5b;
+  cursor: pointer;
+  font-size: 13px;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.delete-lesson-btn:hover {
+  background: #ffeeee;
+}
+
+.lesson-item-details {
+  padding: 16px 20px;
+  border-top: 1px solid #e5e5e5;
+  background: #ffffff;
+}
+
+/* بطاقة الاختبار */
+.quiz-item-card {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background: #ffffff;
+  border: 1px solid #d9e4e5;
+  border-radius: 8px;
+  padding: 16px 12px;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.quiz-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.quiz-item-header:hover {
+  background: transparent;
+}
+
+.quiz-number {
+  font-size: 15px;
+  font-weight: 600;
+  color: #6dcde5;
+}
+
+.quiz-item-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.delete-quiz-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-quiz-btn:hover {
+  background: #ffeeee;
+}
+
+.quiz-item-details {
+  padding: 0;
+  border-top: none;
+  background: transparent;
+}
+
+.quiz-placeholder {
+  text-align: center;
+  color: #708387;
+  padding: 20px;
+}
+
+/* أزرار الإضافة */
+.btn-add-lesson-full,
+.btn-add-quiz-full {
+  background: #6dcde51a;
+  border: 1px solid #6dcde5;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #6dcde5;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 16px;
+  width: 100%;
+}
+
+.btn-add-lesson-full:hover,
+.btn-add-quiz-full:hover {
+  background: #6dcde533;
+}
+
+.expand-icon {
+  font-size: 12px;
+  color: #708387;
+}
+
+/* ========== الأسئلة داخل الاختبارات ========== */
+.quiz-questions {
+  margin-top: 8px;
+}
+
+.sub-section-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a2b3c;
+  margin-bottom: 16px;
+}
+
+.question-full-item {
+  background: #f8f9fa;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.question-full-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.delete-question-btn {
+  background: none;
+  border: none;
+  color: #ff5b5b;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 4px;
+}
+
+.question-type-row {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.radio-label input[type="radio"] {
+  accent-color: #6dcde5;
+  width: 16px;
+  height: 16px;
+}
+
+.question-options-full {
+  margin-top: 12px;
+}
+
+.option-row {
+  margin-bottom: 8px;
+}
+
+.option-input {
+  width: 100%;
+}
+
+.btn-add-option {
+  background: none;
+  border: none;
+  color: #6dcde5;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 8px 0;
+}
+
+.question-required-row {
+  margin-top: 12px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+  accent-color: #6dcde5;
+  width: 16px;
+  height: 16px;
+}
+
+.add-question-form {
+  background: #f8f9fa;
+  border: 1px dashed #6dcde5;
+  border-radius: 10px;
+  padding: 16px;
+  margin-top: 16px;
+}
+
+/* ========== منزلة 95 - رفع شهادة ومعاينة اختبارات ========== */
+.quizzes-preview-title {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+  color: #072127;
+  margin-bottom: 24px;
+}
+
+.empty-quizzes-message {
+  text-align: center;
+  color: #9e9e9e;
+  padding: 40px;
+}
+
+.quizzes-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.quiz-preview-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 16px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 0px 3px 0px #00000014;
+  direction: rtl;
+}
+
+.quiz-name-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.quiz-icon-box {
+  width: 28px;
+  height: 28px;
+  background: #6dcde5;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quiz-name-text {
+  font-size: 20px;
+  font-weight: 500;
+  color: #072127;
+}
+
+.quiz-count-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 86px;
+  padding: 10px;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.quiz-count-number {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a2b3c;
+}
+
+.quiz-count-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #708387;
+}
+
+.quiz-edit-button {
+  width: 100px;
+  height: 40px;
+  background: #f9f9f9;
+  border: none;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  font-family: "Tajawal", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #072127;
+  transition: all 0.3s ease;
+}
+
+.quiz-edit-button:hover {
+  background: #e8e8e8;
+}
+
+/* ========== التصميم الخطي للوحدات (Figma) - النسخة المعدلة ========== */
+.unit-full-card-figma {
+  width: 700px;
+  max-width: 100%;
+  background: #fefeff;
+  border-radius: 8px;
+  border-right: 6px solid #6dcde5;
+  box-shadow: 0px 0px 11px 0px #0000001a;
+  padding: 30px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* تم إزالة border-bottom حسب الصورة */
+.unit-header-figma {
+  text-align: center;
+  padding-bottom: 16px;
+}
+
+/* تم تعديل حجم الخط وغماقته حسب الصورة */
+.unit-title-figma {
+  font-size: 20px;
+  font-weight: 500;
+  color: #072127;
+  margin: 0;
+  text-align: center;
+}
+
+.unit-info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.lessons-section-figma {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.lesson-card-figma {
+  background: #f8f9fa;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.lesson-title-figma {
+  font-size: 18px;
+  font-weight: 600;
+  color: #072127;
+  text-align: center;
+  margin: 0;
+}
+
+/* خيارات نوع الدرس - الشكل القديم (radio buttons) */
+/* ========== خيارات نوع الدرس (Radio Buttons) حسب الصورة المطلوبة ========== */
+.lesson-type-options {
+  display: flex;
+  justify-content: flex-start;
+  gap: 60px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.type-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+/* إخفاء الراديو الأصلي وتصميم جديد (دائرة خارجية رمادية) */
+.type-option input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #708387;
+  border-radius: 50%;
+  margin: 0;
+  position: relative;
+  cursor: pointer;
+  background: white;
+  transition: all 0.2s ease;
+}
+
+/* الراديو المحدد (دائرة خارجية زرقاء) */
+.type-option input[type="radio"]:checked {
+  border: 2px solid #6dcde5;
+}
+
+/* الدائرة الداخلية (النقطة الزرقاء) عند التحديد */
+.type-option input[type="radio"]:checked::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background: #6dcde5;
+  border-radius: 50%;
+}
+
+.type-label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #072127;
+}
+
+/* أزرار إضافة درس واختبار في الدروس */
+.unit-lesson-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.btn-add-lesson-new {
+  background: #6dcde5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 24px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn-add-lesson-new:hover {
+  background: #4bb8d1;
+}
+
+.btn-add-quiz-new {
+  background: #6dcde51a;
+  color: #072127;
+  border: 1px solid #6dcde5;
+  border-radius: 8px;
+  padding: 10px 24px;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.add-unit-bottom-card {
+  width: 700px;
+  max-width: 100%;
+  background: #fefeff;
+  border-radius: 8px;
+  border-right: 6px solid #6dcde5;
+  box-shadow: 0px 0px 11px 0px #0000001a;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.btn-add-quiz-new:hover {
+  background: #6dcde533;
+}
+
+.btn-delete-lesson {
+  background: #ff5b5b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.btn-add-lesson-figma {
+  background: #6dcde5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 16px;
+}
+
+.btn-add-lesson-figma:hover {
+  background: #4bb8d1;
+}
+
+.add-unit-bottom-title {
+  font-weight: 500;
+  font-size: 20px;
+  color: #072127;
+  margin: 0;
+  text-align: center;
+}
+
+.add-unit-bottom-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #6dcde51a;
+  border: 1px solid #6dcde5;
+  border-radius: 8px;
+  padding: 8px 20px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #6dcde5;
+  cursor: pointer;
+}
+
+.add-unit-bottom-button:hover {
+  background: #6dcde533;
+}
+
+/* قسم الاختبارات - بطاقات الأسئلة */
+
+.quiz-card-figma {
+  background: #f8f9fa;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.question-full-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.delete-question-btn {
+  background: none;
+  border: none;
+  color: #ff5b5b;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 4px;
+}
+
+.btn-add-question:hover {
+  background: #6dcde533;
+}
+
+.btn-delete-quiz {
+  background: #ff5b5b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+/* خانة مطلوب - checkbox عادي حسب الصورة */
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+  accent-color: #6dcde5;
+  width: 16px;
+  height: 16px;
+}
+
+.btn-add-option {
+  background: none;
+  border: none;
+  color: #6dcde5;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 8px 0;
+}
+
+.btn-delete-small {
+  background: none;
+  border: none;
+  color: #ff5b5b;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+/* ========== الأسئلة والخيارات في Stage4 ========== */
+.question-box {
+  background: #f8f9fa;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.option-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.option-input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #70838766;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #708387;
+  background: #ffffff;
+  outline: none;
+}
+
+.option-input:focus {
+  border-color: #6dcde5;
+}
+
+.btn-delete-option {
+  background: none;
+  border: none;
+  color: #ff5b5b;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.btn-delete-option:hover {
+  background: #ffeeee;
+}
+
+.btn-delete-question {
+  background: none;
+  border: none;
+  color: #ff5b5b;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.btn-delete-question:hover {
+  background: #ffeeee;
+}
+
+/* تعديل الـ upload box */
+.upload-box-cyan .upload-plus-box {
+  width: 25px;
+  height: 25px;
+  background: #6dcde5;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.upload-box-cyan .upload-icon-cyan {
+  position: relative;
+}
+
+.upload-box-cyan .upload-plus-box span {
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+}
+
+/* نمط للـ unit-section */
+.unit-section {
+  margin-bottom: 40px;
+  padding: 20px;
+  background: #fefeff;
+  border-radius: 8px;
+  border: 1px solid #e5e5e5;
+}
+
+.quiz-title-figma {
+  font-size: 18px;
+  font-weight: 600;
+  color: #072127;
+  text-align: center;
+  margin: 0 0 24px 0;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.question-header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.question-number {
+  font-size: 15px;
+  font-weight: 600;
+  color: #6dcde5;
+}
+
+.question-actions-icons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* حقل اسم الاختبار */
+.quiz-name-input {
+  margin-bottom: 24px;
+}
+
+.quiz-name-input input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: "Tajawal", sans-serif;
+}
+
+.icon-btn:hover {
+  background: #f0f0f0;
+  color: #6dcde5;
+}
+
+.icon-delete {
+  color: #ff5b5b;
+}
+
+.icon-delete:hover {
+  background: #ffeeee;
+  color: #ff0000;
+}
+
+/* الحقول */
+.question-text-input {
+  margin-bottom: 16px;
+}
+
+.question-text-input input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: "Tajawal", sans-serif;
+}
+
+/* الخيارات للأجوبة المتعددة */
+.question-options {
+  margin-bottom: 20px;
+}
+
+/* الخيارات */
+.question-options-full {
+  margin-top: 16px;
+  margin-bottom: 20px;
+}
+
+.option-input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.delete-option-icon {
+  background: none;
+  border: none;
+  color: #ff5b5b;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 6px;
+  border-radius: 4px;
+}
+
+.add-option-btn {
+  background: none;
+  border: none;
+  color: #6dcde5;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 8px 0 0 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.delete-option-icon:hover {
+  background: #ffeeee;
+}
+
+/* الإجابة النصية */
+.text-answer-preview {
+  background: #f5f5f5;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  color: #708387;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* Toggle مطلوب */
+.required-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.required-toggle span {
+  font-size: 14px;
+  font-weight: 500;
+  color: #072127;
+}
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 24px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.3s;
+  border-radius: 34px;
+}
+
+.toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.3s;
+  border-radius: 50%;
+}
+
+/* زر إضافة سؤال */
+.add-question-btn {
+  background: #6dcde51a;
+  border: 1px solid #6dcde5;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #6dcde5;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+.add-question-btn:hover {
+  background: #6dcde533;
+}
+
+/* ========== منزلة 93 - الاختبارات والأسئلة (نسخة نظيفة حسب الصورة) ========== */
+
+/* حاوية الاختبارات */
+.quizzes-section-figma {
+  margin-top: 24px;
+}
+
+/* بطاقة الاختبار الواحدة */
+.quiz-card-figma {
+  background: #f9f9f9;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+/* حذف الاختبار - أيقونة سلة */
+.delete-quiz-icon {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.delete-quiz-icon button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #ff5b5b;
+  font-size: 18px;
+  padding: 5px;
+}
+
+/* بطاقة السؤال الواحد */
+.question-item-card {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background: #ffffff;
+  border: 1px solid #f2f2f2;
+  border-radius: 8px;
+  padding: 16px 12px;
+  margin-bottom: 20px;
+}
+
+/* رأس السؤال مع رقم السؤال وأيقونات الحذف */
+.question-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.question-actions {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.question-actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn-save-question {
+  color: #6dcde5;
+}
+
+.btn-delete-question {
+  color: #ff5b5b;
+}
+
+/* نوع السؤال - قائمة منسدلة */
+.question-type-select {
+  margin-bottom: 20px;
+}
+
+.question-type-select select {
+  width: 180px;
+  padding: 10px 16px;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: "Tajawal", sans-serif;
+  background: white;
+  cursor: pointer;
+}
+
+.option-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.option-item input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: "Tajawal", sans-serif;
+}
+
+.delete-option-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-delete-option {
+  background: none;
+  border: none;
+  color: #ff5b5b;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn-add-option {
+  background: none;
+  border: none;
+  color: #6dcde5;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Toggle مطلوب */
+.required-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.required-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #072127;
+}
+
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+input:checked + .toggle-slider {
+  background-color: #6dcde5;
+}
+
+input:checked + .toggle-slider:before {
+  transform: translateX(24px);
+}
+
+/* زر إضافة سؤال */
+.btn-add-question {
+  width: 100%;
+  background: #6dcde51a;
+  border: 1px solid #6dcde5;
+  border-radius: 8px;
+  padding: 12px;
+  color: #6dcde5;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
+  .main-card,
+  .add-unit-card,
+  .units-list-container,
+  .add-unit-outer-simple,
+  .unit-full-card-figma,
+  .add-unit-bottom-card {
+    width: 95%;
+  }
+
+  .lesson-item-header,
+  .quiz-item-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .lesson-item-actions,
+  .quiz-item-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .info-row {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .info-label {
+    min-width: auto;
+  }
+
+  .radio-group {
+    gap: 15px;
+  }
+
+  .unit-actions-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .unit-actions-row button {
+    width: 100%;
+  }
+
+  .lessons-tabs {
+    justify-content: center;
+  }
+
+  .lesson-tab {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .quiz-preview-card {
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+  }
+
+  .quiz-name-section {
+    justify-content: center;
+  }
+
+  .quiz-count-box {
+    align-self: center;
+    width: 100%;
+    max-width: 120px;
+  }
+
+  .quiz-edit-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-card,
+  .add-unit-card {
+    padding: 16px;
+  }
+
+  .lesson-internal-box {
+    padding: 12px;
+  }
+
+  .radio-group {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .radio-item {
+    width: 100%;
+  }
+
+  .unit-title-header-center {
+    font-size: 16px;
+  }
+
+  .add-unit-title-simple {
+    font-size: 16px;
+  }
+
+  .btn-add-lesson,
+  .btn-add-quiz {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+
+  .add-unit-button-simple {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .add-unit-icon-wrapper-simple {
+    width: 16px;
+    height: 16px;
+  }
+
+  .add-unit-icon-simple {
+    font-size: 10px;
+  }
+
+  .unit-readonly-info {
+    padding: 12px;
+  }
+
+  .upload-box-cyan {
+    min-height: 80px;
+    padding: 12px;
+  }
+
+  .upload-icon-cyan {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+
+  .quiz-name-text {
+    font-size: 16px;
+  }
+
+  .quiz-count-number {
+    font-size: 14px;
+  }
+
+  .quiz-count-label {
+    font-size: 12px;
+  }
+
+  .quiz-edit-button {
+    font-size: 14px;
+    height: 36px;
+  }
+}
