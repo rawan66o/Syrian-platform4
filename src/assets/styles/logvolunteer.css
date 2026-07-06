@@ -1,0 +1,243 @@
+/* تغليف المكون لعدم تداخل التنسيقات مع باقي أجزاء الموقع */
+.log-volunteer-component {
+  direction: rtl;
+  width: 100%;
+  background-color: #fcfdfe;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding-bottom: 100px; /* مساحة تمنع اختفاء الفورم خلف أزرار الـ footer */
+  padding-top: 100px;
+}
+
+.log-volunteer-component * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Tajawal", sans-serif;
+}
+
+/* الحاوية وتوسيط الكارت */
+.log-volunteer-component .main-container {
+  width: 100%;
+  max-width: 680px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.log-volunteer-component .page-title {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #232323;
+}
+
+.log-volunteer-component .form-card {
+  background-color: #ffffff;
+  border: 1px solid #e1eff2;
+  border-right: 6px solid #6dcde5;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(109, 205, 229, 0.05);
+}
+
+.log-volunteer-component .form-group {
+  margin-bottom: 24px;
+}
+
+.log-volunteer-component .form-group label {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #000000;
+}
+
+.log-volunteer-component .form-group .help-text {
+  display: block;
+  font-weight: 400;
+  font-size: 12px;
+  color: #708387;
+  margin-bottom: 8px;
+}
+
+.log-volunteer-component .form-control {
+  width: 100%;
+  /* border: 1px solid #d9e4e5; */
+  border: 1px solid #70838766;
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #072127;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.log-volunteer-component .form-control:focus {
+  border-color: #6dcde5;
+}
+
+.log-volunteer-component .form-control::placeholder {
+  color: #708387;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.log-volunteer-component textarea.form-control {
+  height: 110px;
+  resize: vertical;
+}
+
+/* حاوية رقم الهاتف (مجهزة لليسار واليمين بشكل صحيح للأرقام) */
+/* حاوية الحقل بالكامل تتبع اتجاه الصفحة العربي (يمين ليسار) */
+.log-volunteer-component .phone-input-wrapper {
+  display: flex;
+  flex-direction: row-reverse; /* جعل العناصر تتدفق طبيعياً من اليمين لليسار */
+  justify-content: space-between; /* دفع محدد الدولة لليسار والرقم لليمين */
+  align-items: center;
+  border: 1px solid #d9e4e5;
+  border-radius: 8px;
+  height: 56px; /* الارتفاع المطابق للصورة تماماً 56px */
+  padding: 0 16px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+
+.log-volunteer-component .phone-input-wrapper:focus-within {
+  border-color: #6dcde5;
+}
+
+/* حقل إدخال رقم الهاتف */
+.log-volunteer-component .phone-input {
+  flex: 1;
+  border: none;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: #072127;
+  outline: none;
+  text-align: right; /* محاذاة الرقم إلى جهة اليمين تماماً كالصورة */
+  font-family: sans-serif; /* لضمان ظهور الأرقام بالصيغة اللاتينية بوضوح */
+}
+
+/* محدد الدولة والكود على اليسار */
+.log-volunteer-component .country-selector {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  direction: ltr; /* لترتيب العلم ثم السهم ثم الكود من اليسار لليمين */
+}
+
+.log-volunteer-component .country-selector img {
+  width: 28px;
+  height: auto;
+  border-radius: 2px;
+  object-fit: cover;
+}
+
+.log-volunteer-component .country-selector .arrow {
+  /* font-size: 8px; */
+  width: 18px;
+  height: 18px;
+  /* color: #708387; */
+}
+
+/* الخط الفاصل الرمادي الصغير بين السهم والكود */
+.log-volunteer-component .country-selector .divider {
+  width: 1px;
+  height: 16px;
+  background-color: #d9e4e5;
+  margin: 0 4px;
+}
+
+.log-volunteer-component .country-selector .code {
+  font-size: 18px;
+  color: #0a1826;
+  font-weight: 400;
+}
+
+/* الأزرار السفلية */
+.log-volunteer-component .footer-actions {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0px -2px 37.4px 0px #0000001a;
+
+  border-top: 1px solid #e9eff0;
+  padding: 16px 40px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 100;
+  gap: 20px;
+}
+
+.log-volunteer-component .btn-submit {
+  /* width: 350px; */
+  background-color: #6dcde5;
+  color: #ffffff;
+  border: none;
+  border-radius: 100px;
+  padding: 16px 86px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.log-volunteer-component .btn-back {
+  /* width: 146px; */
+  background-color: #ffffff;
+  color: #072127;
+  border: 1px solid #d9e4e5;
+  border-radius: 100px;
+  padding: 16px 33px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* =======================================
+   تجاوب المكون التام مع الموبايل (Responsive)
+   ======================================= */
+@media (max-width: 768px) {
+  .log-volunteer-component .main-container {
+    margin: 20px auto;
+  }
+
+  .log-volunteer-component .form-card {
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  .log-volunteer-component .page-title {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  .log-volunteer-component .footer-actions {
+    padding: 12px 20px;
+  }
+
+  .log-volunteer-component .btn-submit,
+  .log-volunteer-component .btn-back {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+/* شاشات الموبايل (أقل من 768px) */
+@media (max-width: 768px) {
+}
+/* --- التابلت والموبايل (أقل من 1024px) --- */
+@media (max-width: 1024px) {
+}
+@media (max-width: 400px) {
+}
+/* --- الموبايلات الصغيرة جداً (أقل من 375px) --- */
+@media (max-width: 375px) {
+}
+@media (max-width: 480px) {
+}

@@ -46,7 +46,6 @@ function App() {
   return (
     <div className="App">
       <Routes>
-
         {/* 1. صفحات تسجيل الدخول والـ Auth وتظهر مباشرة في الـ Root "/" */}
         <Route element={<AuthLayout />}>
           <Route path="/" element={<Login />} />
@@ -88,65 +87,64 @@ function App() {
 
           {/* مسارات الحساب المتداخلة */}
 
-        <Route element={<AuthLayout />}>
-          <Route path="/" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/forgetpassword" element={<ForgetPassword />} />
-          <Route path="/resetpassword" element={<ResetPassword />} />
-          <Route path="/privacypolicy" element={<h1>page not found</h1>} />
-          <Route path="/supportandassistance" element={<h1>page not found</h1>} />
-        </Route>
-
-        <Route element={<AuthLayout2 />}>
-          <Route path="/fileforthevolunteer" element={<Fileforthevolunteer />} />
-        </Route>
-
-
-        <Route element={<MainLayout />}>
-          <Route path="courses" element={<Courses />} />
-          <Route path="partners" element={<Partners />} />
-
-          <Route path="account" element={<Account />}>
-            <Route path="dashboard" element={<Dashboard />} />
-            <Route path="profile" element={<Profile />} />
+          <Route element={<AuthLayout />}>
+            <Route path="/" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/forgetpassword" element={<ForgetPassword />} />
+            <Route path="/resetpassword" element={<ResetPassword />} />
+            <Route path="/privacypolicy" element={<h1>page not found</h1>} />
+            <Route path="/supportandassistance" element={<h1>page not found</h1>} />
           </Route>
 
-          {/* مسارات الكورسات المتداخلة (تم إزالة السلاش / لتصبح نسبية وصحيحة) */}
-          <Route path="courses/:id" element={<CourseView />} />
-          <Route path="courses/:id/startCourse" element={<StartCourse />} />
-          <Route path="courses/:id/startCourse/startCourse2" element={<StartCourse2 />} />
+          <Route element={<AuthLayout2 />}>
+            <Route path="/fileforthevolunteer" element={<Fileforthevolunteer />} />
+          </Route>
 
-          <Route
-            path="courses/:id/startCourse/startCourse2/startCourse3"
-            element={<StartCourse3 />}
-          />
-          <Route
-            path="courses/:id/startCourse/startCourse2/startCourse3/startCourse4"
-            element={<StartCourse4 />}
-          />
-          <Route
-            path="courses/:id/startCourse/startCourse2/startCourse3/startCourse4/startCourse5"
-            element={<StartCourse5 />}
-          />
-          <Route
-            path="courses/:id/startCourse/startCourse2/startCourse3/startCourse4/startCourse5/startCourse6"
-            element={<StartCourse6 />}
-          />
-          <Route
-            path="courses/:id/startCourse/startCourse2/startCourse3/startCourse4/startCourse5/startCourse6/startCourse7"
-            element={<StartCourse7 />}
-          />
-          <Route
-            path="courses/:id/startCourse/startCourse2/startCourse3/startCourse4/startCourse5/startCourse6/startCourse7/startCourse8"
-            element={<StartCourse8 />}
-          />
-          <Route
-            path="courses/:id/startCourse/startCourse2/startCourse3/startCourse4/startCourse5/startCourse6/startCourse7/startCourse8/startCourse9"
-            element={<StartCourse9 />}
-          />
-        </Route>
+          <Route element={<MainLayout />}>
+            <Route path="courses" element={<Courses />} />
+            <Route path="partners" element={<Partners />} />
 
-        {/* 4. صفحات قريباً (Coming Soon) والصفحات الأخرى */}
+            <Route path="account" element={<Account />}>
+              <Route path="dashboard" element={<Dashboard />} />
+              <Route path="profile" element={<Profile />} />
+            </Route>
+
+            {/* مسارات الكورسات المتداخلة (تم إزالة السلاش / لتصبح نسبية وصحيحة) */}
+            <Route path="courses/:id" element={<CourseView />} />
+            <Route path="courses/:id/startCourse" element={<StartCourse />} />
+            <Route path="courses/:id/startCourse/startCourse2" element={<StartCourse2 />} />
+
+            <Route
+              path="courses/:id/startCourse/startCourse2/startCourse3"
+              element={<StartCourse3 />}
+            />
+            <Route
+              path="courses/:id/startCourse/startCourse2/startCourse3/startCourse4"
+              element={<StartCourse4 />}
+            />
+            <Route
+              path="courses/:id/startCourse/startCourse2/startCourse3/startCourse4/startCourse5"
+              element={<StartCourse5 />}
+            />
+            <Route
+              path="courses/:id/startCourse/startCourse2/startCourse3/startCourse4/startCourse5/startCourse6"
+              element={<StartCourse6 />}
+            />
+            <Route
+              path="courses/:id/startCourse/startCourse2/startCourse3/startCourse4/startCourse5/startCourse6/startCourse7"
+              element={<StartCourse7 />}
+            />
+            <Route
+              path="courses/:id/startCourse/startCourse2/startCourse3/startCourse4/startCourse5/startCourse6/startCourse7/startCourse8"
+              element={<StartCourse8 />}
+            />
+            <Route
+              path="courses/:id/startCourse/startCourse2/startCourse3/startCourse4/startCourse5/startCourse6/startCourse7/startCourse8/startCourse9"
+              element={<StartCourse9 />}
+            />
+          </Route>
+
+          {/* 4. صفحات قريباً (Coming Soon) والصفحات الأخرى */}
 
           <Route path="partners" element={<Partners />} />
           <Route path="courses/:id" element={<CourseView />} />
@@ -252,9 +250,29 @@ function App() {
             </>
           }
         />
-
-
       </Routes>
+      <HashRouter>
+        <ScrollToTop />
+        <Header isNavOpen={isNavOpen} onToggleNav={() => setIsNavOpen(prev => !prev)} />
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/الكورسات" element={<Courses />} />
+          <Route path="/المنتدى" element={<Forum />} />
+          <Route path="/المشاريع" element={<Projects />} />
+          <Route path="/اتصل" element={<Callus />} />
+          <Route path="/details/post/:id" element={<Details pageData="homeData" />} />
+          <Route path="/details/project/:id" element={<Details pageData="projectData" />} />
+          <Route path="/تسجيل-متطوع" element={<LogVolunteer />} />
+          {/* هكذا نستدعي الـ Layout كأب يحضن الصفحات الداخلية */}
+          <Route element={<Dashboardlayout isNavOpen={isNavOpen} />}>
+            <Route path="/الشهادات" element={<Certaficates />} />
+            <Route path="/المشاريع-التطوعية" element={<VoluntaryProjects />} />
+            <Route path="/الكورسات-الجارية" element={<Courseslists />} />
+            {/* يمكنك إضافة باقي مسارات الـ SideNav هنا مستقبلاً */}
+            {/* <Route path="/dashboard" element={<ControlPanel />} /> */}
+          </Route>
+        </Routes>
+      </HashRouter>
     </div>
   );
 }

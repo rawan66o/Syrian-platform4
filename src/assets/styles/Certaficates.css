@@ -1,0 +1,184 @@
+/* الحاوية الرئيسية للمكون */
+.certaficates-container {
+  margin-top: 100px;
+  background-color: #ffffff;
+  min-height: 100vh;
+  font-family: sans-serif;
+  gap: 25px;
+}
+
+/* الهيدر العلوي */
+.certificates-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  /* width: 90%; */
+}
+
+.certificates-header .title {
+  font-family: "Tajawal", sans-serif;
+  font-size: 24px;
+  color: #000000;
+  font-weight: bold;
+}
+
+/* أزرار الفلترة العلوية */
+.header-btns {
+  display: flex;
+  background-color: #f5f5f5;
+  font-family: "Tajawal", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 5px;
+  border-radius: 8px;
+}
+
+.filter-btn {
+  border: none;
+  background: none;
+  padding: 8px 20px;
+  color: #071722;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.filter-btn.active {
+  background-color: #64cbdc; /* اللون السماوي الموضح بالصورة */
+  color: #ffffff;
+}
+
+/* شبكة عرض البطاقات (عمودين متساويين) */
+.certificates-grid {
+  display: grid;
+  /* تقسيم مرن إلى عمودين متساويين يأخذان المساحة المتاحة المتبقية فقط */
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 26px;
+  /* width: 90%; */
+}
+
+/* ستايل البطاقة الفردية */
+.certificate-card {
+  background: #ffffff;
+  border: 1px solid #ececec;
+  border-radius: 12px;
+  padding: 24px 20px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.01);
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* القسم العلوي داخل البطاقة */
+.card-top {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 10px;
+  gap: 16px;
+}
+
+.card-title {
+  font-family: "Tajawal", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: #072127;
+  line-height: 100%;
+  letter-spacing: 0;
+  text-align: right;
+  margin: 0;
+}
+
+/* الصورة المصغرة الدائرية للشهادة */
+.cert-thumbnail {
+  width: 55px;
+  height: 55px;
+  object-fit: cover;
+}
+
+/* قسم التاريخ */
+.card-date {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  color: #072127;
+  font-size: 18px;
+}
+
+.icon-calendar {
+  width: 24px;
+  height: 24px;
+}
+
+/* أزرار التحكم السفلية للبطاقة */
+.card-actions {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+
+/* زر التنزيل السماوي */
+.btn-download {
+  flex: 1;
+  background-color: #6dcde5;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 15px 36px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background 0.2s;
+}
+
+.btn-download:hover {
+  background-color: #55b7c8;
+}
+
+.btn-download img {
+  width: 16px;
+  height: 16px;
+}
+
+/* زر عرض الشهادة الرمادي */
+.btn-view {
+  flex: 1;
+  gap: 10px;
+  background-color: #7083870d;
+  color: #072127;
+  border: none;
+  border-radius: 8px;
+  padding: 19px 34px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.btn-view:hover {
+  background-color: #eeeeee;
+}
+
+.arrow-icon {
+  scale: -1;
+  font-size: 16px;
+  line-height: 1;
+}
+
+/* لضمان التوافق مع الشاشات الصغيرة وتصبح بطاقة واحدة في السطر */
+@media (max-width: 768px) {
+  .certificates-grid {
+    grid-template-columns: 1fr;
+  }
+}

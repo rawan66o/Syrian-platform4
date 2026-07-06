@@ -1,0 +1,362 @@
+.cardStyle {
+  border: 1px solid #f0f0f0;
+  border-radius: 18px;
+  padding: 20px;
+  margin-bottom: 24px;
+  background: #f9f9f9bf;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    div:nth-child(1) {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      img {
+        border-radius: 50%;
+        width: 43px;
+        height: 44px;
+      }
+      div {
+        h4 {
+          margin: 0;
+          font-family: "Tajawal", sans-serif;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 100%;
+          letter-spacing: 0;
+          color: #0a1826;
+        }
+        small {
+          font-family: "Tajawal", sans-serif;
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 100%;
+          letter-spacing: 0;
+          color: #4a5568;
+        }
+      }
+    }
+    span {
+      font-family: "Tajawal", sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 100%;
+      letter-spacing: 0;
+      color: #072127;
+
+      text {
+        font-size: 12px;
+        color: #708387;
+      }
+    }
+  }
+  .content {
+    margin-top: 15px;
+    text-align: right;
+    direction: rtl;
+
+    p {
+      /* width: 732px; */
+      font-family: "Tajawal", sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 160%;
+      letter-spacing: 0;
+      color: #072127;
+      margin: 0;
+    }
+  }
+  .footer {
+    width: 732px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* margin-top: 10px; */
+    padding-top: 10px;
+
+    .buttons {
+      width: 732px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+    .response {
+      width: 712px;
+      /* padding-right: 20px; */
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        div:nth-child(1) {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+
+          img {
+            border-radius: 50%;
+            width: 43px;
+            height: 44px;
+          }
+          div {
+            h4 {
+              margin: 0;
+              font-family: "Tajawal", sans-serif;
+              font-weight: 500;
+              font-size: 16px;
+              line-height: 100%;
+              letter-spacing: 0;
+              color: #0a1826;
+            }
+            small {
+              font-family: "Tajawal", sans-serif;
+              font-weight: 500;
+              font-size: 12px;
+              line-height: 100%;
+              letter-spacing: 0;
+              color: #4a5568;
+            }
+          }
+        }
+        span {
+          font-family: "Tajawal", sans-serif;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 100%;
+          letter-spacing: 0;
+          color: #072127;
+
+          text {
+            font-size: 12px;
+            color: #708387;
+          }
+        }
+      }
+    }
+
+    .hidden-comments {
+      padding: 0;
+      font-family: "Tajawal", sans-serif;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 160%;
+      letter-spacing: 0;
+      color: #708387;
+    }
+    .call-comments {
+      font-family: "Tajawal", sans-serif;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 160%;
+      letter-spacing: 0;
+      color: #6dcde5;
+    }
+
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}
+.add-comment-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 11px;
+  gap: 16px;
+  width: 738px;
+  box-shadow: 0px 0px 4px 0px #0000001f;
+  border-radius: 8px;
+  background-color: #ffffff;
+
+  .add-comment-input {
+    width: 615px;
+    height: 55px;
+    border-bottom: 1px solid #70838780;
+    background: #f2f2f280;
+    padding-right: 16px;
+    font-family: "Tajawal", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0;
+    color: #072127;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+  input:focus {
+    /* إزالة الإطار الافتراضي عند الضغط */
+    outline: none;
+  }
+  input::placeholder {
+    color: #072127;
+    opacity: 1; /* لضمان ظهور اللون بوضوح في Firefox */
+  }
+
+  .add-comment-button {
+    border: none;
+    width: 111px;
+    height: 52px;
+    background-color: #6dcde5;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: "Tajawal", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0;
+    color: #ffffff;
+  }
+}
+.comments-section {
+  width: 764px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .title-comments {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+
+    h3 {
+      font-family: "Tajawal", sans-serif;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 100%;
+      letter-spacing: 0;
+      color: #072127;
+    }
+    h6 {
+      font-family: "Tajawal", sans-serif;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 100%;
+      letter-spacing: 0;
+      color: #708387;
+      margin: 0;
+    }
+  }
+}
+/* شاشات الموبايل (أقل من 768px) */
+@media (max-width: 768px) {
+  /* --- 2. قسم التعليقات والردود --- */
+  .comments-section {
+    width: 100% !important;
+  }
+
+  .title-comments {
+    flex-direction: row-reverse; /* الحفاظ على الاتجاه العربي */
+    justify-content: flex-start;
+    gap: 10px;
+    margin-bottom: 25px;
+  }
+
+  /* كرت التعليق (في حال كان يحتوي على صورة ونصوص بجانب بعض) */
+  .comment-card {
+    flex-direction: column !important; /* العناصر فوق بعضها في الموبايل */
+    align-items: flex-start !important;
+    padding: 15px !important;
+    gap: 15px;
+  }
+
+  /* --- 3. صندوق إضافة رد (AddComment) --- */
+  .add-comment-container {
+    flex-direction: column !important; /* المدخل فوق الزر */
+    gap: 15px !important;
+    width: 100% !important;
+    padding: 0 !important;
+  }
+
+  .add-comment-input {
+    width: 100% !important;
+    height: 55px !important;
+    padding: 12px 20px !important;
+    font-size: 16px !important; /* حجم خط مريح للكتابة */
+    border-radius: 10px !important;
+    box-sizing: border-box;
+  }
+
+  .add-comment-button {
+    width: 100% !important; /* زر عريض يسهل الضغط عليه */
+    height: 48px !important;
+    font-size: 18px !important;
+    border-radius: 10px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+/* --- التابلت والموبايل (أقل من 1024px) --- */
+@media (max-width: 1024px) {
+}
+@media (max-width: 400px) {
+}
+/* --- الموبايلات الصغيرة جداً (أقل من 375px) --- */
+@media (max-width: 375px) {
+  /* 1. قسم التعليقات بالكامل */
+  .comments-section {
+    width: 100% !important;
+    padding: 10px 0;
+  }
+
+  /* عنوان التعليقات وعددها */
+  .title-comments {
+    flex-direction: column !important; /* وضع "التعليقات" فوق "العدد" */
+    align-items: flex-start !important;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  .title-comments h3 {
+    font-size: 18px !important;
+  }
+}
+@media (max-width: 480px) {
+  /* 2. كرت التعليق الواحد (CommentCard) */
+  /* ملاحظة: إذا كان كرت التعليق يحتوي على صورة شخص بجانب النص، يفضل وضعها فوقه */
+  .comment-card {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 12px;
+    padding: 15px !important;
+  }
+
+  /* 3. صندوق إضافة تعليق (AddComment) */
+  .add-comment-container {
+    flex-direction: column !important; /* جعل الإدخال فوق الزر */
+    gap: 12px !important;
+    width: 100% !important;
+    background-color: transparent !important; /* اختياري إذا كنتِ تريدين شكل أنحف */
+    padding: 0 !important;
+  }
+
+  .add-comment-input {
+    width: 100% !important;
+    height: 50px !important;
+    padding: 10px 15px !important;
+    font-size: 14px !important;
+    border-radius: 12px !important; /* شكل أكثر عصرية للموبايل */
+    border: 1px solid #d9e4e5 !important;
+    box-sizing: border-box;
+  }
+
+  .add-comment-button {
+    width: 100% !important; /* الزر يأخذ العرض كاملاً ليسهل النقر عليه */
+    height: 45px !important;
+    border-radius: 12px !important;
+    font-size: 16px !important;
+    justify-content: center !important; /* توسيط نص الزر */
+  }
+}

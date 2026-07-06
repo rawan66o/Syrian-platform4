@@ -1,0 +1,112 @@
+/* التصميم الافتراضي للشريط الجانبي داخل التخطيط */
+.side-nav {
+  position: -webkit-sticky;
+  position: sticky;
+  /* top: 110px; */
+  width: 300px;
+  /* min-height: calc(100vh - 140px); */
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+  display: none;
+  align-self: flex-start;
+  /* border-radius: 20px; */
+  overflow: hidden;
+  margin-left: 20px;
+  height: 1126px;
+  margin-top: 100px;
+}
+
+.side-nav.open {
+  display: block;
+}
+
+/* حاوية العناصر الداخلية */
+.menu-section {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 20px;
+  /* padding-top: 100px; */
+  direction: ltr; /* لجعل المحاذاة تبدأ من اليسار كما بالصورة */
+}
+
+/* العناوين الفرعية (معلوماتي / أخرى) */
+.section-title {
+  font-family: "Tajawal", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0;
+  color: #708387;
+  text-align: right;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #d9e4e5;
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+/* فاصل إضافي قبل كلمة "أخرى" */
+.section-title.divider {
+  margin-top: 30px;
+}
+
+/* العناصر البرمجية (الروابط) */
+.menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* دفع العناصر لليسار لتبدأ الأيقونة أولاً من اليمين */
+  gap: 15px;
+  padding: 12px 20px;
+  text-decoration: none;
+  color: #555555;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  transition: all 0.2s ease;
+}
+.menu-item:first-child span {
+  font-family: "Tajawal", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -2%;
+  color: #ffffff;
+}
+.menu-item span {
+  font-family: "Tajawal", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0;
+  color: #072127;
+}
+/* حجم الأيقونات */
+.menu-item img {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+}
+
+/* العنصر الفعال النشط (لوحة التحكم) */
+.menu-item.active {
+  background-color: #6dcde5; /* اللون السماوي الموضح بالصورة */
+  color: #ffffff;
+}
+
+/* تغيير لون أيقونة العنصر النشط للأبيض إذا كانت svg أو تلوين النص فقط */
+.menu-item.active span {
+  color: #ffffff;
+}
+
+/* تنسيق خاص بزر تسجيل الخروج باللون الأحمر */
+.menu-item.logout {
+  color: #e05656;
+}
+.menu-item:last-child span {
+  color: #ec2625;
+}
+
+/* تأثير التمرير بالفأرة (Hover) */
+.menu-item:hover:not(.active) {
+  background-color: #f3f3f3;
+}

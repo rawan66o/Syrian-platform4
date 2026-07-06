@@ -1,0 +1,41 @@
+/* الحاوية الرئيسية لكل الصفحة */
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* تجعل الصفحة تأخذ كامل ارتفاع الشاشة على الأقل */
+  background-color: #f8f9fa; /* لون الخلفية الفاتح كما في الصورة */
+}
+
+/* تخطيط الشريط الجانبي والمحتوى بجانب بعضهما */
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #ffffff;
+  position: relative;
+  overflow-x: hidden;
+  flex: 1; /* تجعل هذا القسم يتمدد ليملأ الفراغ ويطرد الفوتر للأسفل */
+  flex-direction: row; /* لترتيب المحتوى والـ SideNav بجانب بعضهما */
+  gap: 20px;
+  padding-bottom: 275px;
+  align-items: flex-start;
+}
+
+/* حاوية المحتوى الرئيسي */
+.main-content-page {
+  padding: 20px;
+  flex: 1;
+  /* يمكنك إضافة اتجاه النص إذا كانت الصفحة عربية بالكامل */
+  direction: rtl;
+  width: 100%;
+  padding-right: 0; /* الوضع الافتراضي عندما تكون القائمة مغلقة */
+  transition: padding-right 0.3s ease-in-out;
+}
+
+/* عندما
+  تصبح
+  القائمة
+  الجانبية
+  مفتوحة
+  .dashboard-layout.nav-is-open
+  .main-content-page {
+  padding-right: 300px; /* دفع المحتوى لليسار بمقدار عرض الـ SideNav تماماً */

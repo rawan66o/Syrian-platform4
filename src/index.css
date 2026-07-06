@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap");
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* --- الموبايلات الصغيرة جداً (أقل من 375px) --- */
+@media (max-width: 375px) {
+  .page-link {
+    font-size: 14px;
+    width: 25px;
+    height: 25px;
+  }
+}
